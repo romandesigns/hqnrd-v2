@@ -3,7 +3,9 @@ import localFont from "next/font/local";
 import { i18n } from "@/i18n-config";
 import "./globals.css";
 import Link from "next/link";
-import LocaleSwitcher from "./_ui/site/features/locale-switcher";
+import { LocaleSwitcher } from "../../components/ui";
+import { ThemeProvider } from "@/providers/ThemeProvider";
+import { ModeToggle } from "@/components/ui/theme-toggle";
 
 const geistSans = localFont({
   src: "../../fonts/GeistVF.woff",
@@ -34,20 +36,28 @@ export default function RootLayout({
   params: { lang: string };
 }>) {
   return (
-    <html lang={lang}>
+    <html lang={lang} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav>
-          <ul className="flex justify-between p-4">
-            <div className="flex gap-4">
-              <Link href={`/${lang}`}>Home</Link>
-              <Link href={`/${lang}/about`}>About</Link>
-            </div>
-            <LocaleSwitcher lang={lang} />
-          </ul>
-        </nav>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <nav>
+            <ul className="flex justify-between p-4">
+              <div className="flex gap-4">
+                <Link href={`/${lang}`}>Home</Link>
+                <Link href={`/${lang}/about`}>About</Link>
+              </div>
+              <ModeToggle />
+              <LocaleSwitcher lang={lang} />
+            </ul>
+          </nav>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

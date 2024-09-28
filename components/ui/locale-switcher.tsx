@@ -6,7 +6,7 @@ import { i18n, Locale } from "@/i18n-config";
 import cn from "classnames";
 import { twMerge } from "tailwind-merge";
 
-export default function LocaleSwitcher({ lang }: { lang: string }) {
+export function LocaleSwitcher({ lang }: { lang: string }) {
   const pathName = usePathname();
   const redirectedPathName = (locale: Locale) => {
     if (!pathName) return "/";
