@@ -3,9 +3,9 @@ import localFont from "next/font/local";
 import { i18n } from "@/i18n-config";
 import "./globals.css";
 import Link from "next/link";
-import { LocaleSwitcher } from "../../components/ui";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { ModeToggle } from "@/components/ui/theme-toggle";
+import { LocaleSwitcher } from "@/components/ui";
 
 const geistSans = localFont({
   src: "../../fonts/GeistVF.woff",
