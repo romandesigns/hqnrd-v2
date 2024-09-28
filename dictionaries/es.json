@@ -1,6 +1,11 @@
 {
   "server-component": {
-    "welcome": "Bienvenido"
+    "home_page": {
+      "welcome": "Bienvenido a la página de inicio"
+    },
+    "about_page": {
+      "welcome": "Bienvenido a la página hacerca de nosotros"
+    }
   },
   "counter": {
     "increment": "Incrementar",

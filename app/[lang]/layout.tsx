@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { i18n } from "@/i18n-config";
 import "./globals.css";
+import Link from "next/link";
+import LocaleSwitcher from "./_ui/site/features/locale-switcher";
 
 const geistSans = localFont({
   src: "../../fonts/GeistVF.woff",
@@ -36,6 +38,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav>
+          <ul className="flex justify-between p-4">
+            <div className="flex gap-4">
+              <Link href={`/${lang}`}>Home</Link>
+              <Link href={`/${lang}/about`}>About</Link>
+            </div>
+            <LocaleSwitcher lang={lang} />
+          </ul>
+        </nav>
         {children}
       </body>
     </html>
