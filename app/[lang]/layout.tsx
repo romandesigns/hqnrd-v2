@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { ModeToggle } from "@/components/ui/theme-toggle";
 import { LocaleSwitcher } from "@/components/ui";
+import StoreProvider from "@/store/StoreProvider";
 
 const geistSans = localFont({
   src: "../../fonts/GeistVF.woff",
@@ -40,24 +41,26 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <nav>
-            <ul className="flex justify-between p-4">
-              <div className="flex gap-4">
-                <Link href={`/${lang}`}>Home</Link>
-                <Link href={`/${lang}/about`}>About</Link>
-              </div>
-              <ModeToggle />
-              <LocaleSwitcher lang={lang} />
-            </ul>
-          </nav>
-          {children}
-        </ThemeProvider>
+        <StoreProvider lastUpdate={new Date().getTime()}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <nav>
+              <ul className="flex justify-between p-4">
+                <div className="flex gap-4">
+                  <Link href={`/${lang}`}>Home</Link>
+                  <Link href={`/${lang}/about`}>About</Link>
+                </div>
+                <ModeToggle />
+                <LocaleSwitcher lang={lang} />
+              </ul>
+            </nav>
+            {children}
+          </ThemeProvider>
+        </StoreProvider>
       </body>
     </html>
   );
