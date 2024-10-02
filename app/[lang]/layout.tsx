@@ -37,7 +37,11 @@ export default function RootLayout({
   params: { lang: string };
 }>) {
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html
+      lang={lang}
+      suppressHydrationWarning
+      className="scroll-smooth focus:scroll-auto"
+    >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
