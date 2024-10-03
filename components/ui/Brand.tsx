@@ -5,8 +5,8 @@ export function Brand({
   width = 24,
   height = 24,
 }: {
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 }) {
   return (
     <div className="flex items-center justify-start gap-2">

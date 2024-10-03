@@ -8,6 +8,7 @@ import StoreProvider from "@/store/StoreProvider";
 import { poppins } from "@/components/fonts";
 import "./globals.css";
 import { DesktopNav } from "@/components/site/Navigation/DesktopNav";
+import { Navigation } from "@/components/site/Navigation";
 
 export const metadata: Metadata = {
   title: "Hotel Quinto Nivel RD",
@@ -43,7 +44,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {/* Navigation */}
-            <DesktopNav />
+            <Navigation lang={lang} />
             {/* Page Content */}
             {children}
             {/* Footer */}
