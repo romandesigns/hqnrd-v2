@@ -7,6 +7,7 @@ import { LocaleSwitcher } from "@/components/ui";
 import StoreProvider from "@/store/StoreProvider";
 import { poppins } from "@/components/fonts";
 import "./globals.css";
+import { DesktopNav } from "@/components/site/Navigation/DesktopNav";
 
 export const metadata: Metadata = {
   title: "Hotel Quinto Nivel RD",
@@ -41,17 +42,12 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <nav>
-              <ul className="flex justify-between p-4">
-                <div className="flex gap-4">
-                  <Link href={`/${lang}`}>Home</Link>
-                  <Link href={`/${lang}/about`}>About</Link>
-                </div>
-                <ModeToggle />
-                <LocaleSwitcher lang={lang} />
-              </ul>
-            </nav>
+            {/* Navigation */}
+            <DesktopNav />
+            {/* Page Content */}
             {children}
+            {/* Footer */}
+            <p>Footer</p>
           </ThemeProvider>
         </StoreProvider>
       </body>
