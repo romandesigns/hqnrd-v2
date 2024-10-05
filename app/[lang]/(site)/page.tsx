@@ -1,5 +1,24 @@
 import { Locale } from "@/i18n-config";
-import { ModeToggle } from "@/components/ui";
+import { Button, ModeToggle } from "@/components/ui";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 
 export default async function Home({
   params: { lang },

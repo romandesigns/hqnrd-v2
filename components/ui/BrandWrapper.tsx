@@ -10,15 +10,16 @@ export function BrandWrapper({
   children: React.ReactNode;
   HTMLTag?: "div" | "nav";
   className?: string;
+  wrapperClassName?: string;
 }) {
   return HTMLTag === "div" ? (
-    <div className={twMerge(className)}>
+    <div className={twMerge(`${className} w-full`)}>
       <Brand />
       {children}
     </div>
   ) : (
     HTMLTag === "nav" && (
-      <nav className={twMerge(className)}>
+      <nav className={twMerge(`${className} w-full`)}>
         <Brand />
         {children}
       </nav>

@@ -40,6 +40,8 @@ body {
     --brand-secondary-accent-900: #4f5418; /* Very dark */
     --brand-secondary-accent-950: #3b3e12; /* Darkest */
 
+    --max_width: 86rem;
+    
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
