@@ -1,15 +1,18 @@
 import { CONSTANTS } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Brand({
   width = 24,
   height = 24,
+  lang,
 }: {
   width?: number;
   height?: number;
+  lang: string;
 }) {
   return (
-    <div className="flex items-center justify-start gap-2">
+    <Link href={`/${lang}`} className="flex items-center justify-start gap-2">
       <div>
         <Image
           src={CONSTANTS.site.site_logo}
@@ -24,6 +27,6 @@ export function Brand({
         </h1>
         <p className="text-xs font-medium">{CONSTANTS.site.site_slogan}</p>
       </div>
-    </div>
+    </Link>
   );
 }

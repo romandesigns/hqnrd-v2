@@ -1,5 +1,5 @@
+import { clsx } from "@/utils/clsx";
 import React from "react";
-import { twMerge } from "tailwind-merge";
 
 export function Wrapper({
   children,
@@ -9,7 +9,7 @@ export function Wrapper({
   className?: string;
 }) {
   return (
-    <div className={twMerge(`${className} mx-auto w-full max-w-[--max_width]`)}>
+    <div className={clsx(`mx-auto w-full max-w-[--max_width]`, className)}>
       {children}
     </div>
   );

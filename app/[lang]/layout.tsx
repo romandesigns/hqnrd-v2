@@ -1,14 +1,10 @@
-import type { Metadata } from "next";
-import { i18n } from "@/i18n-config";
-import Link from "next/link";
-import { ThemeProvider } from "@/providers/ThemeProvider";
-import { ModeToggle } from "@/components/ui/theme-toggle";
-import { LocaleSwitcher } from "@/components/ui";
-import StoreProvider from "@/store/StoreProvider";
 import { poppins } from "@/components/fonts";
-import "./globals.css";
-import { DesktopNav } from "@/components/site/Navigation/DesktopNav";
 import { Navigation } from "@/components/site/Navigation";
+import { i18n } from "@/i18n-config";
+import { ThemeProvider } from "@/providers/ThemeProvider";
+import StoreProvider from "@/store/StoreProvider";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Hotel Quinto Nivel RD",
@@ -35,7 +31,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className="scroll-smooth focus:scroll-auto"
     >
-      <body className={`${poppins.className} antialiased`}>
+      <body className={`${poppins.className} h-dvh antialiased`}>
         <StoreProvider lastUpdate={new Date().getTime()}>
           <ThemeProvider
             attribute="class"
@@ -43,12 +39,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {/* Navigation */}
-            <Navigation lang={lang} />
-            {/* Page Content */}
             {children}
-            {/* Footer */}
-            <p>Footer</p>
           </ThemeProvider>
         </StoreProvider>
       </body>

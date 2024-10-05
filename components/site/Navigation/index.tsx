@@ -1,12 +1,14 @@
 import React from "react";
 import { DesktopNav } from "./DesktopNav";
+import { MobileNav } from "./MobileNav";
 
 export function Navigation({ lang }: { lang: string }) {
   return (
     <div>
-      {/* <div className="max-lg:hidden">Desktop</div> */}
-      <div className="lg:hidden">Mobile</div>
-      <DesktopNav lang={lang} className="max-lg:hidden" />
+      <DesktopNav
+        lang={lang}
+        className="flex p-4 max-lg:max-w-[100vw] lg:static lg:inset-auto lg:p-2"
+      />
     </div>
   );
 }
