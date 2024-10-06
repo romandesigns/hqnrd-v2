@@ -6,6 +6,7 @@ administrative tasks.
 **Features**
 
 1.  Internationalization
+2.  Responsive Site Navigation
 
 ## Public Site
 

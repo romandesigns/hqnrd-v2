@@ -11,7 +11,23 @@
       "themeMenu": {
         "light": "Claro",
         "dark": "Oscuro",
-        "system": "Systema"
+        "system": "Sistema"
+      },
+      "ui": {
+        "button": {
+          "exploreRooms": "Explorar Habitaciones",
+          "contactUs": "Contáctenos"
+        }
+      },
+      "page": {
+        "home": {
+          "header": {
+            "review": "Reseñas",
+            "highlight": "En Salcedo, República Dominicana",
+            "title": "Experimente una Comodidad y Elegancia Inigualables!",
+            "complementaryText": "Ya sea que viaje solo, con familia, o en una escapada romántica, nuestras habitaciones cuidadosamente diseñadas satisfacen todas las necesidades. <b className='font-semibold'>Visítenos hoy!</b>"
+          }
+        }
       }
     }
   }
