@@ -3,6 +3,7 @@ import React from "react";
 import { Navigation } from "../Navigation";
 import { useStore } from "@/store";
 import { useShallow } from "zustand/react/shallow";
+import { Footer } from "../Footer";
 
 export interface SiteNavigationTypes {
   navigation: {
@@ -55,6 +56,7 @@ export function SiteWrapper({
       {children}
       {/* Page Footer */}
       <p>Footer</p>
+      <Footer />
     </div>
   );
 }
