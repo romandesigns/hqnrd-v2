@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { Navigation } from "../Navigation";
+import { useStore } from "@/store";
+import { useShallow } from "zustand/react/shallow";
 
 /**
  * Site Wrapper Component
@@ -11,6 +13,15 @@ import { Navigation } from "../Navigation";
  * @see Navigation
  * @see Footer
  */
+
+function useCounter() {
+  return useStore(
+    useShallow((store) => ({
+      isOpen: store.isOpen,
+    })),
+  );
+}
+
 export function SiteWrapper({
   children,
   lang,
@@ -18,10 +29,11 @@ export function SiteWrapper({
   children: React.ReactNode;
   lang: string;
 }) {
+  const { isOpen } = useCounter();
   return (
-    <div>
+    <div className="grid h-full w-full grid-cols-1 grid-rows-[auto_1fr_auto]">
       {/* Page Navigation */}
-      <Navigation lang={lang} />
+      <Navigation lang={lang} navIsOpen={isOpen} />
       {/* Page Content */}
       {children}
       {/* Page Footer */}

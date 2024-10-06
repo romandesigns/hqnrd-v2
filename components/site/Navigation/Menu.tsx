@@ -1,13 +1,6 @@
-import {
-  FaEnvelope,
-  PiMapPinFill,
-  RiWhatsappFill,
-  SiGoogletranslate,
-} from "@/components/icons";
 import { Button, ContactWidget, ModeToggle } from "@/components/ui";
 import { clsx } from "@/utils/clsx";
 import Link from "next/link";
-import React from "react";
 
 export function NavigationMenu({
   lang,
