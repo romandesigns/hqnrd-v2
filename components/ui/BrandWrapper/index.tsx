@@ -1,5 +1,5 @@
 import React from "react";
-import { Brand } from ".";
+import { Brand } from "..";
 import { clsx } from "@/utils/clsx";
 
 /**

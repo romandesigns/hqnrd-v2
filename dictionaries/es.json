@@ -1,14 +1,18 @@
 {
-  "server-component": {
-    "home_page": {
-      "welcome": "Bienvenido a la página de inicio"
-    },
-    "about_page": {
-      "welcome": "Bienvenido a la página hacerca de nosotros"
+  "site": {
+    "component": {
+      "navigation": {
+        "home": "Inicio",
+        "rooms": "Habitaciones",
+        "signIn": "Iniciar sesión",
+        "signUp": "Registrarse",
+        "signOut": "Cerrar sesión"
+      },
+      "themeMenu": {
+        "light": "Claro",
+        "dark": "Oscuro",
+        "system": "Systema"
+      }
     }
-  },
-  "counter": {
-    "increment": "Incrementar",
-    "decrement": "Dicrementar"
   }
 }

@@ -4,6 +4,21 @@ import { Navigation } from "../Navigation";
 import { useStore } from "@/store";
 import { useShallow } from "zustand/react/shallow";
 
+export interface SiteNavigationTypes {
+  navigation: {
+    home: string;
+    rooms: string;
+    signIn: string;
+    signUp: string;
+    signOut: string;
+  };
+  themeMenu: {
+    light: string;
+    dark: string;
+    system: string;
+  };
+}
+
 /**
  * Site Wrapper Component
  * It is used to wrap page components with the Navigation and Footer component.
@@ -25,15 +40,17 @@ function useCounter() {
 export function SiteWrapper({
   children,
   lang,
+  dictionary,
 }: {
   children: React.ReactNode;
   lang: string;
+  dictionary: SiteNavigationTypes;
 }) {
   const { isOpen } = useCounter();
   return (
     <div className="grid h-full w-full grid-cols-1 grid-rows-[auto_1fr_auto]">
       {/* Page Navigation */}
-      <Navigation lang={lang} navIsOpen={isOpen} />
+      <Navigation lang={lang} navIsOpen={isOpen} navStrings={dictionary} />
       {/* Page Content */}
       {children}
       {/* Page Footer */}

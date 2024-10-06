@@ -1,8 +1,8 @@
 "use client";
 import { useStore } from "@/store";
 import { useShallow } from "zustand/react/shallow";
-import { HiMenuAlt1 } from "../icons";
-import { Button } from "./button";
+import { HiMenuAlt1 } from "../../icons";
+import { Button } from "../button";
 
 function useCounter() {
   return useStore(

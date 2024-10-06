@@ -1,5 +1,4 @@
 import { poppins } from "@/components/fonts";
-import { Navigation } from "@/components/site/Navigation";
 import { i18n } from "@/i18n-config";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import StoreProvider from "@/store/StoreProvider";

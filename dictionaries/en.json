@@ -1,14 +1,18 @@
 {
-  "server-component": {
-    "home_page": {
-      "welcome": "Welcome to the Home Page"
-    },
-    "about_page": {
-      "welcome": "Welcome to the About Page"
+  "site": {
+    "component": {
+      "navigation": {
+        "home": "Home",
+        "rooms": "Rooms",
+        "signIn": "Sign In",
+        "signUp": "Sign Up",
+        "signOut": "Sign Out"
+      },
+      "themeMenu": {
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+      }
     }
-  },
-  "counter": {
-    "increment": "Increment",
-    "decrement": "Decrement"
   }
 }

@@ -9,7 +9,7 @@ export function Brand({
 }: {
   width?: number;
   height?: number;
-  lang: string;
+  lang?: string;
 }) {
   return (
     <Link href={`/${lang}`} className="flex items-center justify-start gap-2">

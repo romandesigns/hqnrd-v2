@@ -12,9 +12,18 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { TbMoonStars, TbSunHigh } from "../icons";
 
-export function ModeToggle() {
-  const { setTheme } = useTheme();
+interface ModeTogglePropTypes {
+  light: string;
+  dark: string;
+  system: string;
+}
 
+export function ModeToggle({
+  navStrings,
+}: {
+  navStrings: ModeTogglePropTypes;
+}) {
+  const { setTheme } = useTheme();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -26,13 +35,13 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+          {navStrings.light}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+          {navStrings.dark}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+          {navStrings.system}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -6,14 +6,16 @@ import { i18n, Locale } from "@/i18n-config";
 import cn from "classnames";
 import { twMerge } from "tailwind-merge";
 
+export const redirectedPathName = (locale: Locale, pathName: string) => {
+  if (!pathName) return "/";
+  const segments = pathName.split("/");
+  segments[1] = locale;
+  return segments.join("/");
+};
+
 export function LocaleSwitcher({ lang }: { lang: string }) {
   const pathName = usePathname();
-  const redirectedPathName = (locale: Locale) => {
-    if (!pathName) return "/";
-    const segments = pathName.split("/");
-    segments[1] = locale;
-    return segments.join("/");
-  };
+
   return (
     <div className="flex">
       <p>Locale switcher:</p>
@@ -26,10 +28,10 @@ export function LocaleSwitcher({ lang }: { lang: string }) {
                 `flex`,
                 cn({
                   "text-blue-500": locale === lang,
-                })
+                }),
               )}
             >
-              <Link href={redirectedPathName(locale)}>{locale}</Link>
+              <Link href={redirectedPathName(locale, pathName)}>{locale}</Link>
             </li>
           );
         })}

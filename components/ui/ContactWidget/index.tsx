@@ -1,11 +1,8 @@
-import React from "react";
-import { FaEnvelope } from "react-icons/fa";
-import { PiMapPinFill } from "react-icons/pi";
-import { RiWhatsappFill } from "react-icons/ri";
-import { SiGoogletranslate } from "react-icons/si";
-import { Button } from "./button";
+import { FaEnvelope, PiMapPinFill, RiWhatsappFill } from "@/components/icons";
+import { Button } from "..";
+import { LanugageSwitcher } from "./LanguageSwitcher";
 
-export function ContactWidget() {
+export function ContactWidget({ lang }: { lang: string }) {
   return (
     <ul className="flex items-center justify-center gap-3 py-4 lg:hidden">
       <li>
@@ -19,9 +16,7 @@ export function ContactWidget() {
         </Button>
       </li>
       <li>
-        <Button variant="outline" size="icon">
-          <SiGoogletranslate className="size-5" />
-        </Button>
+        <LanugageSwitcher lang={lang} />
       </li>
       <li>
         <Button variant="outline" size="icon">

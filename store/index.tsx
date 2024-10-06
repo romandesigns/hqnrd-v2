@@ -6,6 +6,7 @@ import { PreloadedStoreInterface } from "./StoreProvider";
 // Store interface combining both navigation and counter logic
 export interface StoreInterface {
   isOpen: boolean;
+  lastUpdate: number;
   toggleNavigation: () => void;
 }
 
@@ -13,6 +14,7 @@ export interface StoreInterface {
 function getDefaultInitialState() {
   return {
     isOpen: false,
+    lastUpdate: new Date().getTime(),
   } as const;
 }
 

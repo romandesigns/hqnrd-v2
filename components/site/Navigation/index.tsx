@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { Wrapper } from "../Wrapper";
 import { NavigationMenu } from "./Menu";
 import { NavContainer } from "@/framerMotion/SlidingContainer";
+import { SiteNavigationTypes } from "../SiteWrapper";
 
 /**
  * Navigation Component
@@ -14,9 +15,11 @@ import { NavContainer } from "@/framerMotion/SlidingContainer";
 export function Navigation({
   lang,
   navIsOpen,
+  navStrings,
 }: {
   lang: string;
   navIsOpen: boolean;
+  navStrings: SiteNavigationTypes;
 }) {
   return (
     <Wrapper
@@ -30,11 +33,15 @@ export function Navigation({
       >
         {/* Show the theme toggle button and open/close navigation btn in mobile screens */}
         <div className="ml-auto space-x-4 lg:hidden">
-          <ModeToggle />
+          <ModeToggle navStrings={navStrings.themeMenu} />
           <NavigationToggleBtn />
         </div>
         {/* Show Desktop navigation on viewport greater than 1024px */}
-        <NavigationMenu lang={lang} classNames="hidden lg:flex lg:w-auto" />
+        <NavigationMenu
+          lang={lang}
+          classNames="hidden lg:flex lg:w-auto"
+          navStrings={navStrings}
+        />
       </BrandWrapper>
 
       {/* Div will show it's children on mobile devices */}
@@ -47,6 +54,7 @@ export function Navigation({
             <NavigationMenu
               lang={lang}
               classNames="w-full flex items-stretch justify-stretch gap-4"
+              navStrings={navStrings}
             />
           </div>
         </div>
