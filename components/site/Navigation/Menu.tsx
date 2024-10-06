@@ -1,4 +1,6 @@
+"use client";
 import { Button, ContactWidget, ModeToggle } from "@/components/ui";
+import { useSiteMobileNavigation } from "@/hooks";
 import { clsx } from "@/utils/clsx";
 import Link from "next/link";
 import { SiteNavigationTypes } from "../SiteWrapper";
@@ -12,9 +14,10 @@ export function NavigationMenu({
   classNames?: string;
   navStrings: SiteNavigationTypes;
 }) {
+  const { toggleNav } = useSiteMobileNavigation();
   return (
     <ul className={clsx("flex text-sm max-lg:flex-col", classNames)}>
-      <li className="w-full">
+      <li className="w-full" onClick={() => toggleNav()}>
         <Button
           variant="ghost"
           className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
@@ -23,7 +26,7 @@ export function NavigationMenu({
           <Link href={`/${lang}`}>{navStrings.navigation.home}</Link>
         </Button>
       </li>
-      <li className="w-full">
+      <li className="w-full" onClick={() => toggleNav()}>
         <Button
           variant="ghost"
           className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
@@ -40,7 +43,7 @@ export function NavigationMenu({
       </li>
       <li className="w-full max-lg:mt-3">
         <ul className="mt-auto flex flex-col gap-4 lg:flex-row">
-          <li className="w-full">
+          <li className="w-full" onClick={() => toggleNav()}>
             <Button
               variant="default"
               className="w-full max-lg:h-10 lg:h-8"
@@ -51,12 +54,15 @@ export function NavigationMenu({
               </Link>
             </Button>
           </li>
-          <li className="w-full">
+          <li className="w-full" onClick={() => toggleNav()}>
             <Button
+              asChild
               variant="ghost"
               className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
             >
-              {navStrings.navigation.signUp}
+              <Link href={`/${lang}/crear-session`}>
+                {navStrings.navigation.signUp}
+              </Link>
             </Button>
           </li>
           <li className="hidden lg:block">

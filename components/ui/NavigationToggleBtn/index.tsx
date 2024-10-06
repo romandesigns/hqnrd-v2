@@ -1,19 +1,11 @@
 "use client";
-import { useStore } from "@/store";
-import { useShallow } from "zustand/react/shallow";
+
+import { useSiteMobileNavigation } from "@/hooks";
 import { HiMenuAlt1 } from "../../icons";
 import { Button } from "../button";
 
-function useCounter() {
-  return useStore(
-    useShallow((store) => ({
-      toggleNav: store.toggleNavigation,
-    })),
-  );
-}
-
 export function NavigationToggleBtn() {
-  const { toggleNav } = useCounter();
+  const { toggleNav } = useSiteMobileNavigation();
   return (
     <Button
       size="icon"

@@ -1,7 +1,7 @@
 import { FaEnvelope, PiMapPinFill, RiWhatsappFill } from "@/components/icons";
+import { CONSTANTS } from "@/constants";
 import { Button, ExternalLink } from "..";
 import { LanugageSwitcher } from "./LanguageSwitcher";
-import { CONSTANTS } from "@/constants";
 
 export function ContactWidget({ lang }: { lang: string }) {
   return (

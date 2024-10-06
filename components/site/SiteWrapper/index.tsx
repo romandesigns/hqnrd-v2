@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
 import { Navigation } from "../Navigation";
-import { useStore } from "@/store";
-import { useShallow } from "zustand/react/shallow";
 import { Footer } from "../Footer";
+import { useSiteMobileNavigation } from "@/hooks";
 
 export interface SiteNavigationTypes {
   navigation: {
@@ -30,14 +29,6 @@ export interface SiteNavigationTypes {
  * @see Footer
  */
 
-function useCounter() {
-  return useStore(
-    useShallow((store) => ({
-      isOpen: store.isOpen,
-    })),
-  );
-}
-
 export function SiteWrapper({
   children,
   lang,
@@ -47,7 +38,8 @@ export function SiteWrapper({
   lang: string;
   dictionary: SiteNavigationTypes;
 }) {
-  const { isOpen } = useCounter();
+  const { isOpen } = useSiteMobileNavigation();
+
   return (
     <div className="grid h-full w-full grid-cols-1 grid-rows-[auto_1fr_auto]">
       {/* Page Navigation */}
