@@ -1,9 +1,9 @@
 import { BrandWrapper, ModeToggle, NavigationToggleBtn } from "@/components/ui";
+import { NavContainer } from "@/framerMotion/SlidingContainer";
 import clsx from "clsx";
+import { SiteNavigationTypes } from "../SiteWrapper";
 import { Wrapper } from "../Wrapper";
 import { NavigationMenu } from "./Menu";
-import { NavContainer } from "@/framerMotion/SlidingContainer";
-import { SiteNavigationTypes } from "../SiteWrapper";
 
 /**
  * Navigation Component
@@ -22,9 +22,7 @@ export function Navigation({
   navStrings: SiteNavigationTypes;
 }) {
   return (
-    <Wrapper
-      className={clsx("flex flex-col items-end justify-end border-b p-2")}
-    >
+    <Wrapper className={clsx("flex flex-col items-end justify-end p-2")}>
       {/* Show the theme toggle button and open/close navigation btn in mobile screens */}
       <BrandWrapper
         lang={lang}
@@ -47,13 +45,14 @@ export function Navigation({
       {/* Div will show it's children on mobile devices */}
       <NavContainer
         isOpen={navIsOpen}
-        className="fixed inset-0 top-auto z-[1] flex h-[calc(100vh-3.7rem)] w-full flex-1 items-center justify-center bg-background p-4 lg:hidden"
+        className="fixed inset-0 top-auto z-[1] flex h-[calc(100vh-3.31rem)] w-full flex-1 items-center justify-center bg-background p-4 lg:hidden"
       >
-        <div className="flex h-full w-full items-center justify-center">
-          <div className="min-md:w-full flex w-5/6 items-center justify-center">
+        <div className="grid h-full w-full grid-cols-1 grid-rows-[1fr_2fr] items-center justify-center">
+          <div className="h-full" />
+          <div className="min-md:w-full flex h-full items-center justify-center">
             <NavigationMenu
               lang={lang}
-              classNames="w-full flex items-stretch justify-stretch gap-4"
+              classNames="w-full flex items-stretch justify-stretch gap-4 h-full"
               navStrings={navStrings}
             />
           </div>

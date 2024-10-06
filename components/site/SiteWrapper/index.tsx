@@ -55,7 +55,6 @@ export function SiteWrapper({
       {/* Page Content */}
       {children}
       {/* Page Footer */}
-      <p>Footer</p>
       <Footer />
     </div>
   );

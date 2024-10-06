@@ -13,12 +13,7 @@ export function NavigationMenu({
   navStrings: SiteNavigationTypes;
 }) {
   return (
-    <ul
-      className={clsx(
-        "flex w-full text-sm max-lg:flex-col [&>li]:border-purple-500",
-        classNames,
-      )}
-    >
+    <ul className={clsx("flex text-sm max-lg:flex-col", classNames)}>
       <li className="w-full">
         <Button
           variant="ghost"
@@ -40,7 +35,7 @@ export function NavigationMenu({
         </Button>
       </li>
       <li className="lg:block lg:px-4" />
-      <li>
+      <li className="mt-auto">
         <ContactWidget lang={lang} />
       </li>
       <li className="w-full max-lg:mt-3">

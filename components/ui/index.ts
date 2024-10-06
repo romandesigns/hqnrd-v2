@@ -5,6 +5,7 @@ import { Brand } from "./Brand";
 import { ContactWidget } from "./ContactWidget";
 import { BrandWrapper } from "./BrandWrapper";
 import { NavigationToggleBtn } from "./NavigationToggleBtn";
+import { ExternalLink } from "./ExternalLink";
 
 export {
   Button,
@@ -14,4 +15,5 @@ export {
   ContactWidget,
   BrandWrapper,
   NavigationToggleBtn,
+  ExternalLink,
 };
