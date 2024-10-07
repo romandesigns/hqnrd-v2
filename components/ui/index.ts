@@ -2,6 +2,7 @@ import { Brand } from "./Brand";
 import { BrandWrapper } from "./BrandWrapper";
 import { Button } from "./button";
 import { ContactWidget } from "./ContactWidget";
+import { Divider } from "./Divider";
 import { ExternalLink } from "./ExternalLink";
 import { LocaleSwitcher } from "./locale-switcher";
 import { NavigationToggleBtn } from "./NavigationToggleBtn";
@@ -16,4 +17,5 @@ export {
   LocaleSwitcher,
   ModeToggle,
   NavigationToggleBtn,
+  Divider,
 };

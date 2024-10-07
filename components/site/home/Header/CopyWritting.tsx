@@ -4,13 +4,11 @@ import {
   FcGoogle,
   PiMapPinFill,
 } from "@/components/icons";
-import { Button, ExternalLink } from "@/components/ui";
+import { Button, ContactWidget, ExternalLink } from "@/components/ui";
 import { CONSTANTS } from "@/constants";
-import { clsx } from "@/utils/clsx";
 import { useHtmlParser } from "@/utils/useHtmlParser";
 import classNames from "classnames";
 import Link from "next/link";
-import React from "react";
 import { twMerge } from "tailwind-merge";
 
 interface CopyWrittingProps {
@@ -21,6 +19,14 @@ interface CopyWrittingProps {
     complementaryText: string;
   };
 }
+
+/**
+ * CopyWritting Header Component
+ * It is used to wrap components with the Brand component.
+ * @param lang - Language of the website.
+ * @param dictionary - CopyWrittingProps object.
+ * @returns CopyWritting component with title, review, highlight, and buttons.
+ **/
 
 export function CopyWritting({
   lang,
@@ -75,6 +81,12 @@ export function CopyWritting({
             Contact Us
           </ExternalLink>
         </Button>
+      </div>
+      <div className="max-lg:hidden lg:pt-12">
+        <ContactWidget
+          lang={lang}
+          className="w-full lg:flex lg:justify-start"
+        />
       </div>
     </div>
   );

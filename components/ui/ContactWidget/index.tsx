@@ -2,10 +2,22 @@ import { FaEnvelope, PiMapPinFill, RiWhatsappFill } from "@/components/icons";
 import { CONSTANTS } from "@/constants";
 import { Button, ExternalLink } from "..";
 import { LanugageSwitcher } from "./LanguageSwitcher";
+import { clsx } from "@/utils/clsx";
 
-export function ContactWidget({ lang }: { lang: string }) {
+export function ContactWidget({
+  lang,
+  className,
+}: {
+  lang: string;
+  className?: string;
+}) {
   return (
-    <ul className="flex items-center justify-center gap-3 py-4 lg:hidden">
+    <ul
+      className={clsx(
+        "flex items-center justify-center gap-3 py-4 lg:hidden",
+        className,
+      )}
+    >
       <li>
         <Button variant="outline" size="icon">
           <ExternalLink href={CONSTANTS.site.contact.whatsapp_chat}>
