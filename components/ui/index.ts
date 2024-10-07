@@ -6,9 +6,10 @@ import { Divider } from "./Divider";
 import { ExternalLink } from "./ExternalLink";
 import { LocaleSwitcher } from "./locale-switcher";
 import { NavigationToggleBtn } from "./NavigationToggleBtn";
+import { Carousel } from "./SwiperCarousel";
 import { ModeToggle } from "./theme-toggle";
-
 export {
+  Carousel,
   Brand,
   BrandWrapper,
   Button,

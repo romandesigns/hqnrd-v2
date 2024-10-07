@@ -22,7 +22,7 @@ export async function HomeHeader({ lang }: { lang: string }) {
 
   return (
     <Wrapper>
-      <header className="grid items-center rounded-md border px-2 py-10 lg:grid-cols-2 lg:grid-rows-1">
+      <header className="grid items-center rounded-md px-2 py-10 lg:grid-cols-2 lg:grid-rows-1">
         <CopyWritting lang={lang} dictionary={page.home} />
         <Gallery lang={lang} />
       </header>
