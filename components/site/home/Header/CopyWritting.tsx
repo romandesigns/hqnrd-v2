@@ -11,6 +11,7 @@ import classNames from "classnames";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import NumberTicker from "@/components/ui/number-ticker";
+import BoxReveal from "@/components/ui/box-reveal";
 
 interface CopyWrittingProps {
   header: {
@@ -61,19 +62,25 @@ export function CopyWritting({
         <PiMapPinFill className="animate-bounce" />
         <p>{dictionary.header.highlight}</p>
       </div>
-      <h1
-        className={twMerge(
-          `text-5xl font-extrabold max-lg:text-center max-lg:text-3xl`,
-          classNames({
-            "text-4xl": lang === "es",
-          }),
-        )}
-      >
-        {dictionary.header.title}
-      </h1>
-      <p className="my-4 text-sm leading-relaxed max-lg:px-4 max-lg:text-center max-lg:text-xs">
-        {useHtmlParser(dictionary.header.complementaryText)}
-      </p>
+      <BoxReveal boxColor={"black"} duration={0.25}>
+        <h1
+          className={twMerge(
+            `text-5xl font-extrabold max-lg:text-center max-lg:text-3xl`,
+            classNames({
+              "text-4xl": lang === "es",
+            }),
+          )}
+        >
+          {dictionary.header.title}
+        </h1>
+      </BoxReveal>
+
+      <BoxReveal boxColor={"black"} duration={0.5}>
+        <p className="my-4 text-sm leading-relaxed max-lg:px-4 max-lg:text-center max-lg:text-xs">
+          {useHtmlParser(dictionary.header.complementaryText)}
+        </p>
+      </BoxReveal>
+
       <div className="flex gap-4 max-lg:justify-center">
         <Button asChild>
           <Link href={`/${lang}/habitaciones`}>Explore Rooms</Link>
