@@ -9,7 +9,9 @@ export function Wrapper({
   className?: string;
 }) {
   return (
-    <div className={clsx(`mx-auto w-full max-w-[--max_width]`, className)}>
+    <div
+      className={clsx(`mx-auto w-full max-w-[--max_width] lg:px-4`, className)}
+    >
       {children}
     </div>
   );

@@ -9,7 +9,7 @@ export function Gallery({ lang }: { lang: string }) {
 
   return (
     <>
-      <div className="relative p-8">
+      <div className="relative p-4 pb-8 pl-8">
         {/* Main Image */}
         <div className="backdrop relative aspect-square overflow-hidden rounded-md border border-white bg-white/50 p-4 shadow-lg backdrop-blur-sm">
           <figure className="relative aspect-square overflow-hidden">
