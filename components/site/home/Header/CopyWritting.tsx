@@ -10,6 +10,7 @@ import { useHtmlParser } from "@/utils/useHtmlParser";
 import classNames from "classnames";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
+import NumberTicker from "@/components/ui/number-ticker";
 
 interface CopyWrittingProps {
   header: {
@@ -41,7 +42,7 @@ export function CopyWritting({
         <div className="flex items-center justify-start gap-2 max-lg:justify-center">
           <p className="flex items-center justify-start gap-2 font-bold">
             <FcGoogle />
-            4.5
+            <NumberTicker value={4.5} decimalPlaces={2} />
           </p>
           <span className="flex items-center justify-start">
             <FaStar />
@@ -52,7 +53,8 @@ export function CopyWritting({
           </span>
         </div>
         <small className="max-lg:text-xs max-lg:font-medium">
-          139 Google {dictionary.header.review}
+          <NumberTicker value={139} delay={2} /> Google{" "}
+          {dictionary.header.review}
         </small>
       </div>
       <div className="flex items-center justify-start gap-2 text-sm font-medium max-lg:justify-center">
