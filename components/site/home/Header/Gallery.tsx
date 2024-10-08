@@ -12,14 +12,8 @@ export function Gallery({ lang }: { lang: string }) {
     <div>
       <div className="relative p-8">
         {/* Main Image */}
-        <div className="backdrop relative aspect-square overflow-hidden rounded-md border bg-background/20 p-2 shadow-lg backdrop-blur-sm lg:p-3">
+        <div className="glass-effect relative aspect-square overflow-hidden">
           <figure className="relative aspect-square overflow-hidden">
-            {/* <Image
-              fill
-              src={images[1]}
-              alt={"gallery image"}
-              className="rounded-md object-cover shadow-sm"
-            /> */}
             <Carousel
               arr={images}
               delay={3500}
@@ -31,7 +25,7 @@ export function Gallery({ lang }: { lang: string }) {
         </div>
 
         {/* Top Left Image */}
-        <div className="backdrop absolute -left-8 top-12 aspect-square w-1/3 overflow-hidden rounded-md border bg-background/20 p-2 shadow-md backdrop-blur-sm max-lg:left-0 max-lg:w-1/4 lg:p-3">
+        <div className="glass-effect absolute -left-8 top-12 aspect-square w-1/3 overflow-hidden max-lg:left-0 max-lg:w-1/4">
           <figure className="relative aspect-square overflow-hidden">
             <Carousel
               arr={images}
@@ -44,7 +38,7 @@ export function Gallery({ lang }: { lang: string }) {
         </div>
 
         {/* Bottom Left Image */}
-        <div className="backdrop absolute -bottom-2 -left-2 -z-[1] aspect-square w-1/3 overflow-hidden rounded-md border bg-background/20 p-2 shadow-lg backdrop-blur-sm max-lg:bottom-2 max-lg:left-2 lg:p-3">
+        <div className="glass-effect absolute -bottom-2 -left-2 -z-[1] aspect-square w-1/3 overflow-hidden max-lg:bottom-2 max-lg:left-2">
           <figure className="before:backdrop relative aspect-square overflow-hidden before:absolute before:-inset-0 before:z-[2] before:block before:rounded-md before:bg-black/50 before:backdrop-blur-sm">
             <Carousel
               arr={images}
@@ -56,7 +50,7 @@ export function Gallery({ lang }: { lang: string }) {
           </figure>
         </div>
 
-        <div className="backdrop absolute -bottom-2 -right-2 aspect-square w-1/3 overflow-hidden rounded-md border bg-background/20 p-2 shadow-lg backdrop-blur-sm max-lg:bottom-2 max-lg:right-2 lg:p-3">
+        <div className="glass-effect absolute -bottom-2 -right-2 aspect-square w-1/3 overflow-hidden max-lg:bottom-2 max-lg:right-2">
           <figure className="relative aspect-square overflow-hidden">
             <Carousel
               arr={images}

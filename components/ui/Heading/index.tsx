@@ -13,7 +13,7 @@ export function Heading({
   return (
     <h2
       className={clsx(
-        `mt-0 flex flex-col items-center justify-center lg:my-8`,
+        `mt-0 flex flex-col items-center justify-center lg:py-10`,
         classNames,
       )}
     >

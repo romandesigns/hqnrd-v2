@@ -9,6 +9,7 @@ import { NavigationToggleBtn } from "./NavigationToggleBtn";
 import { Carousel } from "./SwiperCarousel";
 import { ModeToggle } from "./theme-toggle";
 import { Heading } from "./Heading";
+import { CardTestimonial } from "./CardTestimonial";
 
 export {
   Heading,
@@ -22,4 +23,5 @@ export {
   ModeToggle,
   NavigationToggleBtn,
   Divider,
+  CardTestimonial,
 };
