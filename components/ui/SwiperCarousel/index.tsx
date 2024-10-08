@@ -50,7 +50,7 @@ export function Carousel({
       {arr.map((image, index) => (
         <SwiperSlide
           key={index}
-          className="flex h-full w-full items-center justify-center rounded-md"
+          className="swiper-slide flex h-full w-full items-center justify-center rounded-md"
         >
           <Image
             fill

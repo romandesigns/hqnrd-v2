@@ -22,11 +22,15 @@ export function Navigation({
   navStrings: SiteNavigationTypes;
 }) {
   return (
-    <Wrapper className={clsx("flex flex-col items-end justify-end p-2")}>
+    <Wrapper
+      className={clsx(
+        "after:backdrop sticky top-0 z-[4] flex flex-col items-end justify-end rounded-md border-b bg-background/70 p-2 shadow shadow-black/5 after:absolute after:inset-x-0 after:top-0 after:z-[1] after:block after:h-full after:bg-background/50 after:backdrop-blur-sm after:transition-all after:duration-300 after:ease-in-out after:content-[''] lg:border-none",
+      )}
+    >
       {/* Show the theme toggle button and open/close navigation btn in mobile screens */}
       <BrandWrapper
         lang={lang}
-        className="z-[2] flex h-fit items-start justify-between lg:flex-row lg:items-center"
+        className="z-[4] flex h-fit items-start justify-between lg:flex-row lg:items-center"
         HTMLTag="nav"
       >
         {/* Show the theme toggle button and open/close navigation btn in mobile screens */}
@@ -45,7 +49,7 @@ export function Navigation({
       {/* Div will show it's children on mobile devices */}
       <NavContainer
         isOpen={navIsOpen}
-        className="fixed inset-0 top-auto z-[1] flex h-[calc(100vh-3.31rem)] w-full flex-1 items-center justify-center bg-background p-4 lg:hidden"
+        className="fixed inset-0 top-auto z-[3] flex h-full w-full flex-1 items-center justify-center bg-background p-4 lg:hidden"
       >
         <div className="grid h-full w-full grid-cols-1 grid-rows-[1fr_2fr] items-center justify-center">
           <div className="h-full" />
