@@ -8,7 +8,10 @@ import { LocaleSwitcher } from "./locale-switcher";
 import { NavigationToggleBtn } from "./NavigationToggleBtn";
 import { Carousel } from "./SwiperCarousel";
 import { ModeToggle } from "./theme-toggle";
+import { Heading } from "./Heading";
+
 export {
+  Heading,
   Carousel,
   Brand,
   BrandWrapper,
