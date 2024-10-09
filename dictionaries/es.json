@@ -15,17 +15,41 @@
       },
       "ui": {
         "button": {
-          "exploreRooms": "Explorar Habitaciones",
-          "contactUs": "Contáctenos"
+          "exploreRooms": "Explorar habitaciones",
+          "contactUs": "Contáctanos"
         }
       },
       "page": {
         "home": {
           "header": {
-            "review": "Reseñas",
-            "highlight": "En Salcedo, República Dominicana",
-            "title": "Experimente una Comodidad y Elegancia Inigualables!",
-            "complementaryText": "Ya sea que viaje solo, con familia, o en una escapada romántica, nuestras habitaciones cuidadosamente diseñadas satisfacen todas las necesidades. <b className='font-semibold'>Visítenos hoy!</b>"
+            "review": "Opiniones",
+            "highlight": "En Salcedo, Hermanas Mirabal, República Dominicana",
+            "title": "Experimenta un confort y elegancia inigualables!",
+            "complementaryText": "Ya sea que viajes solo, con familia o en una escapada romántica, nuestras habitaciones están diseñadas cuidadosamente para satisfacer todas tus necesidades. <b className='font-semibold'>¡Visítanos hoy!</b>"
+          },
+          "testimonials": {
+            "heading": {
+              "title": "No solo tomes nuestra palabra",
+              "subTitle": "Escucha directamente a nuestros huéspedes felices!"
+            }
+          },
+          "discounts": {
+            "heading": {
+              "title": "Descuentos Exclusivos",
+              "subTitle": "Cuanto más tiempo te quedes, más ahorras!"
+            },
+            "first_discount": {
+              "title": "Descuento",
+              "description": "Obtén un 5% de descuento al reservar una estancia de 5 días."
+            },
+            "second_discount": {
+              "title": "Descuento",
+              "description": "Disfruta de un 8% de descuento al reservar por 15 días o más."
+            },
+            "cta": {
+              "text": "Toma el control y reserva tu estancia de ensueño hoy mismo!",
+              "button": "Comenzar"
+            }
           }
         }
       }
