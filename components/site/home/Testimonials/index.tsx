@@ -5,13 +5,15 @@ import { Wrapper } from "../../components";
 export function Testimonials({ lang }: { lang: string }) {
   return (
     <section>
-      <Wrapper className="p-2 !py-20 lg:p-4">
-        <Divider orientation="horizontal">
-          <Heading
-            title="Don't only take our word for it"
-            subTitle="See what our guests have to say about us!"
-          />
-        </Divider>
+      <Wrapper className="p-2 !py-20 !pt-10 lg:p-4">
+        <div className="mx-auto max-w-2xl">
+          <Divider orientation="horizontal">
+            <Heading
+              title="Don't only take our word for it"
+              subTitle="See what our guests have to say about us!"
+            />
+          </Divider>
+        </div>
         <div className="grid w-full gap-4">
           <Carousel
             arr={reviews}
