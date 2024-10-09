@@ -10,6 +10,7 @@ import { Carousel } from "./SwiperCarousel";
 import { ModeToggle } from "./theme-toggle";
 import { Heading } from "./Heading";
 import { CardTestimonial } from "./CardTestimonial";
+import { StarRating } from "./StarRating";
 
 export {
   Heading,
@@ -24,4 +25,5 @@ export {
   NavigationToggleBtn,
   Divider,
   CardTestimonial,
+  StarRating,
 };

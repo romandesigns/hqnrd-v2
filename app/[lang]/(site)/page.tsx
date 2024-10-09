@@ -22,7 +22,7 @@ export default async function Home({
     >
       <div>
         <HomeHeader lang={lang} />
-        <main className="bg-neutral-300">
+        <main>
           <Testimonials lang={lang} />
         </main>
       </div>

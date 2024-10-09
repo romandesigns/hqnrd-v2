@@ -20,6 +20,7 @@ export function Gallery({ lang }: { lang: string }) {
               spaceBetween={10}
               speed={2000}
               direction="horizontal"
+              component="img"
             />
           </figure>
         </div>
