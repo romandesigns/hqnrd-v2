@@ -1,11 +1,11 @@
 import { Carousel, Divider, Heading } from "@/components/ui";
-import { reviews } from "@/components/ui/CardTestimonial/data";
 import { Wrapper } from "../../components";
+import { data } from "@/public/assets/data";
 
 export function Testimonials({ lang }: { lang: string }) {
   return (
     <section>
-      <Wrapper className="p-2 !py-20 !pt-10 lg:p-4">
+      <Wrapper className="p-2 lg:p-4">
         <div className="mx-auto max-w-2xl">
           <Divider orientation="horizontal">
             <Heading
@@ -14,9 +14,9 @@ export function Testimonials({ lang }: { lang: string }) {
             />
           </Divider>
         </div>
-        <div className="grid w-full gap-4">
+        <div className="my-28 grid w-full gap-4">
           <Carousel
-            arr={reviews}
+            arr={data.home.testimonials}
             delay={3500}
             direction="horizontal"
             component="cardTestimonial"

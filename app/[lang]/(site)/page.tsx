@@ -1,5 +1,5 @@
 import { SiteWrapper } from "@/components/site/components/SiteWrapper";
-import { HomeHeader, Testimonials } from "@/components/site/home";
+import { Discounts, HomeHeader, Testimonials } from "@/components/site/home";
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
 
@@ -24,6 +24,7 @@ export default async function Home({
         <HomeHeader lang={lang} />
         <main>
           <Testimonials lang={lang} />
+          <Discounts lang={lang} />
         </main>
       </div>
     </SiteWrapper>

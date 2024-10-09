@@ -12,10 +12,7 @@ export function Heading({
 }) {
   return (
     <h2
-      className={clsx(
-        `mt-0 flex flex-col items-center justify-center lg:py-10`,
-        classNames,
-      )}
+      className={clsx(`flex flex-col items-center justify-center`, classNames)}
     >
       {title && (
         <span className="rounded-full bg-primary p-4 py-2 text-xs font-medium text-primary-foreground">

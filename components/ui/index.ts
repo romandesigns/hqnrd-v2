@@ -11,6 +11,7 @@ import { ModeToggle } from "./theme-toggle";
 import { Heading } from "./Heading";
 import { CardTestimonial } from "./CardTestimonial";
 import { StarRating } from "./StarRating";
+import { DiscountCard } from "./DiscountCard";
 
 export {
   Heading,
@@ -26,4 +27,5 @@ export {
   Divider,
   CardTestimonial,
   StarRating,
+  DiscountCard,
 };

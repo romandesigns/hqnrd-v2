@@ -1,13 +1,8 @@
 "use client";
 import { Carousel, ContactWidget } from "@/components/ui";
-
+import { data } from "@/public/assets/data";
+console.log();
 export function Gallery({ lang }: { lang: string }) {
-  const images = [
-    "/assets/images/home/20221015_150527.jpg",
-    "/assets/images/home/20221015_150955.jpg",
-    "/assets/images/home/20221015_151139.jpg",
-  ];
-
   return (
     <div>
       <div className="relative p-8">
@@ -15,7 +10,7 @@ export function Gallery({ lang }: { lang: string }) {
         <div className="glass-effect relative aspect-square overflow-hidden">
           <figure className="relative aspect-square overflow-hidden">
             <Carousel
-              arr={images}
+              arr={data.home.hero_gallery}
               delay={3500}
               spaceBetween={10}
               speed={2000}
@@ -29,7 +24,7 @@ export function Gallery({ lang }: { lang: string }) {
         <div className="glass-effect absolute -left-8 top-12 aspect-square w-1/3 overflow-hidden max-lg:left-0 max-lg:w-1/4">
           <figure className="relative aspect-square overflow-hidden">
             <Carousel
-              arr={images}
+              arr={data.home.hero_gallery}
               delay={3500}
               spaceBetween={10}
               speed={2000}
@@ -42,7 +37,7 @@ export function Gallery({ lang }: { lang: string }) {
         <div className="glass-effect absolute -bottom-2 -left-2 -z-[1] aspect-square w-1/3 overflow-hidden max-lg:bottom-2 max-lg:left-2">
           <figure className="before:backdrop relative aspect-square overflow-hidden before:absolute before:-inset-0 before:z-[2] before:block before:rounded-md before:bg-black/50 before:backdrop-blur-sm">
             <Carousel
-              arr={images}
+              arr={data.home.hero_gallery}
               delay={3500}
               spaceBetween={10}
               speed={2000}
@@ -54,7 +49,7 @@ export function Gallery({ lang }: { lang: string }) {
         <div className="glass-effect absolute -bottom-2 -right-2 aspect-square w-1/3 overflow-hidden max-lg:bottom-2 max-lg:right-2">
           <figure className="relative aspect-square overflow-hidden">
             <Carousel
-              arr={images}
+              arr={data.home.hero_gallery}
               delay={3500}
               spaceBetween={10}
               speed={2000}
