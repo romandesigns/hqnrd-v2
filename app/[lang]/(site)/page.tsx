@@ -1,5 +1,10 @@
 import { SiteWrapper } from "@/components/site/components/SiteWrapper";
-import { Discounts, HomeHeader, Testimonials } from "@/components/site/home";
+import {
+  Categories,
+  Discounts,
+  HomeHeader,
+  Testimonials,
+} from "@/components/site/home";
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
 
@@ -43,6 +48,7 @@ export default async function Home({
               },
             }}
           />
+          <Categories dictionary={component.page.home.categories} />
         </main>
       </div>
     </SiteWrapper>

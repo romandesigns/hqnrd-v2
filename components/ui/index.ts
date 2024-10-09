@@ -12,6 +12,7 @@ import { Heading } from "./Heading";
 import { CardTestimonial } from "./CardTestimonial";
 import { StarRating } from "./StarRating";
 import { DiscountCard } from "./DiscountCard";
+import { CategoryCard } from "./CategoryCard";
 
 export {
   Heading,
@@ -28,4 +29,5 @@ export {
   CardTestimonial,
   StarRating,
   DiscountCard,
+  CategoryCard,
 };

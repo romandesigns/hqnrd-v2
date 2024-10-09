@@ -50,6 +50,51 @@
               "text": "Toma el control y reserva tu estancia de ensueño hoy mismo!",
               "button": "Comenzar"
             }
+          },
+
+          "categories": {
+            "heading": {
+              "title": "Encuentra Tu Habitación Perfecta",
+              "subTitle": "¡Elige la habitación que se adapta a tu estilo y reserva tu estancia hoy mismo!"
+            },
+            "rooms": {
+              "basics": {
+                "btnText": "Ver Habitaciones",
+                "title": "Básica",
+                "description": "Perfecta para viajeros solos que buscan simplicidad y comodidad.",
+                "slug": "basicas"
+              },
+              "doubles": {
+                "btnText": "Ver Habitaciones",
+                "title": "Habitación Doble",
+                "description": "Ideal para parejas, con amplio espacio y comodidades acogedoras.",
+                "slug": "dobles"
+              },
+              "standards": {
+                "btnText": "Ver Habitaciones",
+                "title": "Estándar",
+                "description": "Una opción equilibrada con todos los esenciales para una estancia agradable.",
+                "slug": "standards"
+              },
+              "double_beds": {
+                "btnText": "Ver Habitaciones",
+                "title": "Cama Doble",
+                "description": "Cama doble espaciosa para un descanso reparador después de un día de exploración.",
+                "slug": "dobles-cama"
+              },
+              "family": {
+                "btnText": "Ver Habitaciones",
+                "title": "Familiar",
+                "description": "Espacio generoso diseñado para que las familias disfruten tiempo de calidad juntas.",
+                "slug": "familiar"
+              },
+              "executives": {
+                "btnText": "Ver Habitaciones",
+                "title": "Ejecutiva",
+                "description": "Confort premium para viajeros de negocios que buscan relajarse con estilo.",
+                "slug": "ejecutivas"
+              }
+            }
           }
         }
       }

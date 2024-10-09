@@ -97,5 +97,49 @@ export const data = {
         ServiceRating: 4.2,
       },
     ],
+    categories: [
+      {
+        btnText: "View Rooms",
+        title: "Basic",
+        description:
+          "Perfect for solo travelers seeking simplicity and comfort.",
+        slug: "basicas",
+      },
+      {
+        btnText: "View Rooms",
+        title: "Double Room",
+        description:
+          "Ideal for pairs, offering ample space and cozy amenities.",
+        slug: "dobles",
+      },
+      {
+        btnText: "View Rooms",
+        title: "Standard",
+        description:
+          "A well-balanced option with all essentials for a pleasant stay.",
+        slug: "standards",
+      },
+      {
+        btnText: "View Rooms",
+        title: "Double Bed",
+        description:
+          "Spacious double bed for a restful sleep after a day of exploration.",
+        slug: "dobles-cama",
+      },
+      {
+        btnText: "View Rooms",
+        title: "Family",
+        description:
+          "Generous space designed for families to enjoy quality time together.",
+        slug: "familiar",
+      },
+      {
+        btnText: "View Rooms",
+        title: "Executive",
+        description:
+          "Premium comfort for business travelers looking to unwind in style.",
+        slug: "ejecutivas",
+      },
+    ],
   },
 };
