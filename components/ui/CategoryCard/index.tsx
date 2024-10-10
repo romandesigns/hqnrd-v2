@@ -29,7 +29,9 @@ export function CategoryCard({
       </header>
       <div className="flex flex-col bg-background p-4 pb-0">
         <h3 className="text-2xl font-bold">{title}</h3>
-        <p className="py-4 text-sm font-normal">{description}</p>
+        <p className="py-4 text-xs font-normal leading-relaxed">
+          {description}
+        </p>
       </div>
       <footer className="rounded-bl-md rounded-br-md bg-background pb-4 pl-4 pr-4 text-xs">
         <Button asChild className="w-full">
