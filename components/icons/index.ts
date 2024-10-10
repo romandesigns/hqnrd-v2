@@ -5,3 +5,7 @@ export { RiWhatsappFill } from "react-icons/ri";
 export { SiGoogletranslate } from "react-icons/si";
 export { TbMoonStars, TbSunHigh } from "react-icons/tb";
 export { FcGoogle } from "react-icons/fc";
+export { FiBox } from "react-icons/fi";
+export { IoIosPeople } from "react-icons/io";
+export { FaBed, FaUsers } from "react-icons/fa";
+export { MdKingBed, MdBusinessCenter } from "react-icons/md";

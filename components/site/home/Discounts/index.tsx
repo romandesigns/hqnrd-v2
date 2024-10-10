@@ -29,7 +29,6 @@ export function Discounts({
     };
   };
 }) {
-  console.log(card_left);
   return (
     <section>
       <Wrapper className="p-2 lg:p-4">
