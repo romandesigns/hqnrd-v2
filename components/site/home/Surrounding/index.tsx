@@ -1,16 +1,8 @@
-import { Carousel, Divider, Heading } from "@/components/ui";
-import { Wrapper } from "../../components";
-import { data } from "@/public/assets/data";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Divider, Heading } from "@/components/ui";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
+import { data } from "@/public/assets/data";
+import { Wrapper } from "../../components";
+import { Gallery } from "./Gallery";
 export function Surrounding({
   dictionary: {
     heading: { title, subTitle },
@@ -27,38 +19,16 @@ export function Surrounding({
             <Heading title={title} subTitle={subTitle} />
           </Divider>
         </div>
-        <Tabs defaultValue="account" className="">
-          <TabsList className="grid w-full grid-cols-2">
+        <Tabs defaultValue="terraze" className="mb-28 mt-10">
+          <TabsList className="mx-auto mb-10 grid w-full max-w-lg grid-cols-2">
             <TabsTrigger value="terraze">Terraze</TabsTrigger>
             <TabsTrigger value="hallways">Hallways</TabsTrigger>
           </TabsList>
           <TabsContent value="terraze">
-            <div className="grid grid-cols-2 grid-rows-2 gap-4">
-              <figure className="row-span-full aspect-square rounded-md border border-red-600">
-                Terraze
-              </figure>
-              <figure className="h-full rounded-md border border-blue-600">
-                Terraze
-              </figure>
-              <figure className="h-full rounded-md border border-green-600">
-                Terraze
-              </figure>
-            </div>
+            <Gallery imagesArray={data.home.hero_gallery} />
           </TabsContent>
           <TabsContent value="hallways">
-            <div className="my-28 grid w-full gap-4">
-              <div className="grid grid-cols-2 grid-rows-2 gap-4">
-                <figure className="row-span-full aspect-square rounded-md border border-red-600">
-                  Terraze
-                </figure>
-                <figure className="h-full rounded-md border border-blue-600">
-                  Terraze
-                </figure>
-                <figure className="h-full rounded-md border border-green-600">
-                  Terraze
-                </figure>
-              </div>
-            </div>
+            <Gallery imagesArray={data.home.hero_gallery} />
           </TabsContent>
         </Tabs>
       </Wrapper>

@@ -9,3 +9,4 @@ export { FiBox } from "react-icons/fi";
 export { IoIosPeople } from "react-icons/io";
 export { FaBed, FaUsers } from "react-icons/fa";
 export { MdKingBed, MdBusinessCenter } from "react-icons/md";
+export { CiImageOn } from "react-icons/ci";

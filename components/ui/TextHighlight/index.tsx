@@ -27,13 +27,9 @@ export function TextHighlight({
         type: highlightType,
         color: color,
       });
-
-      // Add delay using setTimeout
       const timer = setTimeout(() => {
         annotation.show();
       }, delay);
-
-      // Cleanup the timeout when the component unmounts or dependencies change
       return () => clearTimeout(timer);
     }
   }, [elId, color, highlightType, delay]);
