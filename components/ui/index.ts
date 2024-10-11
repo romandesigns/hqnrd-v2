@@ -14,6 +14,7 @@ import { StarRating } from "./StarRating";
 import { DiscountCard } from "./DiscountCard";
 import { CategoryCard } from "./CategoryCard";
 import { CardHeader } from "./CardHeader";
+import { TextHighlight } from "./TextHighlight";
 
 export {
   Heading,
@@ -32,4 +33,5 @@ export {
   DiscountCard,
   CategoryCard,
   CardHeader,
+  TextHighlight,
 };

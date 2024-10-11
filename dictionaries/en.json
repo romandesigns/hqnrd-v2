@@ -25,7 +25,8 @@
             "review": "Reviews",
             "highlight": "In Salcedo, Dominican Republic",
             "title": "Experience Unmatched Comfort and Elegance!",
-            "complementaryText": "Whether you&#39;re traveling solo, with family, or on a romantic escape, our thoughtfully designed rooms cater to every need.  <b className='font-semibold'>Visit us today!</d>"
+            "complementaryText": "Whether you&#39;re traveling solo, with family, or on a romantic escape, our thoughtfully designed rooms cater to every need",
+            "cta": "Visit us today!"
           },
           "testimonials": {
             "heading": {
@@ -93,6 +94,12 @@
                 "description": "Premium comfort for business travelers looking to unwind in style.",
                 "slug": "ejecutivas"
               }
+            }
+          },
+          "surrounding": {
+            "heading": {
+              "title": "Unveil Our Scenic Spaces",
+              "subTitle": "Relax and recharge in our tranquil rooftop, serene hallways, and inviting common areas designed for your comfort."
             }
           }
         }

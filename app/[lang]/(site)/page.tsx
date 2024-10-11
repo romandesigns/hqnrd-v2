@@ -3,6 +3,7 @@ import {
   Categories,
   Discounts,
   HomeHeader,
+  Surrounding,
   Testimonials,
 } from "@/components/site/home";
 import { getDictionary } from "@/get-dictionary";
@@ -49,6 +50,12 @@ export default async function Home({
             }}
           />
           <Categories dictionary={component.page.home.categories} />
+          <Surrounding
+            lang={lang}
+            dictionary={{
+              heading: component.page.home.surrounding.heading,
+            }}
+          />
         </main>
       </div>
     </SiteWrapper>

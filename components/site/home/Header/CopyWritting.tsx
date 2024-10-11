@@ -4,7 +4,12 @@ import {
   FcGoogle,
   PiMapPinFill,
 } from "@/components/icons";
-import { Button, ContactWidget, ExternalLink } from "@/components/ui";
+import {
+  Button,
+  ContactWidget,
+  ExternalLink,
+  TextHighlight,
+} from "@/components/ui";
 import { CONSTANTS } from "@/constants";
 import { useHtmlParser } from "@/utils/useHtmlParser";
 import classNames from "classnames";
@@ -19,6 +24,7 @@ interface CopyWrittingProps {
     highlight: string;
     title: string;
     complementaryText: string;
+    cta: string;
   };
 }
 
@@ -78,6 +84,16 @@ export function CopyWritting({
       <BoxReveal boxColor={"black"} duration={0.5}>
         <p className="my-4 text-sm leading-relaxed max-lg:px-4 max-lg:text-center max-lg:text-xs">
           {useHtmlParser(dictionary.header.complementaryText)}
+          <TextHighlight
+            {...{
+              elId: "myEl",
+              text: dictionary.header.cta,
+              highlightType: "underline",
+              color: "black",
+              delay: 3500,
+              className: "font-bold inline-block ml-1",
+            }}
+          />
         </p>
       </BoxReveal>
 

@@ -25,7 +25,8 @@
             "review": "Opiniones",
             "highlight": "En Salcedo, República Dominicana",
             "title": "Experimenta un confort y elegancia inigualables!",
-            "complementaryText": "Ya sea que viajes solo, con familia o en una escapada romántica, nuestras habitaciones están diseñadas cuidadosamente para satisfacer todas tus necesidades. <b className='font-semibold'>¡Visítanos hoy!</b>"
+            "complementaryText": "Ya sea que viajes solo, con familia o en una escapada romántica, nuestras habitaciones están diseñadas cuidadosamente para satisfacer todas tus necesidades",
+            "cta": "Visítanos hoy!"
           },
           "testimonials": {
             "heading": {
@@ -51,7 +52,6 @@
               "button": "Comenzar"
             }
           },
-
           "categories": {
             "heading": {
               "title": "Encuentra Tu Habitación Perfecta",
@@ -94,6 +94,12 @@
                 "description": "Confort premium para viajeros de negocios que buscan relajarse con estilo.",
                 "slug": "ejecutivas"
               }
+            }
+          },
+          "surrounding": {
+            "heading": {
+              "title": "Descubre Nuestros Espacios Escénicos",
+              "subTitle": "Relájate y recarga energías en nuestra tranquila azotea, serenos pasillos y acogedoras áreas comunes diseñadas para tu comodidad."
             }
           }
         }
