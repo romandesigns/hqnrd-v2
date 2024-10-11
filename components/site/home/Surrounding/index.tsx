@@ -1,15 +1,21 @@
-import { Divider, Heading } from "@/components/ui";
+import { Button, Divider, Heading } from "@/components/ui";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { data } from "@/public/assets/data";
 import { Wrapper } from "../../components";
 import { Gallery } from "./Gallery";
+import Link from "next/link";
 export function Surrounding({
+  lang,
   dictionary: {
     heading: { title, subTitle },
+    cta: { buttonTxt },
   },
 }: {
   lang: string;
-  dictionary: { heading: { title: string; subTitle: string } };
+  dictionary: {
+    heading: { title: string; subTitle: string };
+    cta: { buttonTxt: string };
+  };
 }) {
   return (
     <section>
@@ -31,6 +37,13 @@ export function Surrounding({
             <Gallery imagesArray={data.home.hero_gallery} />
           </TabsContent>
         </Tabs>
+        <div className="flex w-full flex-col items-center justify-center">
+          <Button asChild className="w-1/4">
+            <Link href={`/${lang}/habitaciones`} className="block py-6">
+              {buttonTxt}
+            </Link>
+          </Button>
+        </div>
       </Wrapper>
     </section>
   );

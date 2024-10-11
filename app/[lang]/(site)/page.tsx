@@ -54,6 +54,7 @@ export default async function Home({
             lang={lang}
             dictionary={{
               heading: component.page.home.surrounding.heading,
+              cta: component.page.home.surrounding.cta,
             }}
           />
         </main>

@@ -8,6 +8,7 @@ import {
   Button,
   ContactWidget,
   ExternalLink,
+  StarRating,
   TextHighlight,
 } from "@/components/ui";
 import { CONSTANTS } from "@/constants";
@@ -51,13 +52,7 @@ export function CopyWritting({
             <FcGoogle />
             <NumberTicker value={4.5} decimalPlaces={2} />
           </p>
-          <span className="flex items-center justify-start">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStarHalfAlt />
-          </span>
+          <StarRating rating={4.5} classNames="pt-1" />
         </div>
         <small className="max-lg:text-xs max-lg:font-medium">
           <NumberTicker value={139} delay={2} /> Google{" "}
@@ -90,7 +85,7 @@ export function CopyWritting({
               text: dictionary.header.cta,
               highlightType: "underline",
               color: "black",
-              delay: 3500,
+              delay: 3000,
               className: "font-bold inline-block ml-1",
             }}
           />

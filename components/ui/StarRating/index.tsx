@@ -1,16 +1,23 @@
+import { clsx } from "@/utils/clsx";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 interface StarRatingProps {
   rating: number;
+  classNames?: string;
 }
 
-export function StarRating({ rating }: StarRatingProps) {
-  const fullStars = Math.floor(rating); // Number of full stars
-  const hasHalfStar = rating % 1 !== 0; // Check if there's a half star
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0); // Calculate empty stars
+export function StarRating({ rating, classNames }: StarRatingProps) {
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 !== 0;
+  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
   return (
-    <span className="flex -translate-y-1 items-start justify-center">
+    <span
+      className={clsx(
+        `flex -translate-y-1 items-start justify-center`,
+        classNames,
+      )}
+    >
       {/* Render full stars */}
       {Array(fullStars)
         .fill(0)
