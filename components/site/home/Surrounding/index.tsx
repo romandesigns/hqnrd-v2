@@ -1,18 +1,15 @@
 import { Button, Divider, ExternalLink, Heading } from "@/components/ui";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CONSTANTS } from "@/constants";
 import { data } from "@/public/assets/data";
 import { Wrapper } from "../../components";
 import { Gallery } from "./Gallery";
-import Link from "next/link";
-import { CONSTANTS } from "@/constants";
 export function Surrounding({
-  lang,
   dictionary: {
     heading: { title, subTitle },
     cta: { buttonTxt },
   },
 }: {
-  lang: string;
   dictionary: {
     heading: { title: string; subTitle: string };
     cta: { buttonTxt: string };
