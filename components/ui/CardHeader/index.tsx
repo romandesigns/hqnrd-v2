@@ -2,11 +2,11 @@ import { clsx } from "@/utils/clsx";
 import React from "react";
 
 export function CardHeader({
-  p = 0,
-  y = 2,
+  p = 2,
+  y = 1,
   width = "auto",
-  highlight,
-  title,
+  highlight = "# 101",
+  title = "Room Category",
 }: {
   p?: number;
   y?: number;
