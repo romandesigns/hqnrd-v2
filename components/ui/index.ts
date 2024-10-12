@@ -15,6 +15,7 @@ import { DiscountCard } from "./DiscountCard";
 import { CategoryCard } from "./CategoryCard";
 import { CardHeader } from "./CardHeader";
 import { TextHighlight } from "./TextHighlight";
+import { CardHeading } from "./CardHeading";
 
 export {
   Heading,
@@ -34,4 +35,5 @@ export {
   CategoryCard,
   CardHeader,
   TextHighlight,
+  CardHeading,
 };

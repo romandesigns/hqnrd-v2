@@ -3,3 +3,4 @@ export { Testimonials } from "./Testimonials";
 export { Discounts } from "./Discounts";
 export { Categories } from "./Categories";
 export { Surrounding } from "./Surrounding";
+export { Trending } from "./Trending";

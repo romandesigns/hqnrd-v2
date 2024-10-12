@@ -5,6 +5,7 @@ import {
   HomeHeader,
   Surrounding,
   Testimonials,
+  Trending,
 } from "@/components/site/home";
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
@@ -54,6 +55,12 @@ export default async function Home({
             dictionary={{
               heading: component.page.home.surrounding.heading,
               cta: component.page.home.surrounding.cta,
+            }}
+          />
+          <Trending
+            lang={lang}
+            dictionary={{
+              heading: component.page.home.trending.heading,
             }}
           />
         </main>

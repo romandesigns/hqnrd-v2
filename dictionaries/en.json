@@ -104,6 +104,12 @@
             "cta": {
               "buttonTxt": "Contact Us!"
             }
+          },
+          "trending": {
+            "heading": {
+              "title": "Trending!",
+              "subTitle": "Explore our most popular rooms and book your stay today!"
+            }
           }
         }
       }

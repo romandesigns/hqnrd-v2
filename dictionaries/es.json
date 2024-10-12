@@ -104,6 +104,12 @@
             "cta": {
               "buttonTxt": "Contáctanos!"
             }
+          },
+          "trending": {
+            "heading": {
+              "title": "Tendencias!",
+              "subTitle": "Explora nuestras habitaciones más populares y reserva tu estancia hoy mismo!"
+            }
           }
         }
       }
