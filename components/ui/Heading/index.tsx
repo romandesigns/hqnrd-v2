@@ -20,7 +20,7 @@ export function Heading({
         </span>
       )}
       {subTitle && (
-        <span className="xs:text-xs mt-4 text-center text-sm font-medium">
+        <span className="xs:text-xs mt-4 text-center text-sm font-normal">
           {subTitle}
         </span>
       )}

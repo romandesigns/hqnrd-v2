@@ -1,9 +1,10 @@
-import { Button, Divider, Heading } from "@/components/ui";
+import { Button, Divider, ExternalLink, Heading } from "@/components/ui";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { data } from "@/public/assets/data";
 import { Wrapper } from "../../components";
 import { Gallery } from "./Gallery";
 import Link from "next/link";
+import { CONSTANTS } from "@/constants";
 export function Surrounding({
   lang,
   dictionary: {
@@ -67,9 +68,12 @@ export function Surrounding({
         </Tabs>
         <div className="flex w-full flex-col items-center justify-center">
           <Button asChild className="w-1/4">
-            <Link href={`/${lang}/habitaciones`} className="block py-6">
+            <ExternalLink
+              href={CONSTANTS.site.contact.whatsapp_chat}
+              className="block py-6"
+            >
               {buttonTxt}
-            </Link>
+            </ExternalLink>
           </Button>
         </div>
       </Wrapper>
