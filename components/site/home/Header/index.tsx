@@ -1,9 +1,9 @@
+import { getDictionary } from "@/get-dictionary";
+import { Locale } from "@/i18n-config";
 import { Metadata } from "next/types";
 import { Wrapper } from "../../components";
 import { CopyWritting } from "./CopyWritting";
 import { Gallery } from "./Gallery";
-import { getDictionary } from "@/get-dictionary";
-import { Locale } from "@/i18n-config";
 export const metadata: Metadata = {
   title: "Hotel Quinto Nivel RD",
   description:

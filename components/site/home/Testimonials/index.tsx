@@ -1,6 +1,6 @@
 import { Carousel, Divider, Heading } from "@/components/ui";
-import { Wrapper } from "../../components";
 import { data } from "@/public/assets/data";
+import { Wrapper } from "../../components";
 
 export function Testimonials({
   dictionary: {

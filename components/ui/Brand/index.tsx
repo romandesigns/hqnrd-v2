@@ -1,4 +1,5 @@
 import { CONSTANTS } from "@/constants";
+import { clsx } from "@/utils/clsx";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,13 +7,18 @@ export function Brand({
   width = 24,
   height = 24,
   lang,
+  classNames,
 }: {
   width?: number;
   height?: number;
   lang?: string;
+  classNames?: string;
 }) {
   return (
-    <Link href={`/${lang}`} className="flex items-center justify-start gap-2">
+    <Link
+      href={`/${lang}`}
+      className={clsx(`flex items-center justify-start gap-2`, classNames)}
+    >
       <div>
         <Image
           src={CONSTANTS.site.site_logo}

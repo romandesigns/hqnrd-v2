@@ -17,6 +17,7 @@ export const CONSTANTS = {
       instagram: "https://www.instagram.com/rdhotelquintonivel",
     },
     address: "Calle de la Mujer #2, Urb, Salcedo 34000, Dominican Republic",
+    support_email: "roman@wavystyle.io",
     map_location:
       "//www.google.com/maps/place/Hotel+Quinto+Nivel+RD/@19.3805972,-70.4256792,17z/data=!3m1!4b1!4m9!3m8!1s0x8eae296e50e06303:0x4141e3bda5d73fec!5m2!4m1!1i2!8m2!3d19.3805922!4d-70.4231043!16s%2Fg%2F11h18w_m9k?entry=ttu",
     contact: {

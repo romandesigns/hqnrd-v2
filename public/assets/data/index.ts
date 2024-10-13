@@ -1,4 +1,11 @@
 export const data = {
+  site: {
+    shareData: {
+      title: "Hotel Quinto Nivel",
+      text: "Contact us for more information",
+      url: "https://hotelquintonivelrd.com",
+    },
+  },
   home: {
     hero_gallery: [
       "/assets/images/home/20221015_150527.jpg",
