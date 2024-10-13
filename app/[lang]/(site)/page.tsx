@@ -58,7 +58,6 @@ export default async function Home({
             }}
           />
           <Trending
-            lang={lang}
             dictionary={{
               heading: component.page.home.trending.heading,
             }}

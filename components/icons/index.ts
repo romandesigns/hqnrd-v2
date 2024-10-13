@@ -10,3 +10,13 @@ export { IoIosPeople } from "react-icons/io";
 export { FaBed, FaUsers } from "react-icons/fa";
 export { MdKingBed, MdBusinessCenter } from "react-icons/md";
 export { CiImageOn } from "react-icons/ci";
+export { BiHandicap } from "react-icons/bi";
+export { PiFan } from "react-icons/pi";
+export { MdOutlineKitchen } from "react-icons/md";
+export { FaShareNodes } from "react-icons/fa6";
+export {
+  TbAirConditioning,
+  TbMicrowave,
+  TbBrandIntercom,
+  TbToolsKitchen,
+} from "react-icons/tb";

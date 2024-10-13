@@ -16,6 +16,8 @@ import { CategoryCard } from "./CategoryCard";
 import { CardHeader } from "./CardHeader";
 import { TextHighlight } from "./TextHighlight";
 import { CardHeading } from "./CardHeading";
+import { ShareBtn } from "./ShareBtn";
+import { RoomCard } from "./RoomCard";
 
 export {
   Heading,
@@ -36,4 +38,6 @@ export {
   CardHeader,
   TextHighlight,
   CardHeading,
+  ShareBtn,
+  RoomCard,
 };
