@@ -3,25 +3,7 @@ import React from "react";
 import { Navigation } from "../Navigation";
 import { Footer } from "../Footer";
 import { useSiteMobileNavigation } from "@/hooks";
-
-export interface SiteNavigationTypes {
-  navigation: {
-    home: string;
-    rooms: string;
-    signIn: string;
-    signUp: string;
-    signOut: string;
-  };
-  themeMenu: {
-    light: string;
-    dark: string;
-    system: string;
-  };
-  footer: {
-    ctaText: string;
-    mapHeading: string;
-  };
-}
+import { SiteNavigationTypes } from "@/types";
 
 /**
  * Site Wrapper Component

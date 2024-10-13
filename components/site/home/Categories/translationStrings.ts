@@ -6,9 +6,9 @@ import {
   MdBusinessCenter,
   MdKingBed,
 } from "@/components/icons";
-import { Categories } from ".";
+import { CategoriesProps } from "@/types";
 
-export const dictionaryStrings = (dictionary: Categories) => [
+export const dictionaryStrings = (dictionary: CategoriesProps) => [
   {
     btnText: dictionary.rooms.basics.btnText,
     title: dictionary.rooms.basics.title,

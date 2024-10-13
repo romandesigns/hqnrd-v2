@@ -1,30 +1,9 @@
 import { CategoryCard, Divider, Heading } from "@/components/ui";
 import { Wrapper } from "../../components";
 import { dictionaryStrings } from "./translationStrings";
+import { CategoriesProps } from "@/types";
 
-export interface Categories {
-  heading: {
-    title: string;
-    subTitle: string;
-  };
-  rooms: {
-    basics: RoomCategory;
-    doubles: RoomCategory;
-    standards: RoomCategory;
-    double_beds: RoomCategory;
-    family: RoomCategory;
-    executives: RoomCategory;
-  };
-}
-
-interface RoomCategory {
-  btnText: string;
-  title: string;
-  description: string;
-  slug: string;
-}
-
-export function Categories({ dictionary }: { dictionary: Categories }) {
+export function Categories({ dictionary }: { dictionary: CategoriesProps }) {
   const heading = dictionary.heading;
   const translations = dictionaryStrings(dictionary);
 

@@ -7,14 +7,14 @@ import {
 } from "@/components/icons";
 import { ExternalLink, ShareBtn } from "@/components/ui";
 import { CONSTANTS } from "@/constants";
-import { SiteMetaData } from "@/types";
+import { SiteFooterProps, SiteMetaData } from "@/types";
 
 export const Contact = ({
   metadata: { metadata },
-  dictionary,
+  dictionary: { dictionary },
 }: {
   metadata: SiteMetaData;
-  dictionary: { ctaText: string; mapHeading: string };
+  dictionary: SiteFooterProps;
 }) => {
   return (
     <ul className="my-10 w-full space-y-3 text-sm text-white [&_li_a]:hover:text-white">

@@ -1,6 +1,7 @@
 import { Button, DiscountCard, Divider, Heading } from "@/components/ui";
 import Link from "next/link";
 import { Wrapper } from "../../components";
+import { DiscountCardProps } from "@/types";
 
 export function Discounts({
   lang,
@@ -9,26 +10,7 @@ export function Discounts({
     cards: { card_left, card_right },
     cta: { ctaText, buttonTxt },
   },
-}: {
-  lang: string;
-  dictionary: {
-    heading: { title: string; subTitle: string };
-    cards: {
-      card_left: {
-        title: string;
-        description: string;
-      };
-      card_right: {
-        title: string;
-        description: string;
-      };
-    };
-    cta: {
-      ctaText: string;
-      buttonTxt: string;
-    };
-  };
-}) {
+}: DiscountCardProps) {
   return (
     <section>
       <Wrapper className="p-2 lg:p-4">
@@ -52,9 +34,14 @@ export function Discounts({
           />
         </div>
         <div className="flex w-full flex-col items-center justify-center">
-          <p className="mb-4 text-xs font-medium opacity-85">{ctaText}</p>
-          <Button asChild className="w-1/4">
-            <Link href={`/${lang}/habitaciones`} className="block py-6">
+          <p className="mb-4 text-center text-xs font-medium opacity-85">
+            {ctaText}
+          </p>
+          <Button asChild>
+            <Link
+              href={`/${lang}/habitaciones`}
+              className="block w-full max-w-sm py-6"
+            >
               {buttonTxt}
             </Link>
           </Button>

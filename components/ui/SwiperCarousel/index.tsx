@@ -8,28 +8,7 @@ import "swiper/css";
 import { CardTestimonial } from "@/components/ui";
 import { clsx } from "@/utils/clsx";
 import useViewportState from "beautiful-react-hooks/useViewportState";
-
-interface CarouselProps {
-  arr: string[] | CardTestimonialProps[];
-  delay: number;
-  direction: "horizontal" | "vertical";
-  className?: string;
-  spaceBetween?: number;
-  speed?: number;
-  component?: "cardTestimonial" | "img";
-  classNames?: string;
-  slidesPerView?: number | "auto";
-}
-
-export interface CardTestimonialProps {
-  avatar: string;
-  author: string;
-  rating: number;
-  comment: string;
-  roomRating: number;
-  locationRating: number;
-  ServiceRating: number;
-}
+import { CardTestimonialProps, CarouselProps } from "@/types";
 
 export function Carousel({
   arr,

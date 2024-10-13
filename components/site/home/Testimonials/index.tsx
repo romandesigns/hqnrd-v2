@@ -1,15 +1,13 @@
 import { Carousel, Divider, Heading } from "@/components/ui";
 import { data } from "@/public/assets/data";
 import { Wrapper } from "../../components";
+import { TestimonialsProps } from "@/types";
 
 export function Testimonials({
   dictionary: {
     heading: { title, subTitle },
   },
-}: {
-  lang: string;
-  dictionary: { heading: { title: string; subTitle: string } };
-}) {
+}: TestimonialsProps) {
   return (
     <section>
       <Wrapper className="p-2 lg:p-4">

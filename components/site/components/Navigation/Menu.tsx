@@ -1,9 +1,9 @@
 "use client";
 import { Button, ContactWidget, ModeToggle } from "@/components/ui";
 import { useSiteMobileNavigation } from "@/hooks";
+import { SiteNavigationTypes } from "@/types";
 import { clsx } from "@/utils/clsx";
 import Link from "next/link";
-import { SiteNavigationTypes } from "../SiteWrapper";
 
 export function NavigationMenu({
   lang,

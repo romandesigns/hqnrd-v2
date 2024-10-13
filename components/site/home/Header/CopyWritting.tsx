@@ -9,20 +9,11 @@ import {
 import BoxReveal from "@/components/ui/box-reveal";
 import NumberTicker from "@/components/ui/number-ticker";
 import { CONSTANTS } from "@/constants";
+import { CopyWrittingProps } from "@/types";
 import { useHtmlParser } from "@/utils/useHtmlParser";
 import classNames from "classnames";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
-
-interface CopyWrittingProps {
-  header: {
-    review: string;
-    highlight: string;
-    title: string;
-    complementaryText: string;
-    cta: string;
-  };
-}
 
 /**
  * CopyWritting Header Component

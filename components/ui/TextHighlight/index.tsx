@@ -1,16 +1,7 @@
 "use client";
-import React, { useEffect } from "react";
+import { TextHighlightProps } from "@/types";
+import { useEffect } from "react";
 import { annotate } from "rough-notation";
-import { RoughAnnotationType } from "rough-notation/lib/model";
-
-interface TextHighlightProps {
-  elId: string;
-  text: string;
-  highlightType: RoughAnnotationType;
-  color: string;
-  delay?: number;
-  className?: string;
-}
 
 export function TextHighlight({
   elId,

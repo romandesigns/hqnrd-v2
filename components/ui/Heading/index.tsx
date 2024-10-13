@@ -1,15 +1,8 @@
+import { HeadingProps } from "@/types";
 import { clsx } from "@/utils/clsx";
 import React from "react";
 
-export function Heading({
-  title,
-  subTitle,
-  classNames,
-}: {
-  title: string;
-  subTitle: string;
-  classNames?: string;
-}) {
+export function Heading({ title, subTitle, classNames }: HeadingProps) {
   return (
     <h2
       className={clsx(`flex flex-col items-center justify-center`, classNames)}

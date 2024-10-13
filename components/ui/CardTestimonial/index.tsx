@@ -1,7 +1,7 @@
 import { useHtmlParser } from "@/utils/useHtmlParser";
 import Image from "next/image";
 import { StarRating } from "..";
-import { CardTestimonialProps } from "../SwiperCarousel";
+import { CardTestimonialProps } from "@/types";
 
 export function CardTestimonial({
   avatar,
@@ -13,7 +13,7 @@ export function CardTestimonial({
   ServiceRating,
 }: CardTestimonialProps) {
   return (
-    <article className="glass-effect @container w-full">
+    <article className="glass-effect w-full @container">
       <div className="flex justify-end after:absolute after:left-[.5rem] after:block after:h-[calc(100%-3rem)] after:w-[3.4%] after:rounded-tl-lg after:bg-background after:content-[''] lg:after:left-3">
         <div className="relative z-[2] w-[20.5%] -translate-y-6 rounded-lg rounded-tr-none bg-transparent p-[.3rem] shadow-[0px_26px_0px_2px_hsl(var(--background))]">
           <div className="relative aspect-square h-[100%] w-full -translate-y-[.05rem] overflow-hidden rounded-lg bg-background">

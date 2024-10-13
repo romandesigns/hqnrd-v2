@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui";
+import { CategoryCardProps } from "@/types";
 import Link from "next/link";
-import { IconType } from "react-icons/lib";
 
 export function CategoryCard({
   btnText,
@@ -8,13 +8,7 @@ export function CategoryCard({
   description,
   slug,
   Icon,
-}: {
-  btnText: string;
-  title: string;
-  description: string;
-  slug: string;
-  Icon: IconType;
-}) {
+}: CategoryCardProps) {
   return (
     <article className="glass-effect">
       <header className="flex w-full flex-col">

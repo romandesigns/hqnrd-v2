@@ -1,12 +1,9 @@
 import { AiFillFacebook, ImInstagram } from "@/components/icons";
 import { ExternalLink } from "@/components/ui";
 import { CONSTANTS } from "@/constants";
+import { SiteFooterProps } from "@/types";
 
-export function SocialMedia({
-  dictionary,
-}: {
-  dictionary: { ctaText: string; mapHeading: string };
-}) {
+export function SocialMedia({ dictionary }: SiteFooterProps) {
   return (
     <ul className="mt-4 w-full space-y-3 text-sm text-white md:mt-0 [&_li_a]:hover:text-white">
       <li>

@@ -4,16 +4,15 @@ import { CONSTANTS } from "@/constants";
 import { data } from "@/public/assets/data";
 import { Wrapper } from "../../components";
 import { Gallery } from "./Gallery";
+import { SurroundingProps } from "@/types";
+
 export function Surrounding({
   dictionary: {
     heading: { title, subTitle },
     cta: { buttonTxt },
   },
 }: {
-  dictionary: {
-    heading: { title: string; subTitle: string };
-    cta: { buttonTxt: string };
-  };
+  dictionary: SurroundingProps;
 }) {
   return (
     <section>
