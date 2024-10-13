@@ -9,11 +9,16 @@ import {
   TbMicrowave,
   TbToolsKitchen,
 } from "@/components/icons";
+import { data } from "@/public/assets/data";
 
 export function RoomCard({ imgSrc }: { imgSrc: string }) {
   return (
     <div className="">
-      <CardHeader highlight="#101" title="Double Bed" />
+      <CardHeader
+        highlight="#101"
+        title="Double Bed"
+        siteMetaData={{ metadata: data.site.shareData }}
+      />
       <div className="bg-background p-2">
         <figure className="relative block aspect-video">
           <Image

@@ -25,6 +25,7 @@ export default async function Home({
       dictionary={{
         navigation: component.navigation,
         themeMenu: component.themeMenu,
+        footer: component.footer,
       }}
     >
       <div>

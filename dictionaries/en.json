@@ -8,6 +8,10 @@
         "signUp": "Sign Up",
         "signOut": "Sign Out"
       },
+      "footer": {
+        "ctaText": "Report an Issue",
+        "mapHeading": "Find Us in Google Maps"
+      },
       "themeMenu": {
         "light": "Light",
         "dark": "Dark",

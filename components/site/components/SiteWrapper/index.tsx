@@ -17,6 +17,10 @@ export interface SiteNavigationTypes {
     dark: string;
     system: string;
   };
+  footer: {
+    ctaText: string;
+    mapHeading: string;
+  };
 }
 
 /**
@@ -46,7 +50,7 @@ export function SiteWrapper({
       {/* Page Content */}
       {children}
       {/* Page Footer */}
-      <Footer />
+      <Footer lang={lang} dictionary={dictionary.footer} />
     </div>
   );
 }

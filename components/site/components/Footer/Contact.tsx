@@ -7,9 +7,15 @@ import {
 } from "@/components/icons";
 import { ExternalLink, ShareBtn } from "@/components/ui";
 import { CONSTANTS } from "@/constants";
-import { ShareDataPropTypes } from "@/types";
+import { SiteMetaData } from "@/types";
 
-export const Contact = ({ siteSharableData }: ShareDataPropTypes) => {
+export const Contact = ({
+  metadata: { metadata },
+  dictionary,
+}: {
+  metadata: SiteMetaData;
+  dictionary: { ctaText: string; mapHeading: string };
+}) => {
   return (
     <ul className="my-10 w-full space-y-3 text-sm text-white [&_li_a]:hover:text-white">
       <li>
@@ -44,12 +50,12 @@ export const Contact = ({ siteSharableData }: ShareDataPropTypes) => {
             {CONSTANTS.site.contact.domain}
           </span>
         </ExternalLink>
-        <ShareBtn siteSharableData={siteSharableData} />
+        <ShareBtn metadata={{ metadata }} />
       </li>
       <li>
         <ExternalLink
           href={CONSTANTS.site.map_location}
-          className="flex items-start justify-start gap-3"
+          className="inline-flex items-start justify-start gap-3"
         >
           <>
             <FaMapMarkerAlt />
@@ -59,7 +65,7 @@ export const Contact = ({ siteSharableData }: ShareDataPropTypes) => {
           </>
         </ExternalLink>
       </li>
-      <li className="block pt-10">
+      <li className="pt-10">
         <ExternalLink
           href="mailto:roman@wavystyle.io?cc=trfm1987@gmail.com&subject=HQNRD Support Request"
           className="inline-flex flex-col items-start justify-center rounded-md border p-3"
@@ -68,7 +74,7 @@ export const Contact = ({ siteSharableData }: ShareDataPropTypes) => {
             <span className="flex items-baseline justify-start gap-2">
               <BiSolidTrafficCone />
               <strong className="underlined flex items-center justify-start text-xs text-inherit">
-                Report an Issue
+                {dictionary.ctaText}
               </strong>
             </span>
           </>

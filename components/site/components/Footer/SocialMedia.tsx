@@ -2,7 +2,11 @@ import { AiFillFacebook, ImInstagram } from "@/components/icons";
 import { ExternalLink } from "@/components/ui";
 import { CONSTANTS } from "@/constants";
 
-export function SocialMedia() {
+export function SocialMedia({
+  dictionary,
+}: {
+  dictionary: { ctaText: string; mapHeading: string };
+}) {
   return (
     <ul className="mt-4 w-full space-y-3 text-sm text-white md:mt-0 [&_li_a]:hover:text-white">
       <li>
@@ -23,8 +27,8 @@ export function SocialMedia() {
           <span className="mr-2 text-[0.7rem] underline">Instagram</span>
         </ExternalLink>
       </li>
-      <li className="block pt-10">
-        <h3 className="text-xs font-semibold">Find Us in Google Map</h3>
+      <li className="pt-10">
+        <h3 className="text-xs font-semibold">{dictionary.mapHeading}</h3>
       </li>
       <li className="mt-4 h-52 w-full overflow-hidden rounded-md lg:w-3/4">
         <iframe

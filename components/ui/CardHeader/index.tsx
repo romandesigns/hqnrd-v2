@@ -1,18 +1,21 @@
 import { clsx } from "@/utils/clsx";
 import React from "react";
 import { ShareBtn } from "..";
+import { SiteMetaData } from "@/types";
 
 export function CardHeader({
   p = 2,
   width = "auto",
   highlight = "# 101",
   title = "Room Category",
+  siteMetaData: { metadata },
 }: {
   p?: number;
   padding?: number;
   width?: string;
   highlight?: string;
   title?: string;
+  siteMetaData: SiteMetaData;
 }) {
   return (
     <div className="relative flex after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-1 after:bg-background">
@@ -40,7 +43,7 @@ export function CardHeader({
         </div>
       </div>
       <div className="flex flex-1 items-center justify-end rounded-tr-md bg-background">
-        <ShareBtn />
+        <ShareBtn metadata={{ metadata }} />
       </div>
     </div>
   );

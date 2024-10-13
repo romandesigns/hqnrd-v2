@@ -2,35 +2,24 @@
 import React from "react";
 import { Button } from "..";
 import { FaShareNodes } from "@/components/icons";
+import { SiteMetaData } from "@/types";
 
-async function handleShareDetails(data: {
-  title: string;
-  text: string;
-  url: string;
-}) {
+async function handleShareDetails({ metadata }: SiteMetaData) {
   try {
-    await navigator.share(data);
+    await navigator.share(metadata);
     console.log("Done");
   } catch (err) {
     console.log(err);
   }
 }
 
-export function ShareBtn({
-  siteSharableData,
-}: {
-  siteSharableData: {
-    title: string;
-    text: string;
-    url: string;
-  };
-}) {
+export function ShareBtn({ metadata }: { metadata: SiteMetaData }) {
   return (
     <Button
       size="icon"
       variant="ghost"
       className="mx-2"
-      onClick={() => handleShareDetails(siteSharableData)}
+      onClick={() => handleShareDetails(metadata)}
     >
       <FaShareNodes />
     </Button>
