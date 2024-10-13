@@ -44,7 +44,7 @@ export function SiteWrapper({
 }) {
   const { isOpen } = useSiteMobileNavigation();
   return (
-    <div className="grid h-full w-full grid-cols-1 grid-rows-[auto_1fr_auto]">
+    <div className="grid w-full grid-cols-1 grid-rows-[auto_1fr_auto]">
       {/* Page Navigation */}
       <Navigation lang={lang} navIsOpen={isOpen} navStrings={dictionary} />
       {/* Page Content */}
