@@ -2,6 +2,7 @@ import { SiteWrapper } from "@/components/site/components/SiteWrapper";
 import {
   Categories,
   Discounts,
+  FrequentlyAskedQuestions,
   HomeHeader,
   Surrounding,
   Testimonials,
@@ -62,6 +63,9 @@ export default async function Home({
             dictionary={{
               heading: component.page.home.trending.heading,
             }}
+          />
+          <FrequentlyAskedQuestions
+            dictionary={{ faq: component.page.home.faq }}
           />
         </main>
       </div>

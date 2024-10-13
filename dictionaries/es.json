@@ -114,6 +114,64 @@
               "title": "Tendencias!",
               "subTitle": "Explora nuestras habitaciones más populares y reserva tu estancia hoy mismo!"
             }
+          },
+          "faq": {
+            "heading": {
+              "title": "Preguntas Frecuentes",
+              "subTitle": "Encuentra respuestas a preguntas comunes sobre nuestros servicios."
+            },
+            "questions": [
+              {
+                "id": "item-1",
+                "question": "Ofrecen servicio de comida?",
+                "answer": "Sí, ofrecemos servicio de comida. Para recibir este servicio, debes incluir la opción de comida en tu reserva."
+              },
+              {
+                "id": "item-2",
+                "question": "Ofrecen vigilancia para el estacionamiento?",
+                "answer": "Sí, ofrecemos vigilancia para los vehículos. Nuestro estacionamiento está equipado con cámaras de seguridad que monitorean el perímetro del hotel."
+              },
+              {
+                "id": "item-3",
+                "question": "El hotel tiene piscina?",
+                "answer": "Lamentablemente, no contamos con piscina aún. Estamos trabajando en ello y esperamos tener una pronto."
+              },
+              {
+                "id": "item-4",
+                "question": "Cuáles son las principales atracciones cerca del hotel?",
+                "answer": "Nuestro hotel está ubicado en el corazón de la ciudad, cerca de la playa, los principales centros comerciales, atracciones turísticas y los mejores restaurantes y bares."
+              },
+              {
+                "id": "item-5",
+                "question": "Cuáles son los precios?",
+                "answer": "Los precios varían según el tipo de habitación. Ofrecemos habitaciones individuales, dobles, triples, y suites. Las tarifas van desde $50 hasta $200 por noche, con precios especiales para estancias prolongadas."
+              },
+              {
+                "id": "item-6",
+                "question": "Cuáles son los horarios de check-in y check-out?",
+                "answer": "El check-in está disponible las 24 horas del día, y el check-out es a las 11:00 AM del último día de tu estadía."
+              },
+              {
+                "id": "item-7",
+                "question": "Aceptan mascotas?",
+                "answer": "Lamentablemente, no aceptamos mascotas."
+              },
+              {
+                "id": "item-8",
+                "question": "Tienen estacionamiento disponible?",
+                "answer": "Sí, tenemos estacionamiento disponible para nuestros huéspedes."
+              },
+              {
+                "id": "item-9",
+                "question": "Aceptan tarjetas de crédito?",
+                "answer": "Sí, aceptamos tarjetas de crédito y pagos en línea."
+              },
+              {
+                "id": "item-10",
+                "question": "Entregan recibos de pago?",
+                "answer": "Sí, puedes solicitar un recibo de pago en la recepción."
+              }
+            ]
           }
         }
       }

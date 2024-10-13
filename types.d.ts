@@ -5,3 +5,17 @@ export type SiteMetaData = {
     url: string;
   };
 };
+
+interface FAQ {
+  faq: {
+    heading: {
+      title: string;
+      subTitle: string;
+    };
+    questions: {
+      id: string;
+      question: string;
+      answer: string;
+    }[];
+  };
+}

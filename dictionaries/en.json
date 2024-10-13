@@ -114,6 +114,64 @@
               "title": "Trending!",
               "subTitle": "Explore our most popular rooms and book your stay today!"
             }
+          },
+          "faq": {
+            "heading": {
+              "title": "Frequently Asked Questions",
+              "subTitle": "Find answers to common questions about our services."
+            },
+            "questions": [
+              {
+                "id": "item-1",
+                "question": "Do you provide food?",
+                "answer": "Yes, we provide food. To receive this service, you must include the food option in your reservation."
+              },
+              {
+                "id": "item-2",
+                "question": "Do you offer parking surveillance?",
+                "answer": "Yes, we provide surveillance for vehicles. Our parking lot is equipped with security cameras that monitor the perimeter of the hotel."
+              },
+              {
+                "id": "item-3",
+                "question": "Does the hotel have a pool?",
+                "answer": "Unfortunately, we don't have a pool yet. We are working on it and hope to have one soon."
+              },
+              {
+                "id": "item-4",
+                "question": "What are the main attractions near the hotel?",
+                "answer": "Our hotel is located in the heart of the city, near the beach, main shopping centers, tourist attractions, and the best restaurants and bars."
+              },
+              {
+                "id": "item-5",
+                "question": "What are the prices?",
+                "answer": "Prices vary depending on the type of room. We offer single, double, triple rooms, and suites. Rates range from $50 to $200 per night, with special prices for extended stays."
+              },
+              {
+                "id": "item-6",
+                "question": "What are the check-in and check-out times?",
+                "answer": "Check-in is available 24 hours a day, and check-out is at 11:00 AM on the last day of your stay."
+              },
+              {
+                "id": "item-7",
+                "question": "Do you allow pets?",
+                "answer": "Unfortunately, we do not allow pets."
+              },
+              {
+                "id": "item-8",
+                "question": "Is parking available?",
+                "answer": "Yes, we have parking available for our guests."
+              },
+              {
+                "id": "item-9",
+                "question": "Do you accept credit cards?",
+                "answer": "Yes, we accept credit cards and online payments."
+              },
+              {
+                "id": "item-10",
+                "question": "Do you provide payment receipts?",
+                "answer": "Yes, you can request a payment receipt at the reception."
+              }
+            ]
           }
         }
       }
