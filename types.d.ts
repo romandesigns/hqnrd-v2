@@ -15,6 +15,16 @@ export interface ShareMetadata {
   url: string;
 }
 
+export interface HomeHeaderPropTypes {
+  header: {
+    review: string;
+    higlight: string;
+    title: string;
+    complementaryText: string;
+    cta: string;
+  };
+}
+
 export interface FAQ {
   dictionary: {
     heading: {
@@ -133,13 +143,11 @@ export interface TrendingProps {
 }
 
 export interface CopyWrittingProps {
-  header: {
-    review: string;
-    highlight: string;
-    title: string;
-    complementaryText: string;
-    cta: string;
-  };
+  review: string;
+  highlight: string;
+  title: string;
+  complementaryText: string;
+  cta: string;
 }
 
 export interface SurroundingProps {
@@ -201,4 +209,10 @@ export interface TextHighlightProps {
   color: string;
   delay?: number;
   className?: string;
+}
+
+export interface SectionPropTpes {
+  children: React.ReactNode;
+  sectionClassName?: string;
+  wrapperClassName?: string;
 }

@@ -41,13 +41,12 @@ export function CopyWritting({
           <StarRating rating={4.5} classNames="pt-1" />
         </div>
         <small className="max-lg:text-xs max-lg:font-medium">
-          <NumberTicker value={139} delay={2} /> Google{" "}
-          {dictionary.header.review}
+          <NumberTicker value={139} delay={2} /> Google {dictionary.review}
         </small>
       </div>
       <div className="flex items-center justify-start gap-2 text-sm font-medium max-lg:justify-center">
         <PiMapPinFill className="animate-bounce" />
-        <p>{dictionary.header.highlight}</p>
+        <p>{dictionary.highlight}</p>
       </div>
       <BoxReveal boxColor={"black"} duration={0.25}>
         <h1
@@ -58,17 +57,17 @@ export function CopyWritting({
             }),
           )}
         >
-          {dictionary.header.title}
+          {dictionary.title}
         </h1>
       </BoxReveal>
 
       <BoxReveal boxColor={"black"} duration={0.5}>
         <p className="my-4 text-sm leading-relaxed max-lg:px-4 max-lg:text-center max-lg:text-xs">
-          {useHtmlParser(dictionary.header.complementaryText)}
+          {useHtmlParser(dictionary.complementaryText)}
           <TextHighlight
             {...{
               elId: "myEl",
-              text: dictionary.header.cta,
+              text: dictionary.cta,
               highlightType: "underline",
               color: "black",
               delay: 3000,

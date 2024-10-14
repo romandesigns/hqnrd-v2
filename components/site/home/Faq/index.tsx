@@ -1,4 +1,4 @@
-import { Divider, Heading } from "@/components/ui";
+import { SectionHeading } from "@/components/ui";
 import {
   Accordion,
   AccordionContent,
@@ -6,33 +6,36 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { FAQ } from "@/types";
-import { Wrapper } from "../../components";
-
-export function FrequentlyAskedQuestions({ dictionary }: FAQ) {
+import { Section } from "../../components";
+/**
+ * @title Frequently Asked Questions
+ * @description Home Frequently Asked Questions component
+ * @export
+ * @param {FAQ} { dictionary }
+ * @return {*}  {JSX.Element}
+ */
+export function FrequentlyAskedQuestions({ dictionary }: FAQ): JSX.Element {
   return (
-    <section className="py-20">
-      <Wrapper className="max-w-6xl p-4">
-        <div className="mx-auto max-w-xl">
-          <Divider orientation="horizontal">
-            <Heading
-              title={dictionary.heading.title}
-              subtitle={dictionary.heading.subtitle}
-            />
-          </Divider>
-        </div>
-        <Accordion type="single" collapsible className="w-full">
-          {dictionary.questions.map(({ id, question, answer }) => (
-            <AccordionItem key={id} value={id}>
-              <AccordionTrigger>
-                <p className="sm:text-md text-left text-xs">{question}</p>
-              </AccordionTrigger>
-              <AccordionContent>
-                <p className="sm:text-md text-left text-xs">{answer}</p>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </Wrapper>
-    </section>
+    <Section
+      wrapperClassName="p-2 lg:p-4 max-w-6xl"
+      sectionClassName="bg-zinc-500"
+    >
+      <SectionHeading
+        title={dictionary.heading.title}
+        subtitle={dictionary.heading.subtitle}
+      />
+      <Accordion type="single" collapsible className="w-full">
+        {dictionary.questions.map(({ id, question, answer }) => (
+          <AccordionItem key={id} value={id}>
+            <AccordionTrigger>
+              <p className="sm:text-md text-left text-xs">{question}</p>
+            </AccordionTrigger>
+            <AccordionContent>
+              <p className="sm:text-md text-left text-xs">{answer}</p>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </Section>
   );
 }

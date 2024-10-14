@@ -1,7 +1,13 @@
 import { HeadingProps } from "@/types";
 import { clsx } from "@/utils/clsx";
-import React from "react";
-
+/**
+ *
+ *@title Heading UI Component
+ *@description Heading component
+ * @export
+ * @param {HeadingProps} { title, subtitle, classNames }
+ * @return {*}
+ */
 export function Heading({ title, subtitle, classNames }: HeadingProps) {
   return (
     <h2

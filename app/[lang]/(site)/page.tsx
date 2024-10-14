@@ -30,7 +30,7 @@ export default async function Home({
       }}
     >
       <div>
-        <HomeHeader lang={lang} />
+        <HomeHeader lang={lang} dictionary={component.page.home.header} />
         <main>
           <Testimonials dictionary={component.page.home.testimonials.heading} />
           <Discounts lang={lang} dictionary={component.page.home.discounts} />

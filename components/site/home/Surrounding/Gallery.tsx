@@ -1,16 +1,29 @@
 "use client";
-
-import React, { useState, useRef } from "react";
-import Image from "next/image";
+import { CiImageOn } from "@/components/icons";
 import { CONSTANTS } from "@/constants";
+import Image from "next/image";
+import { useRef, useState } from "react";
+import type { FullscreenRef } from "yet-another-react-lightbox";
 import Lightbox from "yet-another-react-lightbox";
 import Counter from "yet-another-react-lightbox/plugins/counter";
 import Download from "yet-another-react-lightbox/plugins/download";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
-import type { FullscreenRef } from "yet-another-react-lightbox";
-import { CiImageOn } from "@/components/icons";
-
-export function Gallery({ imagesArray }: { imagesArray: string[] }) {
+/**
+ * @title Gallery Lightbox
+ * @description Home Surrounding Gallery component
+ * @export
+ * @param {{
+ *   imagesArray: string[];
+ * }} {
+ *   imagesArray,
+ * }
+ * @return {*}  {JSX.Element}
+ */
+export function Gallery({
+  imagesArray,
+}: {
+  imagesArray: string[];
+}): JSX.Element {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 

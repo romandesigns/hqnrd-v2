@@ -18,6 +18,7 @@ import { TextHighlight } from "./TextHighlight";
 import { CardHeading } from "./CardHeading";
 import { ShareBtn } from "./ShareBtn";
 import { RoomCard } from "./RoomCard";
+import { SectionHeading } from "./SectionHeading";
 
 export {
   Heading,
@@ -40,4 +41,5 @@ export {
   CardHeading,
   ShareBtn,
   RoomCard,
+  SectionHeading,
 };
