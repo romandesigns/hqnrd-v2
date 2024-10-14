@@ -19,7 +19,7 @@ export function Heading({ title, subtitle, classNames }: HeadingProps) {
         </span>
       )}
       {subtitle && (
-        <span className="xs:text-xs mt-4 text-center text-sm font-normal">
+        <span className="xs:text-xs mt-4 text-center text-sm font-medium max-sm:text-[0.8rem] max-sm:font-normal">
           {subtitle}
         </span>
       )}

@@ -31,7 +31,7 @@ export function CopyWritting({
   dictionary: CopyWrittingProps;
 }) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col items-start justify-start gap-4 max-lg:items-center max-lg:justify-center">
       <div className="mb-4 flex flex-col max-lg:py-2 max-lg:text-center">
         <div className="flex items-center justify-start gap-2 max-lg:justify-center">
           <p className="flex items-center justify-start gap-2 font-bold">

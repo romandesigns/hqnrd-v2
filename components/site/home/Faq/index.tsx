@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { FAQ } from "@/types";
-import { Section } from "../../components";
+import { Content, Section } from "../../components";
 /**
  * @title Frequently Asked Questions
  * @description Home Frequently Asked Questions component
@@ -24,18 +24,20 @@ export function FrequentlyAskedQuestions({ dictionary }: FAQ): JSX.Element {
         title={dictionary.heading.title}
         subtitle={dictionary.heading.subtitle}
       />
-      <Accordion type="single" collapsible className="w-full">
-        {dictionary.questions.map(({ id, question, answer }) => (
-          <AccordionItem key={id} value={id}>
-            <AccordionTrigger>
-              <p className="sm:text-md text-left text-xs">{question}</p>
-            </AccordionTrigger>
-            <AccordionContent>
-              <p className="sm:text-md text-left text-xs">{answer}</p>
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+      <Content>
+        <Accordion type="single" collapsible className="w-full">
+          {dictionary.questions.map(({ id, question, answer }) => (
+            <AccordionItem key={id} value={id}>
+              <AccordionTrigger>
+                <p className="sm:text-md text-left text-xs">{question}</p>
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="sm:text-md text-left text-xs">{answer}</p>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </Content>
     </Section>
   );
 }

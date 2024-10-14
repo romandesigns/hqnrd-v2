@@ -1,6 +1,6 @@
 import { CategoryCard, SectionHeading } from "@/components/ui";
 import { CategoriesProps } from "@/types";
-import { Section } from "../../components";
+import { Content, Section } from "../../components";
 import { dictionaryStrings } from "./translationStrings";
 /**
  * @title Categories component
@@ -24,7 +24,7 @@ export function Categories({
   return (
     <Section wrapperClassName="p-2 lg:p-4" sectionClassName="bg-red-500">
       <SectionHeading title={heading.title} subtitle={heading.subtitle} />
-      <div className="my-28 grid w-full grid-cols-3 grid-rows-2 items-center justify-center gap-10 max-lg:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <Content contentClassName="grid w-full grid-cols-3 grid-rows-2 items-center justify-center gap-10 max-lg:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {translations.map((room) => (
           <CategoryCard
             btnText={room.btnText}
@@ -35,7 +35,7 @@ export function Categories({
             Icon={room.Icon}
           />
         ))}
-      </div>
+      </Content>
     </Section>
   );
 }

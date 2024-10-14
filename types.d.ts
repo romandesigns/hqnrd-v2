@@ -211,8 +211,13 @@ export interface TextHighlightProps {
   className?: string;
 }
 
-export interface SectionPropTpes {
+export interface SectionPropTypes {
   children: React.ReactNode;
   sectionClassName?: string;
   wrapperClassName?: string;
+}
+
+export interface ContentPropTypes {
+  children: React.ReactNode;
+  contentClassName?: string;
 }
