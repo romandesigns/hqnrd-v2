@@ -9,8 +9,10 @@ import { Wrapper } from "../../components";
 import { FAQ } from "@/types";
 import { Divider, Heading } from "@/components/ui";
 
-export function FrequentlyAskedQuestions({ dictionary }: { dictionary: FAQ }) {
-  const { heading, questions } = dictionary.faq;
+export function FrequentlyAskedQuestions({
+  dictionary: { heading, questions },
+}: FAQ) {
+  console.log(heading, questions);
   return (
     <section className="py-20">
       <Wrapper className="max-w-6xl p-4">

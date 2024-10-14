@@ -59,14 +59,8 @@ export default async function Home({
               cta: component.page.home.surrounding.cta,
             }}
           />
-          <Trending
-            dictionary={{
-              heading: component.page.home.trending.heading,
-            }}
-          />
-          <FrequentlyAskedQuestions
-            dictionary={{ faq: component.page.home.faq }}
-          />
+          <Trending dictionary={component.page.home.trending.heading} />
+          <FrequentlyAskedQuestions dictionary={component.page.home.faq} />
         </main>
       </div>
     </SiteWrapper>

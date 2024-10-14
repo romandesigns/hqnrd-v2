@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "..";
 import { FaShareNodes } from "@/components/icons";
 import { SiteMetaData } from "@/types";
+import { clsx } from "@/utils/clsx";
 
 async function handleShareDetails({ metadata }: SiteMetaData) {
   try {
@@ -13,12 +14,18 @@ async function handleShareDetails({ metadata }: SiteMetaData) {
   }
 }
 
-export function ShareBtn({ metadata }: { metadata: SiteMetaData }) {
+export function ShareBtn({
+  metadata,
+  className,
+}: {
+  metadata: SiteMetaData;
+  className: string;
+}) {
   return (
     <Button
       size="icon"
       variant="ghost"
-      className="mx-2"
+      className={clsx(`mx-2`, className)}
       onClick={() => handleShareDetails(metadata)}
     >
       <FaShareNodes />

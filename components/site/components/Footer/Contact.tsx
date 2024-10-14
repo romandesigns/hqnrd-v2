@@ -17,53 +17,43 @@ export const Contact = ({
   dictionary: SiteFooterProps;
 }) => {
   return (
-    <ul className="my-10 w-full space-y-3 text-sm text-white [&_li_a]:hover:text-white">
+    <ul className="my-10 grid w-full grid-cols-1 grid-rows-[2rem_2rem_2rem_2rem] text-[0.7rem] text-white [&_li_a]:hover:text-white">
       <li>
         <ExternalLink
           href={CONSTANTS.site.contact.whatsapp_chat}
-          className="flex items-center justify-start gap-3"
+          className="inline-flex items-center justify-start gap-3 underline"
         >
           <AiFillPhone />
-          <span className="mr-2 text-[0.7rem] underline">+1809-753-7500</span>
+          <span>+1809-753-7500</span>
         </ExternalLink>
       </li>
       <li>
         <ExternalLink
           href={CONSTANTS.site.contact.admin_email_recipientes}
-          className="flex items-center justify-start gap-3"
+          className="inline-flex items-center justify-start gap-3 underline"
         >
-          <>
-            <MdEmail />
-            <span className="mr-2 text-[0.7rem] underline">
-              {CONSTANTS.site.contact.email}
-            </span>
-          </>
+          <MdEmail />
+          <span>{CONSTANTS.site.contact.email}</span>
         </ExternalLink>
       </li>
-      <li className="my-2 flex items-center justify-between md:justify-start md:space-x-10">
+      <li>
+        <ExternalLink
+          href={CONSTANTS.site.map_location}
+          className="inline-flex items-start justify-start gap-3 underline"
+        >
+          <FaMapMarkerAlt />
+          <span className="mr-2 underline">{CONSTANTS.site.address}</span>
+        </ExternalLink>
+      </li>
+      <li className="my-2 inline-flex items-center justify-between md:justify-start md:space-x-10">
         <ExternalLink
           href={CONSTANTS.site.contact.domain}
           className="flex items-center justify-start gap-3"
         >
           <FaInternetExplorer />
-          <span className="mr-2 text-[0.7rem] underline">
-            {CONSTANTS.site.contact.domain}
-          </span>
+          <span>{CONSTANTS.site.contact.domain}</span>
         </ExternalLink>
-        <ShareBtn metadata={{ metadata }} />
-      </li>
-      <li>
-        <ExternalLink
-          href={CONSTANTS.site.map_location}
-          className="inline-flex items-start justify-start gap-3"
-        >
-          <>
-            <FaMapMarkerAlt />
-            <span className="mr-2 text-left text-[0.7rem] underline">
-              {CONSTANTS.site.address}
-            </span>
-          </>
-        </ExternalLink>
+        <ShareBtn metadata={{ metadata }} className="border" />
       </li>
       <li className="pt-10">
         <ExternalLink

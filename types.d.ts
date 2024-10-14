@@ -9,17 +9,15 @@ export type SiteMetaData = {
 };
 
 export interface FAQ {
-  faq: {
-    heading: {
-      title: string;
-      subTitle: string;
-    };
-    questions: {
-      id: string;
-      question: string;
-      answer: string;
-    }[];
+  heading: {
+    title: string;
+    subTitle: string;
   };
+  questions: {
+    id: string;
+    question: string;
+    answer: string;
+  }[];
 }
 
 export interface SectionHeading {
@@ -117,6 +115,11 @@ export interface DiscountCardProps {
       buttonTxt: string;
     };
   };
+}
+
+export interface TrendingProps {
+  title: string;
+  subTitle: string;
 }
 
 export interface CopyWrittingProps {
