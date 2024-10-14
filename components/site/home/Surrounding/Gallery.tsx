@@ -24,7 +24,7 @@ export function Gallery({ imagesArray }: { imagesArray: string[] }) {
   // Class names array for styling each image differently based on index
   const imageClasses = [
     "relative row-span-full aspect-square overflow-hidden rounded-md", // For the first image (index 0)
-    "relative h-full overflow-hidden rounded-md border-red-500 border max-md:row-span-2", // For the second image (index 1)
+    "relative h-full overflow-hidden rounded-md max-md:row-span-2", // For the second image (index 1)
     "relative h-full overflow-hidden rounded-md max-md:row-span-2 max-md:col-span-2 max-md:aspect-square", // For the third image (index 2)
   ];
 
