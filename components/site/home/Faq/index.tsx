@@ -1,28 +1,27 @@
-import React from "react";
+import { Divider, Heading } from "@/components/ui";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Wrapper } from "../../components";
 import { FAQ } from "@/types";
-import { Divider, Heading } from "@/components/ui";
+import { Wrapper } from "../../components";
 
-export function FrequentlyAskedQuestions({
-  dictionary: { heading, questions },
-}: FAQ) {
-  console.log(heading, questions);
+export function FrequentlyAskedQuestions({ dictionary }: FAQ) {
   return (
     <section className="py-20">
       <Wrapper className="max-w-6xl p-4">
         <div className="mx-auto max-w-xl">
           <Divider orientation="horizontal">
-            <Heading title={heading.title} subTitle={heading.subTitle} />
+            <Heading
+              title={dictionary.heading.title}
+              subtitle={dictionary.heading.subtitle}
+            />
           </Divider>
         </div>
         <Accordion type="single" collapsible className="w-full">
-          {questions.map(({ id, question, answer }) => (
+          {dictionary.questions.map(({ id, question, answer }) => (
             <AccordionItem key={id} value={id}>
               <AccordionTrigger>
                 <p className="sm:text-md text-left text-xs">{question}</p>

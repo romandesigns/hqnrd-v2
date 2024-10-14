@@ -1,11 +1,10 @@
 "use client";
-import React from "react";
-import { Button } from "..";
 import { FaShareNodes } from "@/components/icons";
-import { SiteMetaData } from "@/types";
+import { ShareMetadata, SiteMetaData } from "@/types";
 import { clsx } from "@/utils/clsx";
+import { Button } from "..";
 
-async function handleShareDetails({ metadata }: SiteMetaData) {
+async function handleShareDetails(metadata: ShareMetadata) {
   try {
     await navigator.share(metadata);
     console.log("Done");
@@ -14,13 +13,7 @@ async function handleShareDetails({ metadata }: SiteMetaData) {
   }
 }
 
-export function ShareBtn({
-  metadata,
-  className,
-}: {
-  metadata: SiteMetaData;
-  className: string;
-}) {
+export function ShareBtn({ metadata, className }: SiteMetaData) {
   return (
     <Button
       size="icon"

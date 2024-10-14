@@ -43,7 +43,7 @@ export function CardHeader({
         </div>
       </div>
       <div className="flex flex-1 items-center justify-end rounded-tr-md bg-background">
-        <ShareBtn metadata={{ metadata }} />
+        <ShareBtn metadata={metadata} />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { IconType } from "react-icons/lib";
 
 export type SiteMetaData = {
+  className?: string;
   metadata: {
     title: string;
     text: string;
@@ -8,22 +9,30 @@ export type SiteMetaData = {
   };
 };
 
+export interface ShareMetadata {
+  title: string;
+  text: string;
+  url: string;
+}
+
 export interface FAQ {
-  heading: {
-    title: string;
-    subTitle: string;
+  dictionary: {
+    heading: {
+      title: string;
+      subtitle: string;
+    };
+    questions: {
+      id: string;
+      question: string;
+      answer: string;
+    }[];
   };
-  questions: {
-    id: string;
-    question: string;
-    answer: string;
-  }[];
 }
 
 export interface SectionHeading {
   heading: {
     title: string;
-    subTitle: string;
+    subtitle: string;
   };
 }
 
@@ -69,7 +78,7 @@ interface RoomCategory {
 export interface CategoriesProps {
   heading: {
     title: string;
-    subTitle: string;
+    subtitle: string;
   };
   rooms: {
     basics: RoomCategory;
@@ -97,29 +106,30 @@ export interface RoomCategory {
 }
 
 export interface DiscountCardProps {
-  lang: string;
-  dictionary: {
-    heading: { title: string; subTitle: string };
-    cards: {
-      card_left: {
-        title: string;
-        description: string;
-      };
-      card_right: {
-        title: string;
-        description: string;
-      };
+  heading: {
+    title: string;
+    subtitle: string;
+  };
+  cards: {
+    first_discount: {
+      title: string;
+      description: string;
     };
-    cta: {
-      ctaText: string;
-      buttonTxt: string;
+    second_discount: {
+      title: string;
+      description: string;
     };
+  };
+  cta: {
+    text: string;
+    button: string;
   };
 }
 
 export interface TrendingProps {
-  title: string;
-  subTitle: string;
+  dictionary: {
+    heading: { title: string; subtitle: string };
+  };
 }
 
 export interface CopyWrittingProps {
@@ -133,18 +143,32 @@ export interface CopyWrittingProps {
 }
 
 export interface SurroundingProps {
-  heading: { title: string; subTitle: string };
-  cta: { buttonTxt: string };
+  dictionary: {
+    heading: { title: string; subtitle: string };
+    cards: {
+      first_card: {
+        title: string;
+        description: string;
+      };
+      second_card: {
+        title: string;
+        description: string;
+      };
+    };
+    cta: { button: string };
+  };
 }
 
 export interface TestimonialsProps {
-  lang: string;
-  dictionary: { heading: { title: string; subTitle: string } };
+  dictionary: {
+    title: string;
+    subtitle: string;
+  };
 }
 
 export interface HeadingProps {
   title: string;
-  subTitle: string;
+  subtitle: string;
   classNames?: string;
 }
 

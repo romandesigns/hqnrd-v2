@@ -53,7 +53,7 @@ export const Contact = ({
           <FaInternetExplorer />
           <span>{CONSTANTS.site.contact.domain}</span>
         </ExternalLink>
-        <ShareBtn metadata={{ metadata }} className="border" />
+        <ShareBtn metadata={metadata} className="border" />
       </li>
       <li className="pt-10">
         <ExternalLink

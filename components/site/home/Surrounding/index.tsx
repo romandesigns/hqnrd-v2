@@ -2,24 +2,20 @@ import { Button, Divider, ExternalLink, Heading } from "@/components/ui";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CONSTANTS } from "@/constants";
 import { data } from "@/public/assets/data";
+import { SurroundingProps } from "@/types";
 import { Wrapper } from "../../components";
 import { Gallery } from "./Gallery";
-import { SurroundingProps } from "@/types";
 
-export function Surrounding({
-  dictionary: {
-    heading: { title, subTitle },
-    cta: { buttonTxt },
-  },
-}: {
-  dictionary: SurroundingProps;
-}) {
+export function Surrounding({ dictionary }: SurroundingProps) {
   return (
     <section>
       <Wrapper className="p-2 lg:p-4">
         <div className="mx-auto max-w-xl">
           <Divider orientation="horizontal">
-            <Heading title={title} subTitle={subTitle} />
+            <Heading
+              title={dictionary.heading.title}
+              subtitle={dictionary.heading.subtitle}
+            />
           </Divider>
         </div>
         <Tabs
@@ -41,10 +37,10 @@ export function Surrounding({
                 className="h-full gap-2 md:flex md:flex-col md:items-start md:justify-center md:p-4"
               >
                 <h3 className="text-left text-2xl font-bold max-lg:text-xl max-md:text-sm max-md:font-medium">
-                  Terraze
+                  {dictionary.cards.first_card.title}
                 </h3>
                 <p className="text-left text-xs max-lg:hidden">
-                  Available for our guests entertainment and private events.
+                  {dictionary.cards.first_card.description}
                 </p>
               </TabsTrigger>
               <TabsTrigger
@@ -52,11 +48,10 @@ export function Surrounding({
                 className="h-full gap-2 md:flex md:flex-col md:items-start md:justify-center md:p-4"
               >
                 <h3 className="text-left text-2xl font-bold max-lg:text-xl max-md:text-sm max-md:font-medium">
-                  Common Areas
+                  {dictionary.cards.second_card.title}
                 </h3>
                 <p className="text-left text-xs max-lg:hidden">
-                  Offering you top best quality of cleanliness and peacefulness
-                  all around.
+                  {dictionary.cards.second_card.description}
                 </p>
               </TabsTrigger>
             </TabsList>
@@ -68,7 +63,7 @@ export function Surrounding({
               href={CONSTANTS.site.contact.whatsapp_chat}
               className="block py-6"
             >
-              {buttonTxt}
+              {dictionary.cta.button}
             </ExternalLink>
           </Button>
         </div>

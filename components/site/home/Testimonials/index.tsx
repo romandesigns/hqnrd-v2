@@ -3,17 +3,13 @@ import { data } from "@/public/assets/data";
 import { Wrapper } from "../../components";
 import { TestimonialsProps } from "@/types";
 
-export function Testimonials({
-  dictionary: {
-    heading: { title, subTitle },
-  },
-}: TestimonialsProps) {
+export function Testimonials({ dictionary }: TestimonialsProps) {
   return (
     <section>
       <Wrapper className="p-2 lg:p-4">
         <div className="mx-auto max-w-2xl">
           <Divider orientation="horizontal">
-            <Heading title={title} subTitle={subTitle} />
+            <Heading title={dictionary.title} subtitle={dictionary.subtitle} />
           </Divider>
         </div>
         <div className="my-28 grid w-full gap-4">

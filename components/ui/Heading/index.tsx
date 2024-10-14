@@ -2,7 +2,7 @@ import { HeadingProps } from "@/types";
 import { clsx } from "@/utils/clsx";
 import React from "react";
 
-export function Heading({ title, subTitle, classNames }: HeadingProps) {
+export function Heading({ title, subtitle, classNames }: HeadingProps) {
   return (
     <h2
       className={clsx(`flex flex-col items-center justify-center`, classNames)}
@@ -12,9 +12,9 @@ export function Heading({ title, subTitle, classNames }: HeadingProps) {
           {title}
         </span>
       )}
-      {subTitle && (
+      {subtitle && (
         <span className="xs:text-xs mt-4 text-center text-sm font-normal">
-          {subTitle}
+          {subtitle}
         </span>
       )}
     </h2>

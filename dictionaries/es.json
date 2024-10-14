@@ -35,21 +35,23 @@
           "testimonials": {
             "heading": {
               "title": "No solo tomes nuestra palabra",
-              "subTitle": "Escucha directamente a nuestros huéspedes felices!"
+              "subtitle": "Escucha directamente a nuestros huéspedes felices!"
             }
           },
           "discounts": {
             "heading": {
               "title": "Descuentos Exclusivos",
-              "subTitle": "Cuanto más tiempo te quedes, más ahorras!"
+              "subtitle": "Cuanto más tiempo te quedes, más ahorras!"
             },
-            "first_discount": {
-              "title": "Descuento",
-              "description": "Obtén un 5% de descuento al reservar una estancia de 5 días."
-            },
-            "second_discount": {
-              "title": "Descuento",
-              "description": "Disfruta de un 8% de descuento al reservar por 15 días o más."
+            "cards": {
+              "first_discount": {
+                "title": "Descuento",
+                "description": "Obtén un 5% de descuento al reservar una estancia de 5 días."
+              },
+              "second_discount": {
+                "title": "Descuento",
+                "description": "Disfruta de un 8% de descuento al reservar por 15 días o más."
+              }
             },
             "cta": {
               "text": "Toma el control y reserva tu estancia de ensueño hoy mismo!",
@@ -59,7 +61,7 @@
           "categories": {
             "heading": {
               "title": "Encuentra Tu Habitación Perfecta",
-              "subTitle": "Elige la habitación que se adapta a tu estilo y reserva tu estancia hoy mismo!"
+              "subtitle": "Elige la habitación que se adapta a tu estilo y reserva tu estancia hoy mismo!"
             },
             "rooms": {
               "basics": {
@@ -103,22 +105,32 @@
           "surrounding": {
             "heading": {
               "title": "Descubre Nuestros Espacios Escénicos",
-              "subTitle": "Relájate en nuestra azotea, pasillos tranquilos y acogedoras áreas comunes."
+              "subtitle": "Relájate en nuestra azotea, pasillos tranquilos y acogedoras áreas comunes."
+            },
+            "cards": {
+              "first_card": {
+                "title": "Terraza",
+                "description": "Ideal para el entretenimiento de huéspedes y eventos privados."
+              },
+              "second_card": {
+                "title": "Áreas Comunes",
+                "description": "Asegurando limpieza y tranquilidad en todo momento."
+              }
             },
             "cta": {
-              "buttonTxt": "Contáctanos!"
+              "button": "Contáctanos!"
             }
           },
           "trending": {
             "heading": {
               "title": "Tendencias!",
-              "subTitle": "Explora nuestras habitaciones más populares y reserva tu estancia hoy mismo!"
+              "subtitle": "Explora nuestras habitaciones más populares y reserva tu estancia hoy mismo!"
             }
           },
           "faq": {
             "heading": {
               "title": "Preguntas Frecuentes",
-              "subTitle": "Encuentra respuestas a preguntas comunes sobre nuestros servicios."
+              "subtitle": "Encuentra respuestas a preguntas comunes sobre nuestros servicios."
             },
             "questions": [
               {

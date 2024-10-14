@@ -35,21 +35,23 @@
           "testimonials": {
             "heading": {
               "title": "Don't Just Take Our Word For It",
-              "subTitle": "Hear directly from our happy guests!"
+              "subtitle": "Hear directly from our happy guests!"
             }
           },
           "discounts": {
             "heading": {
               "title": "Exclusive Discounts",
-              "subTitle": "The longer you stay, the more you save!"
+              "subtitle": "The longer you stay, the more you save!"
             },
-            "first_discount": {
-              "title": "Discount",
-              "description": "Get a 5% discount when you book a 5-day stay!"
-            },
-            "second_discount": {
-              "title": "Discount",
-              "description": "Enjoy an 8% discount when you book for 15 days or more!"
+            "cards": {
+              "first_discount": {
+                "title": "Discount",
+                "description": "Get a 5% discount when you book a 5-day stay!"
+              },
+              "second_discount": {
+                "title": "Discount",
+                "description": "Enjoy an 8% discount when you book for 15 days or more!"
+              }
             },
             "cta": {
               "text": "Take charge and book your dream stay today!",
@@ -59,7 +61,7 @@
           "categories": {
             "heading": {
               "title": "Find Your Perfect Room",
-              "subTitle": "Choose the room that fits your style and book your stay today!"
+              "subtitle": "Choose the room that fits your style and book your stay today!"
             },
             "rooms": {
               "basics": {
@@ -103,22 +105,32 @@
           "surrounding": {
             "heading": {
               "title": "Unveil Our Scenic Spaces",
-              "subTitle": "Relax in our rooftop, serene hallways, and cozy common areas."
+              "subtitle": "Relax in our rooftop, serene hallways, and cozy common areas."
+            },
+            "cards": {
+              "first_card": {
+                "title": "Terrace",
+                "description": "Perfect for guest entertainment and private events."
+              },
+              "second_card": {
+                "title": "Common Areas",
+                "description": "Ensuring cleanliness and tranquility throughout."
+              }
             },
             "cta": {
-              "buttonTxt": "Contact Us!"
+              "button": "Contact Us!"
             }
           },
           "trending": {
             "heading": {
               "title": "Trending!",
-              "subTitle": "Explore our most popular rooms and book your stay today!"
+              "subtitle": "Explore our most popular rooms and book your stay today!"
             }
           },
           "faq": {
             "heading": {
               "title": "Frequently Asked Questions",
-              "subTitle": "Find answers to common questions about our services."
+              "subtitle": "Find answers to common questions about our services."
             },
             "questions": [
               {
