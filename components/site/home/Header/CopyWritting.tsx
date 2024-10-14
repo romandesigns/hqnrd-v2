@@ -60,7 +60,6 @@ export function CopyWritting({
           {dictionary.title}
         </h1>
       </BoxReveal>
-
       <BoxReveal boxColor={"black"} duration={0.5}>
         <p className="my-4 text-sm leading-relaxed max-lg:px-4 max-lg:text-center max-lg:text-xs">
           {useHtmlParser(dictionary.complementaryText)}
@@ -76,14 +75,13 @@ export function CopyWritting({
           />
         </p>
       </BoxReveal>
-
       <div className="flex gap-4 max-lg:justify-center">
         <Button asChild>
-          <Link href={`/${lang}/habitaciones`}>Explore Rooms</Link>
+          <Link href={`/${lang}/habitaciones`}>{dictionary.buttonLeft}</Link>
         </Button>
         <Button variant="outline" asChild>
           <ExternalLink href={CONSTANTS.site.contact.whatsapp_chat}>
-            Contact Us
+            {dictionary.buttonRight}
           </ExternalLink>
         </Button>
       </div>

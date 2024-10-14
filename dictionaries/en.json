@@ -30,7 +30,9 @@
             "highlight": "In Salcedo, Dominican Republic",
             "title": "Experience Unmatched Comfort and Elegance!",
             "complementaryText": "Whether you&#39;re traveling solo, with family, or on a romantic escape, our thoughtfully designed rooms cater to every need",
-            "cta": "Visit us today!"
+            "cta": "Visit us today!",
+            "buttonLeft": "Explore Rooms",
+            "buttonRight": "Contact Us!"
           },
           "testimonials": {
             "heading": {

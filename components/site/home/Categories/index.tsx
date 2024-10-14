@@ -22,7 +22,7 @@ export function Categories({
   const translations = dictionaryStrings(dictionary);
 
   return (
-    <Section wrapperClassName="p-2 lg:p-4" sectionClassName="bg-red-500">
+    <Section>
       <SectionHeading title={heading.title} subtitle={heading.subtitle} />
       <Content contentClassName="grid w-full grid-cols-3 grid-rows-2 items-center justify-center gap-10 max-lg:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {translations.map((room) => (

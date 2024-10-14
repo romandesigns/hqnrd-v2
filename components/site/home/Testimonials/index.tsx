@@ -11,7 +11,7 @@ import { Content, Section } from "../../components";
  */
 export function Testimonials({ dictionary }: TestimonialsProps): JSX.Element {
   return (
-    <Section sectionClassName="bg-green-500">
+    <Section>
       <SectionHeading title={dictionary.title} subtitle={dictionary.subtitle} />
       <Content contentClassName="grid w-full gap-4">
         <Carousel

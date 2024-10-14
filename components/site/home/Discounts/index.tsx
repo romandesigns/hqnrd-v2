@@ -11,7 +11,7 @@ export function Discounts({
   dictionary: DiscountCardProps;
 }) {
   return (
-    <Section sectionClassName="bg-purple-500">
+    <Section>
       <SectionHeading
         title={dictionary.heading.title}
         subtitle={dictionary.heading.subtitle}

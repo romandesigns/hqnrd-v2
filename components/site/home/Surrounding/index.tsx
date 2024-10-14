@@ -14,7 +14,7 @@ import { Gallery } from "./Gallery";
  */
 export function Surrounding({ dictionary }: SurroundingProps): JSX.Element {
   return (
-    <Section wrapperClassName="p-2 lg:p-4" sectionClassName="bg-yellow-500">
+    <Section>
       <SectionHeading
         title={dictionary.heading.title}
         subtitle={dictionary.heading.subtitle}

@@ -12,7 +12,7 @@ import { Content, Section } from "../../components";
  */
 export function Trending({ dictionary }: TrendingProps): JSX.Element {
   return (
-    <Section wrapperClassName="p-2 lg:p-4" sectionClassName="bg-orange-500">
+    <Section>
       <SectionHeading
         title={dictionary.heading.title}
         subtitle={dictionary.heading.subtitle}

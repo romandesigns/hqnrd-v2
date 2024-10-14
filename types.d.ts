@@ -148,6 +148,8 @@ export interface CopyWrittingProps {
   title: string;
   complementaryText: string;
   cta: string;
+  buttonLeft: string;
+  buttonRight: string;
 }
 
 export interface SurroundingProps {

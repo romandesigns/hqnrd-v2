@@ -30,7 +30,9 @@
             "highlight": "En Salcedo, República Dominicana",
             "title": "Experimenta un confort y elegancia inigualables!",
             "complementaryText": "Ya sea que viajes solo, con familia o en una escapada romántica, nuestras habitaciones están diseñadas cuidadosamente para satisfacer todas tus necesidades",
-            "cta": "Visítanos hoy!"
+            "cta": "Visítanos hoy!",
+            "buttonLeft": "Explorar Habitaciones",
+            "buttonRight": "Contáctanos!"
           },
           "testimonials": {
             "heading": {
