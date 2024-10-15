@@ -25,7 +25,7 @@ export function Gallery({ lang }: { lang: string }) {
           <figure className="relative aspect-square overflow-hidden">
             <Carousel
               arr={data.home.header.terrace}
-              delay={3500}
+              delay={3000}
               spaceBetween={10}
               speed={2000}
               direction="vertical"
