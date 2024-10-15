@@ -14,7 +14,7 @@ body {
   }
 
   .glass-effect {
-    @apply p-2 lg:p-3 bg-background/20 backdrop-blur-sm border rounded-md shadow-lg;
+    @apply p-2 lg:p-3 bg-background/40 backdrop-blur-md border rounded-md shadow-sm;
   }
 
 }

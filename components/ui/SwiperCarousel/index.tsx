@@ -15,18 +15,18 @@ export function Carousel({
   delay,
   slidesPerView = "auto",
   spaceBetween = 10,
-  speed = 800, // Default speed of 800ms
+  speed = 800,
   direction = "horizontal",
   component = "img",
   classNames,
 }: CarouselProps) {
   const { width } = useViewportState();
+
   useEffect(() => {
-    // Apply cubic-bezier easing to all slides for smooth transitions
     const swiperSlides = document.querySelectorAll(".swiper-slide");
     swiperSlides.forEach((slide) => {
       (slide as HTMLElement).style.transitionTimingFunction =
-        "cubic-bezier(.21,.96,.79,.31)"; // Smoother easing function
+        "cubic-bezier(.21,.96,.79,.31)";
     });
   }, []);
 

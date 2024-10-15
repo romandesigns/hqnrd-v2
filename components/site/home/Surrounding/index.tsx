@@ -26,10 +26,10 @@ export function Surrounding({ dictionary }: SurroundingProps): JSX.Element {
         >
           <div className="w-full rounded-md bg-background p-2 pt-0 max-md:order-2">
             <TabsContent value="terraze">
-              <Gallery imagesArray={data.home.hero_gallery} />
+              <Gallery imagesArray={data.home.header.room} />
             </TabsContent>
             <TabsContent value="hallways">
-              <Gallery imagesArray={data.home.hero_gallery} />
+              <Gallery imagesArray={data.home.header.room} />
             </TabsContent>
           </div>
           <div className="h-full max-md:order-1">

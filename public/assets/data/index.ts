@@ -7,11 +7,23 @@ export const data = {
     },
   },
   home: {
-    hero_gallery: [
-      "/assets/images/home/20221015_150527.jpg",
-      "/assets/images/home/20221015_150955.jpg",
-      "/assets/images/home/20221015_151139.jpg",
-    ],
+    header: {
+      room: [
+        "/assets/images/home/header/room/HQNRD-first-featured-image.jpg",
+        "/assets/images/home/header/room/HQNRD-second-featured-image.jpg",
+        "/assets/images/home/header/room/HQNRD-third-featured-image.jpg",
+      ],
+      terrace: [
+        "/assets/images/home/header/terrace/HQNRD-first-featured-image.jpg",
+        "/assets/images/home/header/terrace/HQNRD-second-featured-image.jpg",
+        "/assets/images/home/header/terrace/HQNRD-third-featured-image.jpg",
+      ],
+      around: [
+        "/assets/images/home/header/around/HQNRD-first-featured-image.jpg",
+        "/assets/images/home/header/around/HQNRD-second-featured-image.jpg",
+        "/assets/images/home/header/around/HQNRD-third-featured-image.jpg",
+      ],
+    },
     testimonials: [
       {
         avatar: "https://randomuser.me/api/portraits/men/4.jpg",
