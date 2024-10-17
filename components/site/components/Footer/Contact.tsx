@@ -45,7 +45,7 @@ export const Contact = ({
           <span className="mr-2 underline">{CONSTANTS.site.address}</span>
         </ExternalLink>
       </li>
-      <li className="my-2 inline-flex items-center justify-between md:justify-start md:space-x-10">
+      <li className="my-2 inline-flex items-center justify-between underline md:justify-start md:space-x-10">
         <ExternalLink
           href={CONSTANTS.site.contact.domain}
           className="flex items-center justify-start gap-3"
