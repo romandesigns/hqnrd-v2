@@ -1,6 +1,6 @@
 import { CopyWrittingProps } from "@/types";
 import { Metadata } from "next/types";
-import { Wrapper } from "../../components";
+import { Header, Wrapper } from "../../components";
 import { CopyWritting } from "./CopyWritting";
 import { Gallery } from "./Gallery";
 
@@ -34,10 +34,10 @@ export async function HomeHeader({
 }) {
   return (
     <Wrapper>
-      <header className="grid grid-cols-1 grid-rows-[auto_auto] items-center rounded-md px-2 py-20 lg:grid-cols-2 lg:grid-rows-1">
+      <Header>
         <CopyWritting lang={lang} dictionary={dictionary} />
         <Gallery lang={lang} />
-      </header>
+      </Header>
     </Wrapper>
   );
 }

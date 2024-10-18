@@ -8,8 +8,8 @@ export function SectionHeading({
   headingClassName,
   headingDividerClassName,
 }: {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   headingContainerClassName?: string;
   headingClassName?: string;
   headingDividerClassName?: string;

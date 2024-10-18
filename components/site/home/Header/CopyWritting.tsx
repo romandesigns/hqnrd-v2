@@ -49,7 +49,7 @@ export function CopyWritting({
         <p>{dictionary.highlight}</p>
       </div>
       <BoxReveal boxColor={"black"} duration={0.25}>
-        <h1
+        <h2
           className={twMerge(
             `text-5xl font-extrabold max-lg:text-center max-lg:text-3xl`,
             classNames({
@@ -58,7 +58,7 @@ export function CopyWritting({
           )}
         >
           {dictionary.title}
-        </h1>
+        </h2>
       </BoxReveal>
       <BoxReveal boxColor={"black"} duration={0.5}>
         <p className="my-4 text-sm leading-relaxed max-lg:px-4 max-lg:text-center max-lg:text-xs">
