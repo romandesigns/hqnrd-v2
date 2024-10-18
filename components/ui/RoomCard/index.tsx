@@ -33,17 +33,17 @@ export function RoomCard({ imgSrc }: { imgSrc: string }) {
       <div className="flex flex-col gap-2 bg-background p-2 py-4">
         <div className="flex items-center justify-start gap-2">
           <p className="text-xs font-semibold">Features</p>
-          <ul className="flex items-center justify-start gap-1">
-            <li className="rounded-full bg-foreground/5 p-1 px-2 text-[0.72rem]">
+          <ul className="flex items-center justify-start gap-3">
+            <li className="rounded-full bg-foreground/5 p-1 px-2 text-[0.60rem] font-semibold">
               258 sqft
             </li>
-            <li className="rounded-full bg-foreground/5 p-1 px-2 text-[0.72rem]">
+            <li className="rounded-full bg-foreground/5 p-1 px-2 text-[0.60rem] font-semibold">
               Intercom
             </li>
-            <li className="rounded-full bg-foreground/5 p-1 px-2 text-[0.72rem]">
+            <li className="rounded-full bg-foreground/5 p-1 px-2 text-[0.60rem] font-semibold">
               2.5 Beds
             </li>
-            <li className="rounded-full bg-foreground/5 p-1 px-2 text-[0.72rem]">
+            <li className="rounded-full bg-foreground/5 p-1 px-2 text-[0.60rem] font-semibold">
               Balcony
             </li>
           </ul>
