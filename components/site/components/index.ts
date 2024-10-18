@@ -4,3 +4,4 @@ export { Navigation } from "./Navigation";
 export { Wrapper } from "./Wrapper";
 export { Section } from "./Section";
 export { Content } from "./Content";
+export { Header } from "./Header";

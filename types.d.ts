@@ -177,8 +177,8 @@ export interface TestimonialsProps {
 }
 
 export interface HeadingProps {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   classNames?: string;
 }
 
@@ -222,4 +222,17 @@ export interface SectionPropTypes {
 export interface ContentPropTypes {
   children: React.ReactNode;
   contentClassName?: string;
+}
+
+export interface RoomsHeaderProps {
+  slug: string;
+  label: string;
+}
+
+export interface SectionHeadingProps {
+  title?: string;
+  subtitle?: string;
+  headingContainerClassName?: string;
+  headingClassName?: string;
+  headingDividerClassName?: string;
 }

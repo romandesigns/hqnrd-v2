@@ -1,5 +1,6 @@
 import { clsx } from "@/utils/clsx";
 import { Divider, Heading } from "..";
+import { SectionHeadingProps } from "@/types";
 
 export function SectionHeading({
   title,
@@ -7,13 +8,7 @@ export function SectionHeading({
   headingContainerClassName,
   headingClassName,
   headingDividerClassName,
-}: {
-  title: string;
-  subtitle: string;
-  headingContainerClassName?: string;
-  headingClassName?: string;
-  headingDividerClassName?: string;
-}) {
+}: SectionHeadingProps) {
   return (
     <div className={clsx(`mx-auto max-w-3xl`, headingContainerClassName)}>
       <Divider orientation="horizontal" classNames={headingDividerClassName}>

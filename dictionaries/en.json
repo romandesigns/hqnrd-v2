@@ -82,13 +82,13 @@
                 "btnText": "View Rooms",
                 "title": "Standard",
                 "description": "A well-balanced option with all essentials for a pleasant stay.",
-                "slug": "standards"
+                "slug": "estandars"
               },
               "double_beds": {
                 "btnText": "View Rooms",
                 "title": "Double Bed",
                 "description": "Spacious double bed for a restful sleep after a day of exploration.",
-                "slug": "dobles-cama"
+                "slug": "doble-camas"
               },
               "family": {
                 "btnText": "View Rooms",
