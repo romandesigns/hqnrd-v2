@@ -9,7 +9,7 @@ import {
 import BoxReveal from "@/components/ui/box-reveal";
 import NumberTicker from "@/components/ui/number-ticker";
 import { CONSTANTS } from "@/constants";
-import { CopyWrittingProps } from "@/types";
+import { HomeHeaderCopyProps } from "@/types";
 import { useHtmlParser } from "@/utils/useHtmlParser";
 import classNames from "classnames";
 import Link from "next/link";
@@ -19,7 +19,7 @@ import { twMerge } from "tailwind-merge";
  * CopyWritting Header Component
  * It is used to wrap components with the Brand component.
  * @param lang - Language of the website.
- * @param dictionary - CopyWrittingProps object.
+ * @param dictionary - HomeHeaderCopyProps object.
  * @returns CopyWritting component with title, review, highlight, and buttons.
  **/
 
@@ -28,7 +28,7 @@ export function CopyWritting({
   dictionary,
 }: {
   lang: string;
-  dictionary: CopyWrittingProps;
+  dictionary: HomeHeaderCopyProps;
 }) {
   return (
     <div className="flex flex-col items-start justify-start gap-4 max-lg:items-center max-lg:justify-center">

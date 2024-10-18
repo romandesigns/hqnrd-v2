@@ -31,7 +31,11 @@ export default async function Rooms({
       }}
     >
       <>
-        <RoomsHeader lang={lang} slugs={slugs} />
+        <RoomsHeader
+          lang={lang}
+          slugs={slugs}
+          dictionary={component.page.rooms}
+        />
         <main>
           <SectionHeading
             title={"Explore our rooms and choose your perfect stay"}

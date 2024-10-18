@@ -142,7 +142,7 @@ export interface TrendingProps {
   };
 }
 
-export interface CopyWrittingProps {
+export interface HomeHeaderCopyProps {
   review: string;
   highlight: string;
   title: string;
@@ -235,4 +235,16 @@ export interface SectionHeadingProps {
   headingContainerClassName?: string;
   headingClassName?: string;
   headingDividerClassName?: string;
+}
+
+export interface RoomsHeaderCopyProps {
+  header: {
+    highlight: string;
+    title: string;
+    complementaryText: string;
+  };
+  roomsCount: {
+    showing: string;
+    Rooms: string;
+  };
 }

@@ -1,4 +1,4 @@
-import { CopyWrittingProps } from "@/types";
+import { HomeHeaderCopyProps } from "@/types";
 import { Metadata } from "next/types";
 import { Wrapper } from "../../components";
 import { CopyWritting } from "./CopyWritting";
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
  * @export
  * @param {{
  *   lang: string;
- *   dictionary: CopyWrittingProps;
+ *   dictionary: HomeHeaderCopyProps;
  * }} {
  *   lang,
  *   dictionary,
@@ -30,7 +30,7 @@ export async function HomeHeader({
   dictionary,
 }: {
   lang: string;
-  dictionary: CopyWrittingProps;
+  dictionary: HomeHeaderCopyProps;
 }) {
   return (
     <Wrapper>

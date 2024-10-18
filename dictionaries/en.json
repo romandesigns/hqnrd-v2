@@ -187,6 +187,17 @@
               }
             ]
           }
+        },
+        "rooms": {
+          "header": {
+            "highlight": "Explore Our Rooms!",
+            "title": "Select your ideal room!",
+            "complementaryText": "Discover the perfect space tailored to your needs, whether you're here to relax, work, or enjoy an unforgettable stay."
+          },
+          "roomsCpount": {
+            "showing": "Showing",
+            "Rooms": "Rooms"
+          }
         }
       }
     }
