@@ -201,7 +201,128 @@
               "showing": "Showing",
               "rooms": "Rooms"
             }
-          }
+          },
+          "roomsList": [
+            {
+              "id": 1,
+              "unitNumber": "101",
+              "slug": "basic-room",
+              "title": "Basic Room",
+              "pricePerNight": 45
+            },
+            {
+              "id": 2,
+              "unitNumber": "102",
+              "slug": "double-bed-room",
+              "title": "Double Bed Room",
+              "pricePerNight": 65
+            },
+            {
+              "id": 3,
+              "unitNumber": "201",
+              "slug": "executive-room",
+              "title": "Executive Room",
+              "pricePerNight": 120
+            },
+            {
+              "id": 4,
+              "unitNumber": "202",
+              "slug": "basic-room",
+              "title": "Basic Room",
+              "pricePerNight": 45
+            },
+            {
+              "id": 5,
+              "unitNumber": "203",
+              "slug": "standard-room",
+              "title": "Standard Room",
+              "pricePerNight": 75
+            },
+            {
+              "id": 6,
+              "unitNumber": "204",
+              "slug": "standard-room",
+              "title": "Standard Room",
+              "pricePerNight": 75
+            },
+            {
+              "id": 7,
+              "unitNumber": "301",
+              "slug": "executive-room",
+              "title": "Executive Room",
+              "pricePerNight": 120
+            },
+            {
+              "id": 8,
+              "unitNumber": "302",
+              "slug": "familiar-room",
+              "title": "Familiar Room",
+              "pricePerNight": 90
+            },
+            {
+              "id": 9,
+              "unitNumber": "401",
+              "slug": "executive-room",
+              "title": "Executive Room",
+              "pricePerNight": 120
+            },
+            {
+              "id": 10,
+              "unitNumber": "402",
+              "slug": "double-bed-room",
+              "title": "Double Bed Room",
+              "pricePerNight": 65
+            },
+            {
+              "id": 11,
+              "unitNumber": "403",
+              "slug": "double-room",
+              "title": "Double Room",
+              "pricePerNight": 85
+            },
+            {
+              "id": 12,
+              "unitNumber": "404",
+              "slug": "double-room",
+              "title": "Double Room",
+              "pricePerNight": 85
+            },
+            {
+              "id": 13,
+              "unitNumber": "501",
+              "slug": "standard-room",
+              "title": "Standard Room",
+              "pricePerNight": 75
+            },
+            {
+              "id": 14,
+              "unitNumber": "502",
+              "slug": "double-bed-room",
+              "title": "Double Bed Room",
+              "pricePerNight": 65
+            },
+            {
+              "id": 15,
+              "unitNumber": "503",
+              "slug": "basic-room",
+              "title": "Basic Room",
+              "pricePerNight": 45
+            },
+            {
+              "id": 16,
+              "unitNumber": "504",
+              "slug": "double-room",
+              "title": "Double Room",
+              "pricePerNight": 85
+            },
+            {
+              "id": 17,
+              "unitNumber": "505",
+              "slug": "double-room",
+              "title": "Double Room",
+              "pricePerNight": 85
+            }
+          ]
         }
       }
     }

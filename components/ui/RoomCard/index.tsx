@@ -10,13 +10,28 @@ import {
   TbToolsKitchen,
 } from "@/components/icons";
 import { data } from "@/public/assets/data";
+import Link from "next/link";
 
-export function RoomCard({ imgSrc }: { imgSrc: string }) {
+export function RoomCard({
+  imgSrc,
+  id,
+  unitNumber,
+  slug,
+  title,
+  pricePerNight,
+}: {
+  imgSrc: string;
+  id: string;
+  unitNumber: string;
+  slug: string;
+  title: string;
+  pricePerNight: string;
+}) {
   return (
     <div className="">
       <CardHeader
-        highlight="#101"
-        title="Double Bed"
+        highlight={`#${unitNumber}`}
+        title={title}
         siteMetaData={{ metadata: data.site.shareData }}
       />
       <div className="bg-background p-2">
@@ -29,7 +44,10 @@ export function RoomCard({ imgSrc }: { imgSrc: string }) {
           />
         </figure>
       </div>
-      <CardHeading text="2,350 / Per Night" classNames="font-bold -mt-8" />
+      <CardHeading
+        text={`${pricePerNight}.00 / Per Night `}
+        classNames="font-bold -mt-8"
+      />
       <div className="flex flex-col gap-2 bg-background p-2 py-4">
         <div className="flex items-center justify-start gap-2">
           <p className="text-xs font-semibold">Features</p>
@@ -72,7 +90,9 @@ export function RoomCard({ imgSrc }: { imgSrc: string }) {
         </div>
       </div>
       <div className="rounded-bl-md rounded-br-md bg-background p-2">
-        <Button size="block">View Details</Button>
+        <Button size="block" asChild>
+          <Link href={`/habitacion/${unitNumber}`}>View Details</Link>
+        </Button>
       </div>
     </div>
   );

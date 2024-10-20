@@ -23,7 +23,7 @@ export function CategorySelect({
   title: string;
 }) {
   return (
-    <div className="w-full bg-background/80 p-2 max-lg:fixed max-lg:inset-x-0 max-lg:top-[52.9px] max-lg:z-[3] max-lg:backdrop-blur-sm lg:p-0">
+    <div className="w-full bg-background/90 p-2 max-lg:fixed max-lg:inset-x-0 max-lg:top-[52.9px] max-lg:z-[3] max-lg:backdrop-blur-lg lg:p-0">
       <div className="lg:mb-10 lg:hidden">
         <Button asChild variant="ghost" size="icon">
           <Link href={`/${lang}`}>

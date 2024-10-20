@@ -201,7 +201,128 @@
               "showing": "Mostrando",
               "rooms": "Habitaciones"
             }
-          }
+          },
+          "roomsList": [
+            {
+              "id": 1,
+              "unitNumber": "101",
+              "slug": "habitacion-basica",
+              "title": "Habitación Básica",
+              "pricePerNight": 45
+            },
+            {
+              "id": 2,
+              "unitNumber": "102",
+              "slug": "habitacion-cama-doble",
+              "title": "Habitación Cama Doble",
+              "pricePerNight": 65
+            },
+            {
+              "id": 3,
+              "unitNumber": "201",
+              "slug": "habitacion-ejecutiva",
+              "title": "Habitación Ejecutiva",
+              "pricePerNight": 120
+            },
+            {
+              "id": 4,
+              "unitNumber": "202",
+              "slug": "habitacion-basica",
+              "title": "Habitación Básica",
+              "pricePerNight": 45
+            },
+            {
+              "id": 5,
+              "unitNumber": "203",
+              "slug": "habitacion-estandar",
+              "title": "Habitación Estándar",
+              "pricePerNight": 75
+            },
+            {
+              "id": 6,
+              "unitNumber": "204",
+              "slug": "habitacion-estandar",
+              "title": "Habitación Estándar",
+              "pricePerNight": 75
+            },
+            {
+              "id": 7,
+              "unitNumber": "301",
+              "slug": "habitacion-ejecutiva",
+              "title": "Habitación Ejecutiva",
+              "pricePerNight": 120
+            },
+            {
+              "id": 8,
+              "unitNumber": "302",
+              "slug": "habitacion-familiar",
+              "title": "Habitación Familiar",
+              "pricePerNight": 90
+            },
+            {
+              "id": 9,
+              "unitNumber": "401",
+              "slug": "habitacion-ejecutiva",
+              "title": "Habitación Ejecutiva",
+              "pricePerNight": 120
+            },
+            {
+              "id": 10,
+              "unitNumber": "402",
+              "slug": "habitacion-cama-doble",
+              "title": "Habitación Cama Doble",
+              "pricePerNight": 65
+            },
+            {
+              "id": 11,
+              "unitNumber": "403",
+              "slug": "habitacion-doble",
+              "title": "Habitación Doble",
+              "pricePerNight": 85
+            },
+            {
+              "id": 12,
+              "unitNumber": "404",
+              "slug": "habitacion-doble",
+              "title": "Habitación Doble",
+              "pricePerNight": 85
+            },
+            {
+              "id": 13,
+              "unitNumber": "501",
+              "slug": "habitacion-estandar",
+              "title": "Habitación Estándar",
+              "pricePerNight": 75
+            },
+            {
+              "id": 14,
+              "unitNumber": "502",
+              "slug": "habitacion-cama-doble",
+              "title": "Habitación Cama Doble",
+              "pricePerNight": 65
+            },
+            {
+              "id": 15,
+              "unitNumber": "503",
+              "slug": "habitacion-basica",
+              "title": "Habitación Básica",
+              "pricePerNight": 45
+            },
+            {
+              "id": 16,
+              "unitNumber": "504",
+              "slug": "habitacion-doble",
+              "title": "Habitación Doble",
+              "pricePerNight": 85
+            },
+            {
+              "id": 17,
+              "unitNumber": "505",
+              "slug": "habitacion-doble",
+              "title": "Habitación Doble",
+              "pricePerNight": 85
+            }
+          ]
         }
       }
     }

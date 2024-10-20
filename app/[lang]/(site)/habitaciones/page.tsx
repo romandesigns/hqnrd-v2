@@ -22,7 +22,7 @@ export default async function Rooms({
   );
 
   const rooms = Array.from({ length: 13 }, (_, i) => i + 1);
-
+  console.log(component.page.rooms.roomsList);
   return (
     <SiteWrapper
       showFooter
@@ -48,9 +48,9 @@ export default async function Rooms({
           <Wrapper>
             <Content contentClassName="grid w-full gap-4">
               <ul className="grid grid-flow-row grid-cols-1 grid-rows-4 gap-4 gap-y-10 rounded-md p-2 sm:grid-cols-2 lg:grid-cols-3">
-                {rooms.map((room) => (
-                  <li key={room}>
-                    <RoomCard imgSrc={data.home.header.room[0]} />
+                {component.page.rooms.roomsList.map((room) => (
+                  <li key={room.id}>
+                    <RoomCard imgSrc={data.home.header.room[0]} {...room} />
                   </li>
                 ))}
               </ul>
