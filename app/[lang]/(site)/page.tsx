@@ -23,6 +23,8 @@ export default async function Home({
   return (
     <SiteWrapper
       lang={lang}
+      showFooter
+      showNavigation
       dictionary={{
         navigation: component.navigation,
         themeMenu: component.themeMenu,

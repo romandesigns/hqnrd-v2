@@ -22,10 +22,11 @@ export default async function Rooms({
   );
 
   const rooms = Array.from({ length: 13 }, (_, i) => i + 1);
-  console.log(rooms);
 
   return (
     <SiteWrapper
+      showFooter
+      showNavigation
       lang={lang}
       dictionary={{
         navigation: component.navigation,
