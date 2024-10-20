@@ -1,4 +1,5 @@
 import { IconType } from "react-icons/lib";
+import { Locale } from "./i18n-config";
 
 export type SiteMetaData = {
   className?: string;
@@ -224,7 +225,7 @@ export interface ContentPropTypes {
   contentClassName?: string;
 }
 
-export interface RoomsHeaderProps {
+export interface Slugs {
   slug: string;
   label: string;
 }
@@ -237,14 +238,25 @@ export interface SectionHeadingProps {
   headingDividerClassName?: string;
 }
 
-export interface RoomsHeaderCopyProps {
+export interface RoomsHeaderDictionaryProps {
   header: {
     highlight: string;
     title: string;
     complementaryText: string;
+    selectText: string;
+    roomsCount: {
+      showing: string;
+      rooms: string;
+    };
   };
-  roomsCount: {
-    showing: string;
-    Rooms: string;
-  };
+  goBack: string;
+}
+export interface RoomsHeaderProps {
+  dictionary: RoomsHeaderDictionaryProps;
+}
+export interface RoomsHeaderCopyProps {
+  lang: Locale;
+  dictionary: RoomsHeaderDictionaryProps;
+  slugs: Slugs[];
+  rooms: number[];
 }

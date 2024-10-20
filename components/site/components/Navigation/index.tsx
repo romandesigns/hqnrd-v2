@@ -24,7 +24,7 @@ export function Navigation({
   return (
     <Wrapper
       className={clsx(
-        "after:backdrop min-lg:shadow-black/5 min-lg:shadow sticky top-0 z-[4] flex flex-col items-end justify-end rounded-md border-b bg-background/10 p-2 after:absolute after:inset-x-0 after:top-0 after:z-[1] after:block after:h-full after:bg-background/20 after:backdrop-blur-lg after:content-['']",
+        "after:backdrop min-lg:shadow-black/5 min-lg:shadow sticky top-0 z-[4] flex flex-col items-end justify-end rounded-md bg-background p-2 after:absolute after:inset-x-0 after:top-0 after:z-[1] after:block after:h-full after:backdrop-blur-sm after:content-[''] lg:border-b",
       )}
     >
       {/* Show the theme toggle button and open/close navigation btn in mobile screens */}

@@ -12,8 +12,9 @@ export { CiImageOn } from "react-icons/ci";
 export { BiHandicap } from "react-icons/bi";
 export { PiFan } from "react-icons/pi";
 export { MdOutlineKitchen } from "react-icons/md";
-export { FaShareNodes } from "react-icons/fa6";
+export { FaShareNodes, FaArrowLeft } from "react-icons/fa6";
 export { BiSolidTrafficCone } from "react-icons/bi";
+
 export {
   TbAirConditioning,
   TbMicrowave,

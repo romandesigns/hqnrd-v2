@@ -18,6 +18,9 @@
         "system": "Sistema"
       },
       "ui": {
+        "cta": {
+          "goBack": "Regresar"
+        },
         "button": {
           "exploreRooms": "Explorar habitaciones",
           "contactUs": "Contáctanos"
@@ -191,12 +194,13 @@
         "rooms": {
           "header": {
             "highlight": "Explora Nuestras Habitaciones!",
-            "title": "¡Selecciona tu habitación ideal!",
-            "complementaryText": "Descubre el espacio perfecto adaptado a tus necesidades, ya sea para relajarte, trabajar o disfrutar de una estancia inolvidable."
-          },
-          "roomsCount": {
-            "showing": "Mostrando",
-            "Rooms": "Habitaciones"
+            "title": "Selecciona tu habitación ideal!",
+            "complementaryText": "Descubre el espacio perfecto adaptado a tus necesidades, ya sea para relajarte, trabajar o disfrutar de una estancia inolvidable.",
+            "selectText": "Selecciona categoría",
+            "roomsCount": {
+              "showing": "Mostrando",
+              "rooms": "Habitaciones"
+            }
           }
         }
       }

@@ -1,8 +1,10 @@
+import { Button, ContactWidget } from "@/components/ui";
+import { RoomsHeaderCopyProps } from "@/types";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
-import { ContactWidget } from "@/components/ui";
 import { CategorySelect } from "./CategoriesSelect";
-import { RoomsHeaderCopyProps } from "@/types";
+import Link from "next/link";
+import { FaArrowLeft } from "@/components/icons";
 
 /**
  * CopyWritting Header Component
@@ -13,41 +15,55 @@ import { RoomsHeaderCopyProps } from "@/types";
  **/
 
 export function CopyWritting({
-  slugs,
   lang,
+  slugs,
   dictionary,
-}: {
-  slugs: { label: string; slug: string }[];
-  lang: string;
-  dictionary: RoomsHeaderCopyProps;
-}) {
+  rooms,
+}: RoomsHeaderCopyProps) {
   return (
-    <section className="flex flex-col items-start justify-start gap-8">
-      <div className="flex flex-col items-start justify-start gap-4">
-        <small className="font-semibold">Rooms Page!</small>
+    <section className="flex flex-col items-start justify-start gap-2 lg:gap-8">
+      <div className="max-lg:mb-10 max-lg:hidden">
+        <Button asChild variant="ghost" size="icon">
+          <Link href={`/${lang}`}>
+            <FaArrowLeft className="text-lg" />
+          </Link>
+        </Button>
+      </div>
+      <div className="flex flex-col items-start justify-start gap-4 max-lg:mx-auto max-lg:text-center">
+        <small className="font-semibold max-lg:mx-auto max-lg:hidden">
+          {dictionary.header.highlight}
+        </small>
         <h2
           className={twMerge(
-            `text-5xl font-extrabold max-lg:text-center max-lg:text-3xl`,
+            `text-5xl font-extrabold max-lg:mx-auto max-lg:hidden max-lg:text-center max-lg:text-3xl`,
             classNames({
-              "text-4xl": lang === "es",
+              "text-4x w-full": lang === "es",
             }),
           )}
         >
-          Select your ideal room!
+          {dictionary.header.title}
         </h2>
-        <p className="max-w-[90%] text-sm">
-          Find the perfect space that fits your needs, whether for relaxation,
-          work, or a memorable getaway.
+        <p className="max-w-[90%] text-sm max-lg:mx-auto max-lg:hidden max-lg:text-[0.8rem]">
+          {dictionary.header.complementaryText}
         </p>
       </div>
-      <CategorySelect slugs={slugs} />
-      <small className="text-neutral-400">
-        Showing <span className="font-bold text-neutral-800">18</span> Rooms
-      </small>
-      <ContactWidget
+      <CategorySelect
+        slugs={slugs}
         lang={lang}
-        className="items-center justify-center lg:flex"
+        placeholder={dictionary.header.selectText}
+        title={dictionary.header.title}
       />
+      <small className="inline-block text-neutral-400 max-lg:mx-auto max-lg:my-4 max-lg:text-center">
+        {dictionary.header.roomsCount.showing}{" "}
+        <span className="font-bold text-neutral-800">{rooms.length}</span>{" "}
+        {dictionary.header.roomsCount.rooms}
+      </small>
+      <div className="flex w-full max-lg:justify-center lg:justify-start">
+        <ContactWidget
+          lang={lang}
+          className="items-center justify-center max-lg:hidden lg:flex"
+        />
+      </div>
     </section>
   );
 }

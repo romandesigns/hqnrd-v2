@@ -33,7 +33,7 @@ export function RoomCard({ imgSrc }: { imgSrc: string }) {
       <div className="flex flex-col gap-2 bg-background p-2 py-4">
         <div className="flex items-center justify-start gap-2">
           <p className="text-xs font-semibold">Features</p>
-          <ul className="flex items-center justify-start gap-3">
+          <ul className="flex items-center justify-start">
             <li className="rounded-full bg-foreground/5 p-1 px-2 text-[0.60rem] font-semibold">
               258 sqft
             </li>
@@ -46,27 +46,28 @@ export function RoomCard({ imgSrc }: { imgSrc: string }) {
             <li className="rounded-full bg-foreground/5 p-1 px-2 text-[0.60rem] font-semibold">
               Balcony
             </li>
+            <li className="ml-1 text-xs font-bold">... 6+</li>
           </ul>
         </div>
         <div className="flex items-center justify-start gap-2">
           <p className="text-xs font-semibold">Amenities</p>
-          <ul className="flex items-center justify-start gap-2">
-            <li className="p-1 px-2">
+          <ul className="flex items-center justify-start">
+            <li className="p-1">
               <BiHandicap />
             </li>
-            <li className="p-1 px-2">
+            <li className="p-1">
               <TbAirConditioning />
             </li>
-            <li className="p-1 px-2">
+            <li className="p-1">
               <TbMicrowave />
             </li>
-            <li className="p-1 px-2">
+            <li className="p-1">
               <TbBrandIntercom />
             </li>
-            <li className="p-1 px-2">
+            <li className="p-1">
               <TbToolsKitchen />
             </li>
-            <li className="text-xs font-bold">... 15+</li>
+            <li className="ml-1 text-xs font-bold">... 15+</li>
           </ul>
         </div>
       </div>

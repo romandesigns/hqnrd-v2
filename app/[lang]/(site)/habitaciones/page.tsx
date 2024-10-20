@@ -5,7 +5,7 @@ import { RoomCard, SectionHeading } from "@/components/ui";
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
 import { data } from "@/public/assets/data";
-import { RoomsHeaderProps } from "@/types";
+import { Slugs } from "@/types";
 
 export default async function Rooms({
   params: { lang },
@@ -16,10 +16,13 @@ export default async function Rooms({
     site: { component },
   } = await getDictionary(lang);
 
-  const slugs: RoomsHeaderProps[] = [];
+  const slugs: Slugs[] = [];
   dictionaryStrings(component.page.home.categories).map((category) =>
     slugs.push({ slug: category.slug, label: category.title }),
   );
+
+  const rooms = Array.from({ length: 13 }, (_, i) => i + 1);
+  console.log(rooms);
 
   return (
     <SiteWrapper
@@ -32,9 +35,10 @@ export default async function Rooms({
     >
       <>
         <RoomsHeader
+          rooms={rooms}
           lang={lang}
           slugs={slugs}
-          dictionary={component.page.rooms}
+          dictionary={{ ...component.page.rooms, ...component.ui.cta }}
         />
         <main>
           <SectionHeading
@@ -42,9 +46,9 @@ export default async function Rooms({
           />
           <Wrapper>
             <Content contentClassName="grid w-full gap-4">
-              <ul className="grid grid-flow-row grid-cols-3 grid-rows-4 gap-4 gap-y-10 rounded-md">
-                {Array.from({ length: 13 }, (_, i) => (
-                  <li key={i}>
+              <ul className="grid grid-flow-row grid-cols-1 grid-rows-4 gap-4 gap-y-10 rounded-md p-2 sm:grid-cols-2 lg:grid-cols-3">
+                {rooms.map((room) => (
+                  <li key={room}>
                     <RoomCard imgSrc={data.home.header.room[0]} />
                   </li>
                 ))}
