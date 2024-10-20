@@ -41,9 +41,11 @@ export function CategorySelect({
         <SelectContent>
           <SelectGroup>
             {slugs.map((option, index) => (
-              <SelectItem key={index} value={option.slug}>
-                {option.label}
-              </SelectItem>
+              <li key={index} value={option.slug} className="style-none">
+                <Link href={`/${lang}/habitaciones?categoria=${option.slug}`}>
+                  {option.label}
+                </Link>
+              </li>
             ))}
           </SelectGroup>
         </SelectContent>

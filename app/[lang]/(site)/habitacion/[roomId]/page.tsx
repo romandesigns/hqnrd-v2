@@ -1,4 +1,4 @@
-export default async function Room({
+export default async function Page({
   params: { roomId },
 }: {
   params: { roomId: string };

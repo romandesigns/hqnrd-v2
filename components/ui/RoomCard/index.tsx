@@ -1,7 +1,3 @@
-import React from "react";
-import { CONSTANTS } from "@/constants";
-import Image from "next/image";
-import { Button, CardHeader, CardHeading } from "@/components/ui";
 import {
   BiHandicap,
   TbAirConditioning,
@@ -9,7 +5,10 @@ import {
   TbMicrowave,
   TbToolsKitchen,
 } from "@/components/icons";
+import { Button, CardHeader, CardHeading } from "@/components/ui";
+import { CONSTANTS } from "@/constants";
 import { data } from "@/public/assets/data";
+import Image from "next/image";
 import Link from "next/link";
 
 export function RoomCard({
@@ -21,11 +20,11 @@ export function RoomCard({
   pricePerNight,
 }: {
   imgSrc: string;
-  id: string;
+  id: number;
   unitNumber: string;
   slug: string;
   title: string;
-  pricePerNight: string;
+  pricePerNight: number;
 }) {
   return (
     <div className="">
@@ -45,7 +44,7 @@ export function RoomCard({
         </figure>
       </div>
       <CardHeading
-        text={`${pricePerNight}.00 / Per Night `}
+        text={`${pricePerNight} / Night `}
         classNames="font-bold -mt-8"
       />
       <div className="flex flex-col gap-2 bg-background p-2 py-4">
