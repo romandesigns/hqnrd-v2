@@ -1,10 +1,10 @@
 "use client";
 import { Carousel, ContactWidget } from "@/components/ui";
 import { data } from "@/public/assets/data";
-console.log();
+
 export function Gallery({ lang }: { lang: string }) {
   return (
-    <div>
+    <section>
       <div className="relative p-8">
         {/* Main Image */}
         <div className="glass-effect relative aspect-square overflow-hidden">
@@ -65,6 +65,6 @@ export function Gallery({ lang }: { lang: string }) {
           className="w-full lg:flex lg:justify-start"
         />
       </div>
-    </div>
+    </section>
   );
 }
