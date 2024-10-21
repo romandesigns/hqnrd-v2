@@ -53,11 +53,6 @@ export function CopyWritting({
         placeholder={dictionary.header.selectText}
         title={dictionary.header.title}
       />
-      <small className="inline-block text-neutral-400 max-lg:mx-auto max-lg:my-4 max-lg:text-center">
-        {dictionary.header.roomsCount.showing}{" "}
-        <span className="font-bold text-neutral-800">{rooms.length}</span>{" "}
-        {dictionary.header.roomsCount.rooms}
-      </small>
       <div className="flex w-full max-lg:justify-center lg:justify-start">
         <ContactWidget
           lang={lang}
