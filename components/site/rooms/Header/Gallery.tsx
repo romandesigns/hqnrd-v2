@@ -5,7 +5,7 @@ import { Carousel } from "@/components/ui";
 
 export function Gallery() {
   return (
-    <section className="relative flex aspect-square items-center justify-center rounded-md max-sm:mt-28">
+    <section className="relative flex aspect-square items-center justify-center rounded-md max-sm:mt-24">
       <div className="glass-effect aspect-square w-4/6 overflow-hidden">
         <figure className="relative aspect-square overflow-hidden">
           <Carousel

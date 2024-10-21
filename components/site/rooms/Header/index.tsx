@@ -1,9 +1,7 @@
-import { Locale } from "@/i18n-config";
-
+import { RoomsHeaderCopyProps } from "@/types";
 import { Header, Wrapper } from "../../components";
-import { RoomsHeaderCopyProps, RoomsHeaderProps, Slugs } from "@/types";
-import { Gallery } from "./Gallery";
 import { CopyWritting } from "./CopyWritting";
+import { Gallery } from "./Gallery";
 
 export async function RoomsHeader({
   dictionary,

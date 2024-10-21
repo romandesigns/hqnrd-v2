@@ -225,11 +225,6 @@ export interface ContentPropTypes {
   contentClassName?: string;
 }
 
-export interface Slugs {
-  slug: string;
-  label: string;
-}
-
 export interface SectionHeadingProps {
   title?: string;
   subtitle?: string;
@@ -257,6 +252,6 @@ export interface RoomsHeaderProps {
 export interface RoomsHeaderCopyProps {
   lang: Locale;
   dictionary: RoomsHeaderDictionaryProps;
-  slugs: Slugs[];
+  slugs: string[];
   rooms: number[];
 }

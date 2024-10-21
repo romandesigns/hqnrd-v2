@@ -1,10 +1,10 @@
+import { FaArrowLeft } from "@/components/icons";
 import { Button, ContactWidget } from "@/components/ui";
 import { RoomsHeaderCopyProps } from "@/types";
 import classNames from "classnames";
+import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import { CategorySelect } from "./CategoriesSelect";
-import Link from "next/link";
-import { FaArrowLeft } from "@/components/icons";
 
 /**
  * CopyWritting Header Component

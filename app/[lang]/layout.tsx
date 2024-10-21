@@ -3,6 +3,8 @@ import { i18n } from "@/i18n-config";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import StoreProvider from "@/store/StoreProvider";
 import type { Metadata } from "next";
+import type { Viewport } from "next";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -11,6 +13,13 @@ export const metadata: Metadata = {
     "Discover unmatched comfort and elegance at Hotel Quinto Nivel RD. Perfect for solo travelers, families, and romantic getaways. Book your stay now!",
   keywords:
     "Hotel Quinto Nivel, luxury hotel Salcedo, comfortable accommodations, family-friendly hotel, romantic getaways, hotel reservations, Salcedo tourism",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export async function generateStaticParams() {

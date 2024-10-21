@@ -20,11 +20,11 @@ export function RoomCard({
   pricePerNight,
 }: {
   imgSrc: string;
-  id: number;
-  unitNumber: string;
-  slug: string;
-  title: string;
-  pricePerNight: number;
+  id?: number;
+  unitNumber?: string;
+  slug?: string;
+  title?: string;
+  pricePerNight?: number;
 }) {
   return (
     <div className="">

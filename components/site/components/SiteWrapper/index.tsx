@@ -29,13 +29,13 @@ export function SiteWrapper({
   showFooter?: boolean;
 }) {
   const { isOpen } = useSiteMobileNavigation();
+
   return (
     <div className="grid w-full grid-cols-1 grid-rows-[auto_1fr_auto]">
       {/* Page Navigation */}
       {showNavigation && (
         <Navigation lang={lang} navIsOpen={isOpen} navStrings={dictionary} />
       )}
-
       {/* Page Content */}
       {children}
       {/* Page Footer */}

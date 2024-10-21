@@ -1,14 +1,7 @@
 import { FaArrowLeft } from "@/components/icons";
+import { DropDownSelect } from "@/components/motion";
 import { Button } from "@/components/ui";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Slugs } from "@/types";
+import { Locale } from "@/i18n-config";
 import Link from "next/link";
 
 export function CategorySelect({
@@ -17,11 +10,14 @@ export function CategorySelect({
   placeholder,
   title,
 }: {
-  lang: string;
+  lang: Locale;
   placeholder: string;
-  slugs: Slugs[];
+  slugs: string[];
   title: string;
 }) {
+  const formatLabel = (label: string) => {
+    return (label.charAt(0).toUpperCase() + label.slice(1)).replace(/-/g, " ");
+  };
   return (
     <div className="w-full bg-background/90 p-2 max-lg:fixed max-lg:inset-x-0 max-lg:top-[52.9px] max-lg:z-[3] max-lg:backdrop-blur-lg lg:p-0">
       <div className="lg:mb-10 lg:hidden">
@@ -34,22 +30,7 @@ export function CategorySelect({
           {title}
         </h3>
       </div>
-      <Select>
-        <SelectTrigger className="h-14 bg-white">
-          <SelectValue placeholder={placeholder} className="font-bold" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectGroup>
-            {slugs.map((option, index) => (
-              <li key={index} value={option.slug} className="style-none">
-                <Link href={`/${lang}/habitaciones?categoria=${option.slug}`}>
-                  {option.label}
-                </Link>
-              </li>
-            ))}
-          </SelectGroup>
-        </SelectContent>
-      </Select>
+      <DropDownSelect slugs={slugs} lang={lang} />
     </div>
   );
 }
