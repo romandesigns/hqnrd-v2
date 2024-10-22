@@ -6,20 +6,15 @@ import { formatLabel } from "@/lib/utils";
 import { data } from "@/public/assets/data";
 import { clsx } from "@/utils/clsx";
 import { useHtmlParser } from "@/utils/useHtmlParser";
-import { use } from "react";
 
 interface PageProps {
-  params: {
-    lang: Locale; // Assuming Locale is a union type with allowed language codes (e.g., 'en' | 'es')
-  };
-  searchParams: {
-    categoria?: string; // categoria might be optional
-  };
+  params: Promise<{ lang: Locale }>;
+  searchParams: Promise<{ categoria: string }>;
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { lang } = params;
-  const { categoria } = searchParams;
+  const { lang } = await params;
+  const { categoria } = await searchParams;
 
   const {
     site: { component },
