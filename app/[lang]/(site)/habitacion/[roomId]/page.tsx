@@ -14,11 +14,18 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-export default async function Page({
-  params: { roomId, lang },
-}: {
-  params: { roomId: string; lang: Locale };
-}) {
+export default async function Page(
+  props: {
+    params: Promise<{ roomId: string; lang: Locale }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    roomId,
+    lang
+  } = params;
+
   const {
     site: { component },
   } = await getDictionary(lang);

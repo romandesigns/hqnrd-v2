@@ -11,11 +11,17 @@ import {
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
 
-export default async function Page({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
+export default async function Page(
+  props: {
+    params: Promise<{ lang: Locale }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
   const {
     site: { component },
   } = await getDictionary(lang);
