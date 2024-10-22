@@ -1,7 +1,7 @@
+import { CardTestimonialProps } from "@/types";
 import { useHtmlParser } from "@/utils/useHtmlParser";
 import Image from "next/image";
 import { StarRating } from "..";
-import { CardTestimonialProps } from "@/types";
 
 export function CardTestimonial({
   avatar,

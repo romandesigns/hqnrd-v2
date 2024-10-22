@@ -1,14 +1,14 @@
 "use client";
-import { CONSTANTS } from "@/constants";
-import Image from "next/image";
-import { Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useEffect } from "react";
-import "swiper/css";
 import { CardTestimonial } from "@/components/ui";
+import { CONSTANTS } from "@/constants";
+import { CardTestimonialProps, CarouselProps } from "@/types";
 import { clsx } from "@/utils/clsx";
 import useViewportState from "beautiful-react-hooks/useViewportState";
-import { CardTestimonialProps, CarouselProps } from "@/types";
+import Image from "next/image";
+import { useEffect } from "react";
+import "swiper/css";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export function Carousel({
   arr,
