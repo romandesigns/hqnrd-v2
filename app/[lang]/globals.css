@@ -14,7 +14,7 @@ body {
   }
 
   .glass-effect {
-    @apply p-2 lg:p-3 bg-background/40 backdrop-blur-md border rounded-md shadow-sm;
+    @apply p-2 lg:p-3 bg-background border backdrop-blur-md rounded-md;
   }
 
 }
@@ -110,7 +110,7 @@ body {
     --card-foreground: 0 0% 98%;
     --popover: 240 3% 6%;
     --popover-foreground: 0 0% 98%;
-    --primary: 201 58% 47%;
+    --primary: 201 97% 26%;
     --primary-foreground: 0 0% 98%;
     --secondary: 180 2% 12%;
     --secondary-foreground: 0 0% 98%;
@@ -122,7 +122,7 @@ body {
     --destructive-foreground: 0 0% 98%;
     --border: 180 2% 12%;
     --input: 210 2% 18%;
-    --ring: 200 58% 40%;
+    --ring: 201 97% 40%;
 
     /* --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
