@@ -1,14 +1,36 @@
+import { SiteWrapper, Wrapper } from "@/components/site/components";
+import { getDictionary } from "@/get-dictionary";
+import { Locale } from "@/i18n-config";
+
 export default async function Page({
-  params: { roomId },
+  params: { roomId, lang },
 }: {
-  params: { roomId: string };
+  params: { roomId: string; lang: Locale };
 }) {
+  const {
+    site: { component },
+  } = await getDictionary(lang);
+
   console.log(roomId);
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
-        <h1>Habitacion Page unit #{roomId}</h1>
-      </main>
-    </div>
+    <SiteWrapper
+      lang={lang}
+      showFooter
+      showNavigation
+      dictionary={{
+        navigation: component.navigation,
+        themeMenu: component.themeMenu,
+        footer: component.footer,
+      }}
+    >
+      <>
+        <header>
+          <Wrapper>Header</Wrapper>
+        </header>
+        <main>
+          <Wrapper>Main</Wrapper>
+        </main>
+      </>
+    </SiteWrapper>
   );
 }
