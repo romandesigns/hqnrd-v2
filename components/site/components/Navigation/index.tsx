@@ -1,5 +1,5 @@
 import { BrandWrapper, ModeToggle, NavigationToggleBtn } from "@/components/ui";
-import { NavContainer } from "@/framerMotion/SlidingContainer";
+import { NavContainer } from "@/components/motion/SlidingContainer";
 import { SiteNavigationTypes } from "@/types";
 import clsx from "clsx";
 import { Wrapper } from "../Wrapper";

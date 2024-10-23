@@ -14,6 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { GoBack } from "@/components/ui/GoBack";
+import { DateTimePicker } from "@/components/ui/datePickerWithTime";
 
 export default async function Page(props: {
   params: Promise<{ roomId: string; lang: Locale }>;
@@ -55,11 +56,46 @@ export default async function Page(props: {
             <DialogContent>
               <DialogHeader>
                 <DialogTitle>Reservation Form</DialogTitle>
-                <DialogDescription>
+                {/* <DialogDescription>
                   This action cannot be undone. This will permanently delete
                   your account and remove your data from our servers.
-                </DialogDescription>
+                </DialogDescription> */}
               </DialogHeader>
+              <form className="mt-8">
+                <div className="flex items-center justify-center gap-2">
+                  <div className="flex w-full max-w-sm items-center space-x-2">
+                    <Label
+                      htmlFor="adults_quantity"
+                      className="flex-center flex flex-col justify-start gap-2"
+                    >
+                      <div>Adults</div>
+                      <Input
+                        type="number"
+                        id="adults_quantity"
+                        defaultValue="0"
+                        min="0"
+                      />
+                    </Label>
+                  </div>
+                  <div className="flex w-full max-w-sm items-center space-x-2">
+                    <Label
+                      htmlFor="adults_quantity"
+                      className="flex-center flex flex-col justify-start gap-2"
+                    >
+                      <div>Infants</div>
+                      <Input
+                        type="number"
+                        id="infants_quantity"
+                        defaultValue="0"
+                        min="0"
+                      />
+                    </Label>
+                  </div>
+                </div>
+                <div>
+                  <DateTimePicker />
+                </div>
+              </form>
             </DialogContent>
           </Dialog>
         </Wrapper>
