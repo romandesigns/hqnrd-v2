@@ -1,5 +1,5 @@
 import { FaArrowLeft } from "@/components/icons";
-import { Button, ContactWidget } from "@/components/ui";
+import { Button, ContactWidget, GoBack } from "@/components/ui";
 import { RoomsHeaderCopyProps } from "@/types";
 import classNames from "classnames";
 import Link from "next/link";
@@ -23,11 +23,7 @@ export function CopyWritting({
   return (
     <section className="flex flex-col items-start justify-start gap-2 lg:gap-8">
       <div className="max-lg:mb-10 max-lg:hidden">
-        <Button asChild variant="ghost" size="icon">
-          <Link href={`/${lang}`}>
-            <FaArrowLeft className="text-lg" />
-          </Link>
-        </Button>
+        <GoBack />
       </div>
       <div className="flex flex-col items-start justify-start gap-4 max-lg:mx-auto max-lg:text-center">
         <small className="font-semibold max-lg:mx-auto max-lg:hidden">

@@ -19,8 +19,10 @@ import { CardHeading } from "./CardHeading";
 import { ShareBtn } from "./ShareBtn";
 import { RoomCard } from "./RoomCard";
 import { SectionHeading } from "./SectionHeading";
+import { GoBack } from "./GoBack";
 
 export {
+  GoBack,
   Heading,
   Carousel,
   Brand,

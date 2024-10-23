@@ -13,24 +13,19 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { GoBack } from "@/components/ui/GoBack";
 
-export default async function Page(
-  props: {
-    params: Promise<{ roomId: string; lang: Locale }>;
-  }
-) {
+export default async function Page(props: {
+  params: Promise<{ roomId: string; lang: Locale }>;
+}) {
   const params = await props.params;
 
-  const {
-    roomId,
-    lang
-  } = params;
+  const { roomId, lang } = params;
 
   const {
     site: { component },
   } = await getDictionary(lang);
 
-  console.log(roomId);
   return (
     <SiteWrapper
       lang={lang}
@@ -44,6 +39,7 @@ export default async function Page(
     >
       <>
         <Wrapper className="flex items-center justify-between px-2 max-sm:flex-col">
+          <GoBack />
           <div className="flex items-center justify-center py-10 sm:flex-col sm:items-start sm:justify-start lg:py-20 lg:pb-4">
             <Divider classNames="my-0">
               <small className="text-xs font-medium max-sm:text-sm">
