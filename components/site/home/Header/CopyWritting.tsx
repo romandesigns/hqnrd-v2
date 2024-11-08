@@ -9,8 +9,8 @@ import {
 import BoxReveal from "@/components/ui/box-reveal";
 import NumberTicker from "@/components/ui/number-ticker";
 import { CONSTANTS } from "@/constants";
+import { useHtmlParser } from "@/lib/utils";
 import { HomeHeaderCopyProps } from "@/types";
-import { useHtmlParser } from "@/utils/useHtmlParser";
 import classNames from "classnames";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";

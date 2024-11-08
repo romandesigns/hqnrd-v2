@@ -1,7 +1,9 @@
 import { CategoryCard, SectionHeading } from "@/components/ui";
+import { Locale } from "@/i18n-config";
 import { CategoriesProps } from "@/types";
 import { Content, Section } from "../../components";
 import { dictionaryStrings } from "./translationStrings";
+
 /**
  * @title Categories component
  * @description Home Categories component
@@ -13,12 +15,15 @@ import { dictionaryStrings } from "./translationStrings";
  * }
  * @return {*}  {JSX.Element}
  */
+
 export function Categories({
   dictionary,
+  lang,
 }: {
   dictionary: CategoriesProps;
+  lang: Locale;
 }): JSX.Element {
-  const heading = dictionary.heading;
+  const { heading } = dictionary;
   const translations = dictionaryStrings(dictionary);
 
   return (
@@ -33,6 +38,7 @@ export function Categories({
             slug={room.slug}
             key={room.slug}
             Icon={room.Icon}
+            lang={lang}
           />
         ))}
       </Content>

@@ -1,8 +1,9 @@
 "use client";
+import { FaCheck, FaChevronDown } from "@/components/icons";
 import { Locale } from "@/i18n-config";
 import { formatLabel } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 export function DropDownSelect({
@@ -13,8 +14,14 @@ export function DropDownSelect({
   lang: Locale;
 }) {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [currentOption, setCurrentOption] = useState("All Rooms");
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const categoria = searchParams.get("categoria");
+  const param = categoria ? formatLabel(categoria.replace(/-/g, " ")) : "";
+  const [currentOption, setCurrentOption] = useState(
+    param ? param : "All Rooms",
+  );
 
   const dropdownVariants = {
     hidden: { opacity: 0, y: 0 },
@@ -29,12 +36,15 @@ export function DropDownSelect({
   };
 
   return (
-    <motion.div className="relative rounded-sm border p-3">
+    <motion.div className="relative z-[1] rounded-sm border p-3">
       <motion.button
         onClick={() => setShowDropdown((prev) => !prev)}
-        className="block w-full text-left text-sm"
+        className="flex w-full items-center justify-between px-2 text-left text-sm"
       >
-        {currentOption}
+        <span className="font-semibold">{currentOption}</span>
+        <FaChevronDown
+          className={`text-highlight transform transition-transform delay-75 ${showDropdown ? "rotate-180" : "0"}`}
+        />
       </motion.button>
       <AnimatePresence>
         {showDropdown && (
@@ -54,9 +64,20 @@ export function DropDownSelect({
                 <motion.button
                   key={index}
                   onClick={() => handleOptionClick(slug)}
-                  className="relative flex w-full cursor-pointer select-none items-center rounded-sm px-2 py-1.5 pl-2 pr-8 text-left text-sm outline-none hover:bg-muted-foreground/10 focus:bg-accent focus:text-accent-foreground"
+                  className={`group relative flex w-full cursor-pointer select-none items-center justify-between rounded-sm px-2 py-1.5 pl-2 text-left text-sm outline-none hover:bg-muted-foreground/10 focus:bg-accent focus:text-accent-foreground ${
+                    formatLabel(slug) === param
+                      ? "bg-accent text-accent-foreground"
+                      : ""
+                  }`}
                 >
-                  {formatLabel(slug)}
+                  <span>{formatLabel(slug)}</span>
+                  <FaCheck
+                    className={
+                      formatLabel(slug) === param
+                        ? "text-highlight"
+                        : "text-highlight-muted"
+                    }
+                  />
                 </motion.button>
               ))}
             </motion.div>

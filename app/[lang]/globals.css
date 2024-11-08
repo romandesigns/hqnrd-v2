@@ -53,6 +53,8 @@ body {
     --brand-secondary-accent-950: #3b3e12; /* Darkest */
 
     --max_width: 86rem;
+    --highlight-primary-accent: 347, 100%, 63%;
+
     
     /* --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;

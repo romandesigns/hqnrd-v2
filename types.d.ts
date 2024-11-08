@@ -107,6 +107,7 @@ export interface CategoryCardProps {
   description: string;
   slug: string;
   Icon: IconType;
+  lang: Locale;
 }
 
 export interface RoomCategory {

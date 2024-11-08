@@ -206,49 +206,49 @@
             {
               "id": 1,
               "unitNumber": "101",
-              "slug": "basica",
+              "slug": "basicas",
               "title": "Basic Room",
               "pricePerNight": 2550
             },
             {
               "id": 2,
               "unitNumber": "102",
-              "slug": "cama-doble",
+              "slug": "cama-dobles",
               "title": "Double Bed Room",
               "pricePerNight": 3700
             },
             {
               "id": 3,
               "unitNumber": "201",
-              "slug": "ejecutiva",
+              "slug": "ejecutivas",
               "title": "Executive Room",
               "pricePerNight": 6840
             },
             {
               "id": 4,
               "unitNumber": "202",
-              "slug": "basica",
+              "slug": "basicas",
               "title": "Basic Room",
               "pricePerNight": 2550
             },
             {
               "id": 5,
               "unitNumber": "203",
-              "slug": "estandar",
+              "slug": "estandars",
               "title": "Standard Room",
               "pricePerNight": 4250
             },
             {
               "id": 6,
               "unitNumber": "204",
-              "slug": "estandar",
+              "slug": "estandars",
               "title": "Standard Room",
               "pricePerNight": 4250
             },
             {
               "id": 7,
               "unitNumber": "301",
-              "slug": "ejecutiva",
+              "slug": "ejecutivas",
               "title": "Executive Room",
               "pricePerNight": 6840
             },
@@ -262,63 +262,63 @@
             {
               "id": 9,
               "unitNumber": "401",
-              "slug": "ejecutiva",
+              "slug": "ejecutivas",
               "title": "Executive Room",
               "pricePerNight": 6840
             },
             {
               "id": 10,
               "unitNumber": "402",
-              "slug": "cama-doble",
+              "slug": "cama-dobles",
               "title": "Double Bed Room",
               "pricePerNight": 3700
             },
             {
               "id": 11,
               "unitNumber": "403",
-              "slug": "doble",
+              "slug": "dobles",
               "title": "Double Room",
               "pricePerNight": 4845
             },
             {
               "id": 12,
               "unitNumber": "404",
-              "slug": "doble",
+              "slug": "dobles",
               "title": "Double Room",
               "pricePerNight": 4845
             },
             {
               "id": 13,
               "unitNumber": "501",
-              "slug": "estandar",
+              "slug": "estandars",
               "title": "Standard Room",
               "pricePerNight": 4250
             },
             {
               "id": 14,
               "unitNumber": "502",
-              "slug": "cama-doble",
+              "slug": "cama-dobles",
               "title": "Double Bed Room",
               "pricePerNight": 3700
             },
             {
               "id": 15,
               "unitNumber": "503",
-              "slug": "basica",
+              "slug": "basicas",
               "title": "Basic Room",
               "pricePerNight": 2550
             },
             {
               "id": 16,
               "unitNumber": "504",
-              "slug": "doble",
+              "slug": "dobles",
               "title": "Double Room",
               "pricePerNight": 4845
             },
             {
               "id": 17,
               "unitNumber": "505",
-              "slug": "doble",
+              "slug": "dobles",
               "title": "Double Room",
               "pricePerNight": 4845
             }

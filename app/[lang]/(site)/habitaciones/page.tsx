@@ -2,10 +2,9 @@ import { FiInbox } from "@/components/icons";
 import { RoomCard } from "@/components/ui";
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
-import { formatLabel } from "@/lib/utils";
+import { formatLabel, useHtmlParser } from "@/lib/utils";
 import { data } from "@/public/assets/data";
 import { clsx } from "@/utils/clsx";
-import { useHtmlParser } from "@/utils/useHtmlParser";
 
 interface PageProps {
   params: Promise<{ lang: Locale }>;

@@ -19,6 +19,8 @@ const config = {
     },
     extend: {
       colors: {
+        highlight: "hsl(var(--highlight-primary-accent))",
+        "highlight-muted": "hsl(var(--border))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -1,8 +1,6 @@
-import { FaArrowLeft } from "@/components/icons";
-import { Button, ContactWidget, GoBack } from "@/components/ui";
+import { ContactWidget, GoBack } from "@/components/ui";
 import { RoomsHeaderCopyProps } from "@/types";
 import classNames from "classnames";
-import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import { CategorySelect } from "./CategoriesSelect";
 

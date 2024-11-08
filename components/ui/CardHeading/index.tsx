@@ -1,5 +1,5 @@
+import { useHtmlParser } from "@/lib/utils";
 import { clsx } from "@/utils/clsx";
-import { useHtmlParser } from "@/utils/useHtmlParser";
 
 export function CardHeading({
   text = "Enter Price",
