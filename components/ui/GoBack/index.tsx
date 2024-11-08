@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
-import { Button } from "../button";
-import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "@/components/icons";
+import { useRouter } from "next/navigation";
+import { Button } from "../button";
 
 export function GoBack() {
   const router = useRouter();
