@@ -14,7 +14,7 @@ export function StarRating({ rating, classNames }: StarRatingProps) {
   return (
     <span
       className={clsx(
-        `flex -translate-y-1 items-start justify-center text-yellow-500`,
+        `text-secondary-highlight flex -translate-y-1 items-start justify-center`,
         classNames,
       )}
     >

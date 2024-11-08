@@ -19,7 +19,8 @@ const config = {
     },
     extend: {
       colors: {
-        highlight: "hsl(var(--highlight-primary-accent))",
+        "primary-highlight": "hsl(var(--highlight-primary-accent))",
+        "secondary-highlight": "hsl(var(--highlight-second-accent))",
         "highlight-muted": "hsl(var(--border))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

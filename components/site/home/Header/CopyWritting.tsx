@@ -45,7 +45,7 @@ export function CopyWritting({
         </small>
       </div>
       <div className="flex items-center justify-start gap-2 text-sm font-medium max-lg:justify-center">
-        <PiMapPinFill className="animate-bounce text-pink-600" />
+        <PiMapPinFill className="text-primary-highlight animate-bounce" />
         <p>{dictionary.highlight}</p>
       </div>
       <BoxReveal boxColor={"black"} duration={0.25}>
