@@ -13,9 +13,8 @@ import Link from "next/link";
 
 export function RoomCard({
   imgSrc,
-  id,
+  lang,
   unitNumber,
-  slug,
   title,
   pricePerNight,
 }: {
@@ -25,9 +24,10 @@ export function RoomCard({
   slug?: string;
   title?: string;
   pricePerNight?: number;
+  lang?: string;
 }) {
   return (
-    <div className="">
+    <div>
       <CardHeader
         highlight={`#${unitNumber}`}
         title={title}
@@ -90,7 +90,7 @@ export function RoomCard({
       </div>
       <div className="rounded-bl-md rounded-br-md bg-background p-2">
         <Button size="block" asChild>
-          <Link href={`/habitacion/${unitNumber}`}>View Details</Link>
+          <Link href={`/${lang}/habitacion/${unitNumber}`}>View Details</Link>
         </Button>
       </div>
     </div>

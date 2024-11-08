@@ -16,7 +16,6 @@ export function CopyWritting({
   lang,
   slugs,
   dictionary,
-  rooms,
 }: RoomsHeaderCopyProps) {
   return (
     <section className="flex flex-col items-start justify-start gap-2 lg:gap-8">
@@ -37,14 +36,13 @@ export function CopyWritting({
         >
           {dictionary.header.title}
         </h2>
-        <p className="max-w-[90%] text-sm max-lg:mx-auto max-lg:hidden max-lg:text-[0.8rem]">
+        <p className="max-w-[90%] text-sm font-normal leading-relaxed max-lg:mx-auto max-lg:hidden max-lg:text-[0.8rem]">
           {dictionary.header.complementaryText}
         </p>
       </div>
       <CategorySelect
         slugs={slugs}
         lang={lang}
-        placeholder={dictionary.header.selectText}
         title={dictionary.header.title}
       />
       <div className="flex w-full max-lg:justify-center lg:justify-start">

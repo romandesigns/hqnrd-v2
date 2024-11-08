@@ -10,6 +10,6 @@ export const formatLabel = (string: string) => {
   return (string.charAt(0).toUpperCase() + string.slice(1)).replace(/-/g, " ");
 };
 
-export const useHtmlParser = (htmlString: string) => {
+export const htmlParser = (htmlString: string) => {
   return ReactHtmlParser(htmlString);
 };

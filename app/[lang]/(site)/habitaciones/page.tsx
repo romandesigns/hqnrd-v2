@@ -2,7 +2,7 @@ import { FiInbox } from "@/components/icons";
 import { RoomCard } from "@/components/ui";
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
-import { formatLabel, useHtmlParser } from "@/lib/utils";
+import { formatLabel, htmlParser } from "@/lib/utils";
 import { data } from "@/public/assets/data";
 import { clsx } from "@/utils/clsx";
 
@@ -27,7 +27,9 @@ export default async function Page({ params, searchParams }: PageProps) {
     return (
       <article className="p-4">
         <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-md bg-primary-foreground py-8">
-          <h2 className="text-sm uppercase">Rooms {categoria} don't exist!</h2>
+          <h2 className="text-sm uppercase">
+            Rooms {categoria} don&rsquo;t exist!
+          </h2>
           <FiInbox size={40} />
         </div>
       </article>
@@ -39,7 +41,7 @@ export default async function Page({ params, searchParams }: PageProps) {
       <div className="pb-20 pt-2">
         <p className="text-center text-[.9rem] font-medium [&_span]:inline-flex [&_span]:rounded-full [&_span]:bg-accent-foreground [&_span]:px-4 [&_span]:text-primary-foreground">
           {categoria
-            ? useHtmlParser(
+            ? htmlParser(
                 `Showing <span>${rooms.length}</span> ${formatLabel(categoria)} rooms`,
               )
             : "Showing all rooms"}
@@ -53,7 +55,7 @@ export default async function Page({ params, searchParams }: PageProps) {
       >
         {rooms.map((room) => (
           <li key={room.id}>
-            <RoomCard imgSrc={data.home.header.room[0]} {...room} />
+            <RoomCard imgSrc={data.home.header.room[0]} {...room} lang={lang} />
           </li>
         ))}
       </ul>

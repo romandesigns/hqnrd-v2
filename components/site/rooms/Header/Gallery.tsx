@@ -1,11 +1,9 @@
-import Image from "next/image";
-import React from "react";
-import { data } from "@/public/assets/data";
 import { Carousel } from "@/components/ui";
+import { data } from "@/public/assets/data";
 
 export function Gallery() {
   return (
-    <section className="relative flex aspect-square items-center justify-center rounded-md max-sm:mt-24">
+    <section className="relative flex aspect-square items-center justify-center rounded-md max-sm:mt-32">
       <div className="glass-effect aspect-square w-4/6 overflow-hidden">
         <figure className="relative aspect-square overflow-hidden">
           <Carousel

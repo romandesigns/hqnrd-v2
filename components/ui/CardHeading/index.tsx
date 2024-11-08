@@ -1,4 +1,4 @@
-import { useHtmlParser } from "@/lib/utils";
+import { htmlParser } from "@/lib/utils";
 import { clsx } from "@/utils/clsx";
 
 export function CardHeading({
@@ -20,7 +20,7 @@ export function CardHeading({
           `flex w-auto items-center justify-center rounded-tl-md rounded-tr-md bg-background px-4 py-1`,
         )}
       >
-        {useHtmlParser(text)}
+        {htmlParser(text)}
       </div>
     </div>
   );

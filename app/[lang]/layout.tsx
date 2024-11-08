@@ -1,5 +1,5 @@
 import { poppins } from "@/components/fonts";
-import { i18n } from "@/i18n-config";
+import { i18n, Locale } from "@/i18n-config";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import StoreProvider from "@/store/StoreProvider";
 import type { Metadata } from "next";
@@ -26,21 +26,16 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export default async function RootLayout(
-  props: Readonly<{
-    children: React.ReactNode;
-    params: { lang: string };
-  }>
-) {
-  const params = await props.params;
+// Define the type for LayoutProps
+interface LayoutProps {
+  children: React.ReactNode;
+  params: Promise<{
+    lang: Locale;
+  }>;
+}
 
-  const {
-    lang
-  } = params;
-
-  const {
-    children
-  } = props;
+export default async function RootLayout({ children, params }: LayoutProps) {
+  const { lang } = await params;
 
   return (
     <html

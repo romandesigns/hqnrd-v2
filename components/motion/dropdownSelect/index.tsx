@@ -43,7 +43,7 @@ export function DropDownSelect({
       >
         <span className="font-semibold">{currentOption}</span>
         <FaChevronDown
-          className={`text-primary-highlight transform transition-transform delay-75 ${showDropdown ? "rotate-180" : "0"}`}
+          className={`transform text-primary-highlight transition-transform delay-75 ${showDropdown ? "rotate-180" : "0"}`}
         />
       </motion.button>
       <AnimatePresence>

@@ -34,7 +34,7 @@ export async function HomeHeader({
 }) {
   return (
     <Wrapper>
-      <header className="grid grid-cols-1 grid-rows-[auto_auto] items-center rounded-md px-2 py-20 lg:grid-cols-2 lg:grid-rows-1">
+      <header className="grid grid-cols-1 grid-rows-[auto_auto] items-center rounded-md px-2 py-20 max-lg:pt-10 lg:grid-cols-2 lg:grid-rows-1">
         <CopyWritting lang={lang} dictionary={dictionary} />
         <Gallery lang={lang} />
       </header>

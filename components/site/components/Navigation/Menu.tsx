@@ -37,7 +37,7 @@ export function NavigationMenu({
           </Link>
         </Button>
       </li>
-      <li className="lg:block lg:px-4" />
+
       <li className="mt-auto">
         <ContactWidget lang={lang} />
       </li>
@@ -51,17 +51,6 @@ export function NavigationMenu({
             >
               <Link href={`/${lang}/iniciar-session`}>
                 {navStrings.navigation.signIn}
-              </Link>
-            </Button>
-          </li>
-          <li className="w-full" onClick={() => toggleNav()}>
-            <Button
-              asChild
-              variant="ghost"
-              className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
-            >
-              <Link href={`/${lang}/crear-session`}>
-                {navStrings.navigation.signUp}
               </Link>
             </Button>
           </li>

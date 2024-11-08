@@ -1,4 +1,4 @@
-import { useHtmlParser } from "@/lib/utils";
+import { htmlParser } from "@/lib/utils";
 import { CardTestimonialProps } from "@/types";
 import Image from "next/image";
 import { StarRating } from "..";
@@ -29,7 +29,7 @@ export function CardTestimonial({
         </div>
       </div>
       <div className="relative z-[2] -translate-y-2 bg-background px-4 pb-2 text-xs leading-relaxed after:absolute after:left-0 after:right-0 after:block after:h-4 after:bg-background after:content-['']">
-        {useHtmlParser(comment)}
+        {htmlParser(comment)}
       </div>
       <div className="flex justify-between gap-4 rounded-bl-lg rounded-br-lg border-t border-background bg-background p-2 px-4 text-xs">
         <span>
