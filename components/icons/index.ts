@@ -9,7 +9,7 @@ export { IoIosPeople } from "react-icons/io";
 export { FaUsers } from "react-icons/fa";
 export { MdKingBed, MdBusinessCenter } from "react-icons/md";
 export { CiImageOn } from "react-icons/ci";
-export { BiHandicap } from "react-icons/bi";
+export { BiHandicap, BiMessageRoundedDots } from "react-icons/bi";
 export { PiFan } from "react-icons/pi";
 export { MdOutlineKitchen } from "react-icons/md";
 export { FaShareNodes, FaArrowLeft, FaCheck } from "react-icons/fa6";
@@ -138,6 +138,7 @@ export {
   MdOutlineDinnerDining,
   MdAdd,
   MdOutlineCloudUpload,
+  MdOutlineMessage,
 } from "react-icons/md";
 export {
   PiCoatHangerBold,

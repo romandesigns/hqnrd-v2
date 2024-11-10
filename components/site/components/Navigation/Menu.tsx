@@ -16,7 +16,12 @@ export function NavigationMenu({
 }) {
   const { toggleNav } = useSiteMobileNavigation();
   return (
-    <ul className={clsx("flex text-sm max-lg:flex-col", classNames)}>
+    <ul
+      className={clsx(
+        "flex items-center text-sm max-lg:flex-col lg:gap-2",
+        classNames,
+      )}
+    >
       <li className="w-full" onClick={() => toggleNav()}>
         <Button
           variant="ghost"
@@ -42,7 +47,7 @@ export function NavigationMenu({
         <ContactWidget lang={lang} />
       </li>
       <li className="w-full max-lg:mt-3">
-        <ul className="mt-auto flex flex-col gap-4 lg:flex-row">
+        <ul className="mt-auto flex flex-col gap-4 lg:flex-row lg:items-center">
           <li className="w-full" onClick={() => toggleNav()}>
             <Button
               variant="default"
