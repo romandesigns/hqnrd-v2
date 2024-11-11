@@ -14,7 +14,13 @@ import {
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Calendar } from "./calendar";
 
-export function DateTimePicker() {
+export function DateTimePicker({
+  setReservation,
+  reservation,
+}: {
+  setReservation: any;
+  reservation: any;
+}) {
   const [date, setDate] = React.useState<Date>();
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -44,6 +50,7 @@ export function DateTimePicker() {
         );
       }
       setDate(newDate);
+      setReservation({ ...reservation, date: newDate });
     }
   };
 

@@ -1,4 +1,4 @@
-import { Wrapper } from "../components";
+import { ContactWidget, Divider } from "@/components/ui";
 import {
   Dialog,
   DialogContent,
@@ -6,10 +6,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { ContactWidget, Divider } from "@/components/ui";
 import { GoBack } from "@/components/ui/GoBack";
+import { Wrapper } from "../components";
 import { ReservationForm } from "./ReservationForm";
 
 export function Header({ roomId, lang }: { roomId: string; lang: string }) {
@@ -35,7 +33,7 @@ export function Header({ roomId, lang }: { roomId: string; lang: string }) {
         </div>
       </div>
 
-      <div className="self-end py-2 max-lg:w-80">
+      <div className="self-end py-2 max-lg:mx-auto max-lg:w-80">
         <div className="hidden rounded-md bg-background px-4 lg:flex">
           <ContactWidget lang={lang} className="lg:flex" />
         </div>

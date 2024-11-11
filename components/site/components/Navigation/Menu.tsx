@@ -42,6 +42,18 @@ export function NavigationMenu({
           </Link>
         </Button>
       </li>
+      <li className="w-full" onClick={() => toggleNav()}>
+        <Button
+          variant="ghost"
+          className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
+          asChild
+        >
+          <Link href={`/${lang}/portal`}>
+            Portal
+            {/* {navStrings.navigation.rooms} */}
+          </Link>
+        </Button>
+      </li>
 
       <li className="mt-auto">
         <ContactWidget lang={lang} />

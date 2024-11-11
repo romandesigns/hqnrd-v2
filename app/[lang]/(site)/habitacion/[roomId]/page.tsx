@@ -42,7 +42,7 @@ export default async function Page(props: {
         <main className="p-2">
           <Wrapper className="mx-auto my-0 rounded-md !px-0 lg:py-8">
             <article className="items-strech flex justify-between gap-2">
-              <div className="grid flex-[2] grid-cols-1 grid-rows-[auto_auto_auto_auto_auto] gap-2 rounded-md bg-white/80 p-4 dark:bg-black/15">
+              <div className="grid flex-[2] grid-cols-1 grid-rows-[auto_auto_auto_auto_auto] gap-2 rounded-bl-md rounded-tl-md bg-white/80 p-4 pb-6 dark:bg-black/15">
                 <Toolbar data={data.site.shareData} />
                 <Features />
                 <Description />

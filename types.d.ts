@@ -256,3 +256,25 @@ export interface RoomsHeaderCopyProps {
   slugs: string[];
   rooms: number[];
 }
+
+export interface NavBar {
+  isOpen: boolean;
+  lastUpdate: number;
+  toggleNavigation: () => void;
+}
+
+export interface Reservation {
+  adultsCount: number;
+  infantsCount: number;
+  totalDays: number;
+  checkInTime: string;
+  checkOutTime: number;
+  discount: 0 | 5 | 15;
+  totalPrice: number;
+  eligibleForDiscount: boolean;
+}
+[];
+
+export interface Reservations {
+  reservations: Reservation[] | [];
+}
