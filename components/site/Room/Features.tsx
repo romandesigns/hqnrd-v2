@@ -1,11 +1,12 @@
 import React from "react";
 import { featuresList } from "./featureItems";
 import { twMerge } from "tailwind-merge";
+import { Heading } from ".";
 
 export function Features() {
   return (
     <div className="py-4">
-      <h3 className="text-lg font-bold">Features</h3>
+      <Heading text="Features" />
       <ul className="my-3 flex grid-cols-4 grid-rows-2 flex-wrap items-center justify-start gap-2 sm:grid">
         {featuresList.map((feature) => (
           <li

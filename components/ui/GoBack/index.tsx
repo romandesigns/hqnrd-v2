@@ -1,9 +1,8 @@
 "use client";
 import { FaArrowLeft } from "@/components/icons";
-import { useRouter } from "next/navigation";
-import { Button, ButtonProps } from "../button";
-import { Variants } from "framer-motion";
 import { clsx } from "@/utils/clsx";
+import { useRouter } from "next/navigation";
+import { Button } from "../button";
 
 export function GoBack({
   variant = "ghost",

@@ -1,7 +1,9 @@
+import { Heading } from ".";
+
 export function Description() {
   return (
     <div className="py-4">
-      <h3 className="text-lg font-bold">Description</h3>
+      <Heading text="Description" />
       <div className="my-3 [&>p]:mb-4 [&>p]:text-sm [&>p]:leading-relaxed">
         <p>
           The Basic Room is a cozy space for relaxation and tranquility. The

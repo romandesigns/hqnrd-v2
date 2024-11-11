@@ -1,6 +1,6 @@
 "use client";
 import { FaShareNodes } from "@/components/icons";
-import { ShareMetadata, SiteMetaData } from "@/types";
+import { ShareMetadata } from "@/types";
 import { clsx } from "@/utils/clsx";
 import { Button } from "..";
 

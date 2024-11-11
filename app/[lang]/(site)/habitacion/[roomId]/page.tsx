@@ -1,15 +1,16 @@
 import {
   Amenities,
+  Aside,
   Description,
   Features,
   Gallery,
   Header,
+  Media,
   ReservationForm,
+  Toolbar,
+  TrendingRooms,
 } from "@/components/site/Room";
 import { SiteWrapper, Wrapper } from "@/components/site/components";
-import { ShareBtn } from "@/components/ui";
-import { GoBack } from "@/components/ui/GoBack";
-
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
 import { data } from "@/public/assets/data";
@@ -23,7 +24,7 @@ export default async function Page(props: {
   const {
     site: { component },
   } = await getDictionary(lang);
-
+  console.log();
   return (
     <SiteWrapper
       lang={lang}
@@ -41,33 +42,21 @@ export default async function Page(props: {
         <main className="p-2">
           <Wrapper className="mx-auto my-0 rounded-md !px-0 lg:py-8">
             <article className="items-strech flex justify-between gap-2">
-              <div className="flex-[2] rounded-md bg-white/80 p-4 dark:bg-black/15">
-                <div className="flex w-full items-center justify-between py-4">
-                  <GoBack className="mx-0" />
-                  <ShareBtn
-                    metadata={data.site.shareData}
-                    className="mx-0 border bg-transparent"
-                  />
-                </div>
+              <div className="grid flex-[2] grid-cols-1 grid-rows-[auto_auto_auto_auto_auto] gap-2 rounded-md bg-white/80 p-4 dark:bg-black/15">
+                <Toolbar data={data.site.shareData} />
                 <Features />
                 <Description />
                 <Amenities />
+                <Media />
               </div>
-              <div className="flex-[.9] bg-white/80 p-4 dark:bg-black/15">
-                <div className="flex items-center justify-between border-b">
-                  <p className="font-black uppercase">Reservation</p>
-                  <p className="flex items-center justify-center gap-2 rounded-tl-md rounded-tr-md bg-foreground p-2 px-4 uppercase text-background">
-                    <span className="font-black">1,350</span>/
-                    <span className="font-medium">Night</span>
-                  </p>
-                </div>
+              <Aside>
                 <ReservationForm />
-              </div>
+              </Aside>
             </article>
-            <article className="mt-2 flex items-stretch justify-stretch bg-white/80 p-4 dark:bg-black/15">
-              <div className="aspect-square flex-1 bg-pink-500">Layout</div>
-              <div className="aspect-video flex-1 bg-pink-500">Video</div>
-            </article>
+            <TrendingRooms
+              title={component.page.home.trending.heading.title}
+              subtitle={component.page.home.trending.heading.subtitle}
+            />
           </Wrapper>
         </main>
       </>
