@@ -20,9 +20,9 @@ export function Features() {
                 `flex ${feature.color} h-8 w-8 items-center justify-center rounded-md`,
               )}
             >
-              <feature.Icon />
+              <feature.Icon className="text-background" />
             </span>
-            <span className="ml-1 text-xs">{feature.text}</span>
+            <span className="ml-1 text-xs text-foreground">{feature.text}</span>
           </li>
         ))}
       </ul>

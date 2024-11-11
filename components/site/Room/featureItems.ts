@@ -20,7 +20,7 @@ interface FeatureItem {
 export const featuresList: FeatureItem[] = [
   {
     id: 1,
-    color: "bg-primary-100",
+    color: "bg-pink-100",
     Icon: MdOutlineBathtub,
     text: "Private",
   },
