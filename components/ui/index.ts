@@ -20,6 +20,7 @@ import { ShareBtn } from "./ShareBtn";
 import { RoomCard } from "./RoomCard";
 import { SectionHeading } from "./SectionHeading";
 import { GoBack } from "./GoBack";
+import { Notifier } from "./Notifier";
 
 export {
   GoBack,
@@ -44,4 +45,5 @@ export {
   ShareBtn,
   RoomCard,
   SectionHeading,
+  Notifier,
 };

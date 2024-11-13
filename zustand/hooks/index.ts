@@ -20,3 +20,13 @@ export function useReservation() {
     })),
   );
 }
+
+// Reservations
+export function useNotifications() {
+  return useCombinedStore(
+    useShallow((state) => ({
+      notificationTrigger: state.notificationTrigger,
+      notification: state.notification,
+    })),
+  );
+}

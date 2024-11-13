@@ -4,8 +4,13 @@
 @import "yet-another-react-lightbox/styles.css";
 @import "yet-another-react-lightbox/styles.css";
 @import "yet-another-react-lightbox/plugins/counter.css";
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+  line-height: 0;
 }
 
 @layer utilities {
@@ -52,12 +57,13 @@ body {
     --brand-secondary-accent-900: #4f5418; /* Very dark */
     --brand-secondary-accent-950: #3b3e12; /* Darkest */
 
+    
     --max_width: 86rem;
     --highlight-primary-accent: 333, 71%, 51%;
     --highlight-second-accent: 46, 71%, 51%;
 
     
-    /* --background: 0 0% 100%;
+    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -81,9 +87,9 @@ body {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem; */
+    --radius: 0.5rem;
 
-    --background: 0 0% 98%;
+    /* --background: 0 0% 98%;
     --foreground: 210 8% 5%;
     --card: 0 0% 98%;
     --card-foreground: 210 8% 5%;
@@ -110,10 +116,10 @@ body {
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 217.2 91.2% 59.8%; */
   }
   .dark {
-    /* --background: 222.2 84% 4.9%;
+    --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -136,9 +142,9 @@ body {
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%; */
+    --chart-5: 340 75% 55%;
 
-    --background: 180 4% 5%;
+    /* --background: 180 4% 5%;
     --foreground: 0 0% 98%;
     --card: 240 3% 6%;
     --card-foreground: 0 0% 98%;
@@ -164,7 +170,7 @@ body {
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 217.2 91.2% 59.8%; */
   }
 }
 

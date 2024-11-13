@@ -3,8 +3,9 @@ import { Button, ContactWidget, ModeToggle } from "@/components/ui";
 // import { useSiteMobileNavigation } from "@/hooks";
 import { SiteNavigationTypes } from "@/types";
 import { clsx } from "@/utils/clsx";
-import { useMobileNavigation } from "@/zustand/hooks";
+import { useMobileNavigation, useReservation } from "@/zustand/hooks";
 import Link from "next/link";
+import { Bookings } from "./Bookings";
 
 export function NavigationMenu({
   lang,
@@ -16,6 +17,8 @@ export function NavigationMenu({
   navStrings: SiteNavigationTypes;
 }) {
   const { toggle } = useMobileNavigation();
+  const { reservations } = useReservation();
+
   return (
     <ul
       className={clsx(
@@ -43,19 +46,9 @@ export function NavigationMenu({
           </Link>
         </Button>
       </li>
-      <li className="w-full" onClick={() => toggle()}>
-        <Button
-          variant="ghost"
-          className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
-          asChild
-        >
-          <Link href={`/${lang}/portal`}>
-            Portal
-            {/* {navStrings.navigation.rooms} */}
-          </Link>
-        </Button>
+      <li className="w-full rounded-md" onClick={() => toggle()}>
+        <Bookings bookingsCount={reservations.length} />
       </li>
-
       <li className="mt-auto">
         <ContactWidget lang={lang} />
       </li>

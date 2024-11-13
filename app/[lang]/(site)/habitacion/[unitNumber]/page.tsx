@@ -16,10 +16,10 @@ import { Locale } from "@/i18n-config";
 import { data } from "@/public/assets/data";
 
 export default async function Page(props: {
-  params: Promise<{ roomId: string; lang: Locale }>;
+  params: Promise<{ unitNumber: string; lang: Locale }>;
 }) {
   const params = await props.params;
-  const { roomId, lang } = params;
+  const { unitNumber, lang } = params;
 
   const {
     site: { component },
@@ -37,7 +37,7 @@ export default async function Page(props: {
       }}
     >
       <>
-        <Header roomId={roomId} lang={lang} />
+        <Header unitNumber={Number(unitNumber)} lang={lang} />
         <Gallery />
         <main className="p-2">
           <Wrapper className="mx-auto my-0 rounded-md !px-0 lg:py-8">
@@ -50,7 +50,10 @@ export default async function Page(props: {
                 <Media />
               </div>
               <Aside>
-                <ReservationForm />
+                <ReservationForm
+                  unitNumber={Number(unitNumber)}
+                  pricePerNight={1350}
+                />
               </Aside>
             </article>
             <TrendingRooms

@@ -5,3 +5,7 @@ export const mobileNavBarInitialState = {
 export const reservationInitialState = {
   reservations: [],
 };
+
+export const notificationInitialState = {
+  notification: null,
+};

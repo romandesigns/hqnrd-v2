@@ -14,3 +14,8 @@ export interface ReservationTypes {
 export interface ReservationPropTypes {
   reservations: ReservationTypes[];
 }
+
+export interface NotificationPropTypes {
+  notification: "added reservation" | "deleted reservation" | null;
+  notificationTrigger: (event: string) => void;
+}

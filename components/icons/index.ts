@@ -49,6 +49,7 @@ export {
   BsPassport,
   BsTelephone,
   BsThreeDotsVertical,
+  BsJournalCheck,
 } from "react-icons/bs";
 export {
   CgMenuGridO,
@@ -139,6 +140,7 @@ export {
   MdAdd,
   MdOutlineCloudUpload,
   MdOutlineMessage,
+  MdOutlineChecklistRtl,
 } from "react-icons/md";
 export {
   PiCoatHangerBold,

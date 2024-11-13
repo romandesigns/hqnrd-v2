@@ -10,7 +10,13 @@ import { GoBack } from "@/components/ui/GoBack";
 import { Wrapper } from "../components";
 import { ReservationForm } from "./ReservationForm";
 
-export function Header({ roomId, lang }: { roomId: string; lang: string }) {
+export function Header({
+  unitNumber,
+  lang,
+}: {
+  unitNumber: number;
+  lang: string;
+}) {
   return (
     <Wrapper className="z-[2] flex items-center justify-between rounded-bl-md rounded-br-md bg-background/80 px-2 pb-4 backdrop-blur-md max-lg:sticky max-lg:top-[50.79px] max-sm:flex-col lg:sticky lg:top-[53.56px] lg:px-6 lg:py-10 lg:pb-1">
       <div className="w-full">
@@ -21,11 +27,11 @@ export function Header({ roomId, lang }: { roomId: string; lang: string }) {
         <div className="sm:items-start sm:justify-start sm:pl-2 lg:flex-col lg:items-center lg:pb-4">
           <Divider classNames="my-0 w-full sm:hidden">
             <small className="text-xs font-medium text-foreground max-sm:text-sm">
-              Unit {roomId}
+              Unit {unitNumber}
             </small>
           </Divider>
           <small className="hidden text-lg font-bold max-lg:text-sm sm:inline-block">
-            Unit {roomId}
+            Unit {unitNumber}
           </small>
           <h2 className="text-lg font-black max-sm:text-center sm:text-left sm:text-3xl">
             DOUBLE BED ROOM
@@ -46,7 +52,7 @@ export function Header({ roomId, lang }: { roomId: string; lang: string }) {
               <DialogHeader>
                 <DialogTitle>Reservation</DialogTitle>
               </DialogHeader>
-              <ReservationForm />
+              <ReservationForm unitNumber={unitNumber} pricePerNight={3000} />
             </DialogContent>
           </Dialog>
         </div>

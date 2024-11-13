@@ -7,69 +7,55 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import { Textarea } from "@/components/ui/textarea";
-import { useReservation } from "@/zustand/hooks";
-import React, { useState } from "react";
+import { useNotifications, useReservation } from "@/zustand/hooks";
+import moment from "moment";
+import React, { useEffect, useState } from "react";
 import { DatePicker } from "./DatePicker";
 import { DateTimePicker } from "./DateTimePicker";
-
 export interface RoomReservationPropTypes {
   adults: number;
   infants: number;
   pricePerNight: number;
-  unit: number;
+  unitNumber: number;
   checkIn: Date | null;
   checkOut: Date | null;
   message?: string;
   user: string;
   createdOn: Date;
 }
-export function ReservationForm() {
+export function ReservationForm({
+  unitNumber,
+  pricePerNight,
+}: {
+  unitNumber: number;
+  pricePerNight: number;
+}) {
   const [openTray, setOpenTray] = useState(false);
   const [reservation, setReservation] = useState<RoomReservationPropTypes>({
     adults: 0,
     infants: 0,
-    pricePerNight: 1350,
-    unit: 102,
+    pricePerNight,
+    unitNumber,
     checkIn: null,
     checkOut: null,
     message: "",
     user: "Anonymous",
-    createdOn: new Date(),
+    createdOn: moment().toDate(),
   });
 
   const { addReservation } = useReservation();
+  const { notificationTrigger } = useNotifications();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setOpenTray(!openTray);
     addReservation(reservation);
+    notificationTrigger("added reservation");
   };
 
   return (
     <>
-      <Sheet>
-        <SheetTrigger>Open it</SheetTrigger>
-        <SheetContent>
-          <SheetHeader>
-            <SheetTitle>Are you absolutely sure?</SheetTitle>
-            <SheetDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </SheetDescription>
-          </SheetHeader>
-          <SheetClose>Close it</SheetClose>
-        </SheetContent>
-      </Sheet>
       <form className="space-y-8 py-8" onSubmit={handleSubmit}>
         <div className="flex w-full items-stretch justify-center gap-2">
           <Label
