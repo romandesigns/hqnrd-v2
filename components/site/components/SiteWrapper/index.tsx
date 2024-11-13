@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
-import { Navigation } from "../Navigation";
-import { Footer } from "../Footer";
-import { useSiteMobileNavigation } from "@/hooks";
 import { SiteNavigationTypes } from "@/types";
+import { useMobileNavigation } from "@/zustand/hooks";
+import React from "react";
+import { Footer } from "../Footer";
+import { Navigation } from "../Navigation";
 
 /**
  * Site Wrapper Component
@@ -28,17 +28,14 @@ export function SiteWrapper({
   showNavigation?: boolean;
   showFooter?: boolean;
 }) {
-  const { isOpen } = useSiteMobileNavigation();
+  const { isOpen } = useMobileNavigation();
 
   return (
     <div className="grid w-full grid-cols-1 grid-rows-[auto_1fr_auto]">
-      {/* Page Navigation */}
       {showNavigation && (
         <Navigation lang={lang} navIsOpen={isOpen} navStrings={dictionary} />
       )}
-      {/* Page Content */}
       {children}
-      {/* Page Footer */}
       {showFooter && <Footer lang={lang} dictionary={dictionary.footer} />}
     </div>
   );

@@ -12,14 +12,15 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Calendar } from "./calendar";
+import { RoomReservationProps } from "./ReservationForm";
+import { Calendar } from "@/components/ui/calendar";
 
 export function DateTimePicker({
   setReservation,
   reservation,
 }: {
-  setReservation: any;
-  reservation: any;
+  setReservation: React.Dispatch<React.SetStateAction<RoomReservationProps>>;
+  reservation: RoomReservationProps;
 }) {
   const [date, setDate] = React.useState<Date>();
   const [isOpen, setIsOpen] = React.useState(false);
@@ -50,7 +51,7 @@ export function DateTimePicker({
         );
       }
       setDate(newDate);
-      setReservation({ ...reservation, date: newDate });
+      setReservation({ ...reservation, checkIn: newDate });
     }
   };
 

@@ -1,6 +1,5 @@
 import { ShareBtn } from "@/components/ui";
 import { GoBack } from "@/components/ui/GoBack";
-import { SiteMetaData } from "@/types";
 
 export function Toolbar({
   data,

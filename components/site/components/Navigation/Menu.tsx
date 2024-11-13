@@ -1,8 +1,9 @@
 "use client";
 import { Button, ContactWidget, ModeToggle } from "@/components/ui";
-import { useSiteMobileNavigation } from "@/hooks";
+// import { useSiteMobileNavigation } from "@/hooks";
 import { SiteNavigationTypes } from "@/types";
 import { clsx } from "@/utils/clsx";
+import { useMobileNavigation } from "@/zustand/hooks";
 import Link from "next/link";
 
 export function NavigationMenu({
@@ -14,7 +15,7 @@ export function NavigationMenu({
   classNames?: string;
   navStrings: SiteNavigationTypes;
 }) {
-  const { toggleNav } = useSiteMobileNavigation();
+  const { toggle } = useMobileNavigation();
   return (
     <ul
       className={clsx(
@@ -22,7 +23,7 @@ export function NavigationMenu({
         classNames,
       )}
     >
-      <li className="w-full" onClick={() => toggleNav()}>
+      <li className="w-full" onClick={() => toggle()}>
         <Button
           variant="ghost"
           className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
@@ -31,7 +32,7 @@ export function NavigationMenu({
           <Link href={`/${lang}`}>{navStrings.navigation.home}</Link>
         </Button>
       </li>
-      <li className="w-full" onClick={() => toggleNav()}>
+      <li className="w-full" onClick={() => toggle()}>
         <Button
           variant="ghost"
           className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
@@ -42,7 +43,7 @@ export function NavigationMenu({
           </Link>
         </Button>
       </li>
-      <li className="w-full" onClick={() => toggleNav()}>
+      <li className="w-full" onClick={() => toggle()}>
         <Button
           variant="ghost"
           className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
@@ -60,7 +61,7 @@ export function NavigationMenu({
       </li>
       <li className="w-full max-lg:mt-3">
         <ul className="mt-auto flex flex-col gap-4 lg:flex-row lg:items-center">
-          <li className="w-full" onClick={() => toggleNav()}>
+          <li className="w-full" onClick={() => toggle()}>
             <Button
               variant="default"
               className="w-full max-lg:h-10 lg:h-8"

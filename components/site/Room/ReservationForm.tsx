@@ -5,13 +5,8 @@ import {
   MdChildCare,
 } from "@/components/icons";
 import { Button } from "@/components/ui/button";
-import { DatePicker } from "@/components/ui/DatePicker";
-import { DateTimePicker } from "@/components/ui/DateTimePicker";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { set } from "date-fns";
-import React, { useState } from "react";
 import {
   Sheet,
   SheetClose,
@@ -21,15 +16,43 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Textarea } from "@/components/ui/textarea";
+import { useReservation } from "@/zustand/hooks";
+import React, { useState } from "react";
+import { DatePicker } from "./DatePicker";
+import { DateTimePicker } from "./DateTimePicker";
 
+export interface RoomReservationPropTypes {
+  adults: number;
+  infants: number;
+  pricePerNight: number;
+  unit: number;
+  checkIn: Date | null;
+  checkOut: Date | null;
+  message?: string;
+  user: string;
+  createdOn: Date;
+}
 export function ReservationForm() {
-  const [reservation, setReservation] = useState({});
   const [openTray, setOpenTray] = useState(false);
+  const [reservation, setReservation] = useState<RoomReservationPropTypes>({
+    adults: 0,
+    infants: 0,
+    pricePerNight: 1350,
+    unit: 102,
+    checkIn: null,
+    checkOut: null,
+    message: "",
+    user: "Anonymous",
+    createdOn: new Date(),
+  });
+
+  const { addReservation } = useReservation();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setOpenTray(!openTray);
-    console.log(reservation);
+    addReservation(reservation);
   };
 
   return (
@@ -65,7 +88,10 @@ export function ReservationForm() {
               min={0}
               required
               onChange={(e) =>
-                setReservation({ ...reservation, adults: e.target.value })
+                setReservation({
+                  ...reservation,
+                  adults: Number(e.target.value),
+                })
               }
             />
           </Label>
@@ -85,7 +111,10 @@ export function ReservationForm() {
               min={0}
               required
               onChange={(e) =>
-                setReservation({ ...reservation, infants: e.target.value })
+                setReservation({
+                  ...reservation,
+                  infants: Number(e.target.value),
+                })
               }
             />
           </Label>

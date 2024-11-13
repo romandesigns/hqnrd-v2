@@ -1,9 +1,7 @@
 import { poppins } from "@/components/fonts";
 import { i18n, Locale } from "@/i18n-config";
 import { ThemeProvider } from "@/providers/ThemeProvider";
-import StoreProvider from "@/store/StoreProvider";
-import type { Metadata } from "next";
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
 
@@ -26,7 +24,6 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-// Define the type for LayoutProps
 interface LayoutProps {
   children: React.ReactNode;
   params: Promise<{
@@ -44,16 +41,14 @@ export default async function RootLayout({ children, params }: LayoutProps) {
       className="scroll-smooth focus:scroll-auto"
     >
       <body className={`${poppins.className} h-dvh antialiased`}>
-        <StoreProvider lastUpdate={new Date().getTime()}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-        </StoreProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

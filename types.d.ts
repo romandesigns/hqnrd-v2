@@ -273,7 +273,6 @@ export interface Reservation {
   totalPrice: number;
   eligibleForDiscount: boolean;
 }
-[];
 
 export interface Reservations {
   reservations: Reservation[] | [];

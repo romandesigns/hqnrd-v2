@@ -11,19 +11,20 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
+import { RoomReservationProps } from "./ReservationForm";
 
 export function DatePicker({
   setReservation,
   reservation,
 }: {
-  setReservation: any;
-  reservation: any;
+  setReservation: React.Dispatch<React.SetStateAction<RoomReservationProps>>;
+  reservation: RoomReservationProps;
 }) {
   const [date, setDate] = React.useState<Date>();
   const handleDateSelect = (selectedDate: Date | undefined) => {
     if (selectedDate) {
       setDate(selectedDate);
-      setReservation({ ...reservation, date: selectedDate });
+      setReservation({ ...reservation, checkOut: selectedDate });
     }
   };
   return (
