@@ -10,50 +10,28 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useNotifications, useReservation } from "@/zustand/hooks";
 import moment from "moment";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { DatePicker } from "./DatePicker";
 import { DateTimePicker } from "./DateTimePicker";
-export interface RoomReservationPropTypes {
-  adults: number;
-  infants: number;
-  pricePerNight: number;
-  unitNumber: number;
-  checkIn: Date | null;
-  checkOut: Date | null;
-  message?: string;
-  user: string;
-  createdOn: Date;
-}
+import { RoomReservationPropTypes } from "./DialogForm";
+
 export function ReservationForm({
   unitNumber,
   pricePerNight,
+  children,
+  handleSubmit,
+  setReservation,
+  reservation,
 }: {
   unitNumber: number;
   pricePerNight: number;
+  children: React.ReactNode;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  setReservation: React.Dispatch<
+    React.SetStateAction<RoomReservationPropTypes>
+  >;
+  reservation: RoomReservationPropTypes;
 }) {
-  const [openTray, setOpenTray] = useState(false);
-  const [reservation, setReservation] = useState<RoomReservationPropTypes>({
-    adults: 0,
-    infants: 0,
-    pricePerNight,
-    unitNumber,
-    checkIn: null,
-    checkOut: null,
-    message: "",
-    user: "Anonymous",
-    createdOn: moment().toDate(),
-  });
-
-  const { addReservation } = useReservation();
-  const { notificationTrigger } = useNotifications();
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setOpenTray(!openTray);
-    addReservation(reservation);
-    notificationTrigger("added reservation");
-  };
-
   return (
     <>
       <form className="space-y-8 py-8" onSubmit={handleSubmit}>
@@ -166,8 +144,9 @@ export function ReservationForm({
             />
           </Label>
         </div>
-        <Button className="w-full" size="lg" itemType="submit">
-          Add Booking
+        {children}
+        <Button size="block" type="submit" className="max-lg:hidden">
+          Submit
         </Button>
       </form>
     </>

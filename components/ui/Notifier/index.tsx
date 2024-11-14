@@ -17,7 +17,7 @@ export function Notifier() {
       controls
       src="/assets/notifications/system-notification-199277.mp3"
       ref={audioRef}
-      className="hidden"
+      className="absolute top-60 hidden"
     />
   );
 }

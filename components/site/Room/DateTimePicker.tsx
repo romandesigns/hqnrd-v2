@@ -12,15 +12,17 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { RoomReservationProps } from "./ReservationForm";
+import { RoomReservationPropTypes } from "./ReservationForm";
 import { Calendar } from "@/components/ui/calendar";
 
 export function DateTimePicker({
   setReservation,
   reservation,
 }: {
-  setReservation: React.Dispatch<React.SetStateAction<RoomReservationProps>>;
-  reservation: RoomReservationProps;
+  setReservation: React.Dispatch<
+    React.SetStateAction<RoomReservationPropTypes>
+  >;
+  reservation: RoomReservationPropTypes;
 }) {
   const [date, setDate] = React.useState<Date>();
   const [isOpen, setIsOpen] = React.useState(false);

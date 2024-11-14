@@ -1,9 +1,9 @@
 "use client";
 import { Button, ContactWidget, ModeToggle } from "@/components/ui";
-// import { useSiteMobileNavigation } from "@/hooks";
 import { SiteNavigationTypes } from "@/types";
 import { clsx } from "@/utils/clsx";
-import { useMobileNavigation, useReservation } from "@/zustand/hooks";
+import { useMobileNavigation } from "@/zustand/hooks";
+import { ReservationTypes } from "@/zustand/interface";
 import Link from "next/link";
 import { Bookings } from "./Bookings";
 
@@ -11,18 +11,19 @@ export function NavigationMenu({
   lang,
   classNames,
   navStrings,
+  reservations,
 }: {
   lang: string;
   classNames?: string;
   navStrings: SiteNavigationTypes;
+  reservations: ReservationTypes[];
 }) {
   const { toggle } = useMobileNavigation();
-  const { reservations } = useReservation();
 
   return (
     <ul
       className={clsx(
-        "flex items-center text-sm max-lg:flex-col lg:gap-2",
+        "relative flex items-center text-sm max-lg:flex-col lg:gap-2",
         classNames,
       )}
     >
@@ -47,7 +48,7 @@ export function NavigationMenu({
         </Button>
       </li>
       <li className="w-full rounded-md" onClick={() => toggle()}>
-        <Bookings bookingsCount={reservations.length} />
+        <Bookings reservations={reservations} />
       </li>
       <li className="mt-auto">
         <ContactWidget lang={lang} />

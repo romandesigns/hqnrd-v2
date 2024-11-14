@@ -4,15 +4,20 @@ export interface MobileNavBarPropTypes {
 }
 
 export interface ReservationTypes {
-  adultsCount: number;
-  infantsCount: number;
-  checkIn: Date;
-  checkOut: Date;
+  adults: number;
+  infants: number;
+  pricePerNight: number;
+  unitNumber: number;
+  checkIn: Date | null;
+  checkOut: Date | null;
   message?: string;
+  user: string;
+  createdOn: Date;
 }
 
 export interface ReservationPropTypes {
   reservations: ReservationTypes[];
+  addReservation: (reservation: ReservationTypes) => void;
 }
 
 export interface NotificationPropTypes {

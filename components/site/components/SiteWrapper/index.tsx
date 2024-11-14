@@ -1,6 +1,6 @@
 "use client";
 import { SiteNavigationTypes } from "@/types";
-import { useMobileNavigation } from "@/zustand/hooks";
+import { useMobileNavigation, useReservation } from "@/zustand/hooks";
 import React from "react";
 import { Footer } from "../Footer";
 import { Navigation } from "../Navigation";
@@ -29,11 +29,17 @@ export function SiteWrapper({
   showFooter?: boolean;
 }) {
   const { isOpen } = useMobileNavigation();
+  const { reservations } = useReservation();
 
   return (
     <div className="grid w-full grid-cols-1 grid-rows-[auto_1fr_auto]">
       {showNavigation && (
-        <Navigation lang={lang} navIsOpen={isOpen} navStrings={dictionary} />
+        <Navigation
+          lang={lang}
+          navIsOpen={isOpen}
+          navStrings={dictionary}
+          reservations={reservations}
+        />
       )}
       {children}
       {showFooter && <Footer lang={lang} dictionary={dictionary.footer} />}

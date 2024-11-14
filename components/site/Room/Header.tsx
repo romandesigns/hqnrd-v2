@@ -1,14 +1,8 @@
-import { ContactWidget, Divider } from "@/components/ui";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Button, ContactWidget, Divider } from "@/components/ui";
+
 import { GoBack } from "@/components/ui/GoBack";
 import { Wrapper } from "../components";
-import { ReservationForm } from "./ReservationForm";
+import { DialogForm } from "./DialogForm";
 
 export function Header({
   unitNumber,
@@ -44,17 +38,7 @@ export function Header({
           <ContactWidget lang={lang} className="lg:flex" />
         </div>
         <div className="lg:hidden">
-          <Dialog>
-            <DialogTrigger className="text-forground w-full rounded-lg border bg-foreground p-2 px-4 text-sm text-background shadow max-lg:self-end">
-              Make Reservation
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>Reservation</DialogTitle>
-              </DialogHeader>
-              <ReservationForm unitNumber={unitNumber} pricePerNight={3000} />
-            </DialogContent>
-          </Dialog>
+          <DialogForm unitNumber={unitNumber} />
         </div>
       </div>
     </Wrapper>

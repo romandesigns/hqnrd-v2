@@ -1,42 +1,45 @@
 import { MdOutlineChecklistRtl } from "@/components/icons";
-import { Notifier } from "@/components/ui";
+import { Button, Notifier } from "@/components/ui";
 import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { clsx } from "@/utils/clsx";
-import React from "react";
+import { ReservationTypes } from "@/zustand/interface";
 
-export function Bookings({ bookingsCount }: { bookingsCount: number }) {
+import { TrayCard } from "../../Room/TrayCard";
+
+export function Bookings({
+  reservations,
+}: {
+  reservations: ReservationTypes[];
+}) {
+  console.log(reservations);
   return (
     <>
       <Notifier />
-      <Sheet>
+      <Sheet open={true}>
         <SheetTrigger className="relative rounded-md border bg-background p-2 shadow-sm hover:bg-muted">
-          <span
+          <div
             className={clsx(
-              `absolute -right-2 -top-1.5 inline-block rounded-full border border-background bg-muted p-2 px-2.5 text-[0.7rem] font-semibold text-muted-foreground`,
-              bookingsCount > 0 &&
+              `p-0.25 absolute -right-2 -top-1.5 rounded-full border border-background bg-muted-foreground px-2.5 text-[0.7rem] font-semibold text-muted-foreground`,
+              reservations.length >= 1 &&
                 "bg-[var(--brand-secondary-accent-500)] text-white",
             )}
           >
-            {bookingsCount}
-          </span>
+            {reservations.length}
+          </div>
           <MdOutlineChecklistRtl size={18} />
         </SheetTrigger>
-        <SheetContent>
-          <SheetHeader>
-            <SheetTitle>Are you absolutely sure?</SheetTitle>
-            <SheetDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </SheetDescription>
+        <SheetContent className="p-2 [@media(max-width:414px)]:w-[99%]">
+          <SheetHeader className="py-4">
+            <SheetTitle>My Bookings</SheetTitle>
           </SheetHeader>
+          <TrayCard />
           <SheetClose>Close it</SheetClose>
         </SheetContent>
       </Sheet>

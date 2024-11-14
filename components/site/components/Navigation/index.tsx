@@ -4,6 +4,8 @@ import { SiteNavigationTypes } from "@/types";
 import clsx from "clsx";
 import { Wrapper } from "../Wrapper";
 import { NavigationMenu } from "./Menu";
+import { ReservationTypes } from "@/zustand/interface";
+import { Bookings } from "./Bookings";
 
 /**
  * Navigation Component
@@ -16,10 +18,12 @@ export function Navigation({
   lang,
   navIsOpen,
   navStrings,
+  reservations,
 }: {
   lang: string;
   navIsOpen: boolean;
   navStrings: SiteNavigationTypes;
+  reservations: ReservationTypes[];
 }) {
   return (
     <Wrapper
@@ -35,6 +39,7 @@ export function Navigation({
       >
         {/* Show the theme toggle button and open/close navigation btn in mobile screens */}
         <div className="ml-auto space-x-4 lg:hidden">
+          <Bookings reservations={reservations} />
           <ModeToggle navStrings={navStrings.themeMenu} />
           <NavigationToggleBtn />
         </div>
@@ -43,6 +48,7 @@ export function Navigation({
           lang={lang}
           classNames="hidden lg:flex lg:w-auto"
           navStrings={navStrings}
+          reservations={reservations}
         />
       </BrandWrapper>
 
@@ -58,6 +64,7 @@ export function Navigation({
               lang={lang}
               classNames="w-full flex items-stretch justify-stretch gap-4 h-full"
               navStrings={navStrings}
+              reservations={reservations}
             />
           </div>
         </div>

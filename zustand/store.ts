@@ -2,8 +2,8 @@ import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import {
   mobileNavBarInitialState,
-  reservationInitialState,
   notificationInitialState,
+  reservationInitialState,
 } from "./initialStates";
 import {
   MobileNavBarPropTypes,

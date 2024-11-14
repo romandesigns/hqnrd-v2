@@ -1,8 +1,5 @@
 "use client";
 
-import { CalendarIcon } from "@radix-ui/react-icons";
-import { format } from "date-fns";
-import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import {
@@ -11,14 +8,19 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { RoomReservationProps } from "./ReservationForm";
+import { CalendarIcon } from "@radix-ui/react-icons";
+import { format } from "date-fns";
+import * as React from "react";
+import { RoomReservationPropTypes } from "./ReservationForm";
 
 export function DatePicker({
   setReservation,
   reservation,
 }: {
-  setReservation: React.Dispatch<React.SetStateAction<RoomReservationProps>>;
-  reservation: RoomReservationProps;
+  setReservation: React.Dispatch<
+    React.SetStateAction<RoomReservationPropTypes>
+  >;
+  reservation: RoomReservationPropTypes;
 }) {
   const [date, setDate] = React.useState<Date>();
   const handleDateSelect = (selectedDate: Date | undefined) => {
