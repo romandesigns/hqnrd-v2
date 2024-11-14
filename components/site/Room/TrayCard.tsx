@@ -59,15 +59,15 @@ export function TrayCard() {
               </div>
             </div>
             <div className="flex items-end gap-4">
-              <p className="flex items-end text-xs">
+              <p className="flex items-end gap-1 text-xs">
                 <span className="font-bold leading-none">3</span>
                 <HiOutlineUser />
               </p>
-              <p className="flex items-end text-xs">
+              <p className="flex items-end gap-1 text-xs">
                 <span className="font-bold leading-none">0</span>
                 <MdChildCare />
               </p>
-              <p className="flex items-end text-xs">
+              <p className="flex items-end gap-1 text-xs">
                 <span className="font-bold leading-none">2</span>
                 <span className="leading-none">
                   <TbMoonStars />
