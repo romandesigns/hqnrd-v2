@@ -9,3 +9,4 @@ export { Heading } from "./Heading";
 export { Toolbar } from "./Toolbar";
 export { TrendingRooms } from "./TrendingRooms";
 export { Aside } from "./Aside";
+export { CardBooking } from "./CardBooking";

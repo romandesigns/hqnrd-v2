@@ -11,22 +11,21 @@ import {
 import { clsx } from "@/utils/clsx";
 import { ReservationTypes } from "@/zustand/interface";
 
-import { TrayCard } from "../../Room/TrayCard";
+import { CardBooking } from "../../Room";
 
 export function Bookings({
   reservations,
 }: {
   reservations: ReservationTypes[];
 }) {
-  console.log(reservations);
   return (
     <>
       <Notifier />
-      <Sheet open={true}>
+      <Sheet>
         <SheetTrigger className="relative rounded-md border bg-background p-2 shadow-sm hover:bg-muted">
           <div
             className={clsx(
-              `p-0.25 absolute -right-2 -top-1.5 rounded-full border border-background bg-muted-foreground px-2.5 text-[0.7rem] font-semibold text-muted-foreground`,
+              `p-0.25 absolute -right-2 -top-1.5 rounded-full border border-background bg-muted px-2.5 text-[0.7rem] font-semibold text-muted-foreground`,
               reservations.length >= 1 &&
                 "bg-[var(--brand-secondary-accent-500)] text-white",
             )}
@@ -35,11 +34,11 @@ export function Bookings({
           </div>
           <MdOutlineChecklistRtl size={18} />
         </SheetTrigger>
-        <SheetContent className="p-2 [@media(max-width:414px)]:w-[99%]">
+        <SheetContent className="p-2 max-sm:w-full">
           <SheetHeader className="py-4">
             <SheetTitle>My Bookings</SheetTitle>
           </SheetHeader>
-          <TrayCard />
+          <CardBooking />
           <SheetClose>Close it</SheetClose>
         </SheetContent>
       </Sheet>

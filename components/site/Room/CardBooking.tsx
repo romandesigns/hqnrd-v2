@@ -1,20 +1,14 @@
-import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { HiOutlineUser, MdChildCare, TbMoonStars } from "@/components/icons";
+import { Card, CardContent } from "@/components/ui/card";
 
-export function TrayCard() {
+export function CardBooking() {
   return (
     <Card className="rounded-md">
-      <CardContent className="flex items-start justify-start gap-1 p-0">
+      <CardContent className="flex items-start justify-start p-0">
         {/* Image thumbnail */}
-        <figure className="aspect-square w-2/6 rounded-md bg-pink-500" />
+        <div className="aspect-square w-2/6 p-1">
+          <figure className="aspect-square h-full w-full rounded-md bg-pink-500" />
+        </div>
         {/* Header */}
 
         <div className="flex w-full flex-col p-1 pr-2">
@@ -42,8 +36,8 @@ export function TrayCard() {
                   <span className="text-[0.6rem] font-medium text-muted-foreground">
                     Check In
                   </span>
-                  <span className="text-[0.65rem] font-bold">
-                    16/06/2024~12:30PM
+                  <span className="text-[0.65rem] font-medium">
+                    16-06-2024~12:30PM
                   </span>
                 </p>
               </div>
@@ -52,31 +46,37 @@ export function TrayCard() {
                   <span className="text-[0.60rem] font-medium text-muted-foreground">
                     Check Out
                   </span>
-                  <span className="text-[0.65rem] font-bold">
-                    16/06/2024~11:30AM
+                  <span className="text-[0.65rem] font-medium">
+                    16-06-2024~11:30AM
                   </span>
                 </p>
               </div>
             </div>
-            <div className="flex items-end gap-4">
-              <p className="flex items-end gap-1 text-xs">
+            <div className="flex items-end gap-2">
+              <p className="flex items-end gap-1 rounded-full bg-muted p-1 py-0.5 text-xs">
                 <span className="font-bold leading-none">3</span>
-                <HiOutlineUser />
+                <span className="leading-none text-muted-foreground">
+                  <HiOutlineUser />
+                </span>
               </p>
-              <p className="flex items-end gap-1 text-xs">
+              <p className="flex items-end gap-1 rounded-full bg-muted p-1 py-0.5 text-xs">
                 <span className="font-bold leading-none">0</span>
-                <MdChildCare />
+                <span className="leading-none text-muted-foreground">
+                  <MdChildCare />
+                </span>
               </p>
-              <p className="flex items-end gap-1 text-xs">
+              <p className="flex items-end gap-1 rounded-full bg-muted p-1 py-0.5 text-xs">
                 <span className="font-bold leading-none">2</span>
-                <span className="leading-none">
+                <span className="leading-none text-muted-foreground">
                   <TbMoonStars />
                 </span>
               </p>
               <p className="flex items-end gap-1 text-xs">
-                <span className="font-bold leading-none">2</span>
-                <span className="leading-none">x 1,300 = </span>
-                <span className="rounded-lg bg-muted px-2 py-0.5 font-bold leading-none text-muted-foreground">
+                <span className="py-0.25">
+                  <span className="font-bold leading-none">2</span>
+                  <span className="leading-none">x 1,300 = </span>
+                </span>
+                <span className="rounded-lg bg-muted px-2 py-0.5 font-bold leading-none">
                   $2,600
                 </span>
               </p>
