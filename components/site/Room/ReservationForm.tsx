@@ -1,37 +1,25 @@
 "use client";
 import {
-  BiMessageRoundedDots,
-  FaCalendar,
+  FaChevronDown,
+  FaRegClock,
   HiOutlineUser,
-  LuCalendarDays,
   MdChildCare,
-  MdOutlineTimer,
+  MdOutlineChecklistRtl,
+  MdOutlineMessage,
 } from "@/components/icons";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import React, { useState } from "react";
-import { RoomReservationPropTypes } from "./DialogForm";
-import moment from "moment";
-import { useNotifications, useReservation } from "@/zustand/hooks";
-import { RoomReservationInterface } from "@/types";
-import { validateRequiredFields } from "@/utils/validateReservationForm";
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { set } from "date-fns";
-import { DateTimePicker, TimePicker } from "@/components/ui/DateTimePicker";
-import { ChevronDown } from "lucide-react";
-import { tree } from "next/dist/build/templates/app-page";
+  Button,
+  Input,
+  Label,
+  Textarea,
+  TimePicker,
+  DateTimePicker,
+} from "@/components/ui";
+import { RoomReservationInterface } from "@/types";
+import { timeWithDateConversion } from "@/utils/timeDateConversion";
+import { bookingSchema } from "@/zod/roomBookingSchema";
+import { useNotifications, useReservation } from "@/zustand/hooks";
+import React, { useEffect, useState } from "react";
 
 export function ReservationForm({
   unitNumber,
@@ -48,72 +36,66 @@ export function ReservationForm({
     infants: 0,
     pricePerNight: 1300,
     unitNumber,
-    checkInTime: null,
-    checkInDate: null,
-    checkOutDate: null,
+    checkInTime: undefined,
+    checkInDate: undefined,
+    checkOutDate: undefined,
     checkOutTime: "11:30 AM",
     message: "",
     user: "Anonymous",
     createdOn: new Date(),
   });
-
-  const { addReservation } = useReservation();
+  const [isValid, setIsValid] = useState(true);
+  const { addReservation, reservations } = useReservation();
   const { notificationTrigger } = useNotifications();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [date, setDate] = React.useState<Date | undefined>(undefined);
-  const [time, setTime] = React.useState<Date | undefined>(undefined);
-  const [checkInDate, setCheckInDate] = useState<Date | undefined>(undefined);
-  const [checkOutDate, setCheckOutDate] = useState<Date | undefined>(undefined);
-  const handleCheckIn = (selectedDate: Date | undefined) => {
-    console.log(selectedDate);
-    if (selectedDate) {
-      setReservation({ ...reservation, checkInDate: selectedDate });
-    }
-  };
+  const [timeToCheckIn, setTimeToCheckIn] = React.useState<string | undefined>(
+    undefined,
+  );
 
-  const handleCheckOut = (selectedDate: Date | undefined) => {
-    console.log(selectedDate);
-    if (selectedDate) {
-      setReservation({ ...reservation, checkOutDate: selectedDate });
-    }
-  };
+  useEffect(() => {
+    setReservation({ ...reservation, checkInTime: timeToCheckIn ?? "" });
+  }, [timeToCheckIn]);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  useEffect(() => {
+    try {
+      const output = timeWithDateConversion(reservation);
+      const validation = bookingSchema.parse(output);
+      console.log(validation);
+    } catch (error) {
+      setIsValid(false); // Set invalid if parsing fails
+    }
+  }, [reservation]);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const validationErrors = validateRequiredFields(reservation);
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(
-        Object.values(validationErrors).map((error) => error.message), // Use map to extract messages
-      );
-      setIsDialogOpen(true); // Open Alert Dialog on errors
-      return;
+    try {
+      addReservation(reservation);
+      notificationTrigger("added reservation");
+    } catch (error) {
+      console.error(error.errors); // Log the validation errors
     }
-    addReservation(reservation);
   };
 
   return (
     <>
       <form
-        onSubmit={handleSubmit}
         className="flex flex-col items-stretch justify-center gap-6 lg:py-8"
+        onSubmit={handleSubmit}
       >
-        {/* Guests Count */}
-        <div className="flex w-full items-stretch justify-center gap-2">
-          <Label
-            htmlFor="adultCount"
-            className="flex flex-1 flex-col items-start justify-start"
-          >
-            <p className="mb-1 flex items-center justify-start gap-1">
+        <div className="grid grid-cols-2 items-center justify-between gap-2">
+          <div className="flex flex-col">
+            <Label
+              htmlFor="adultsCount"
+              className="mb-1 flex gap-1 text-muted-foreground"
+            >
               <HiOutlineUser />
               <span className="text-xs">Adults</span>
-            </p>
+            </Label>
             <Input
-              type="number"
-              name="adultCount"
+              type="tel"
+              min={1}
+              id="adultsCount"
               placeholder="0"
-              id="adultCount"
-              min={0}
-              required
+              value={reservation.adults}
               onChange={(e) =>
                 setReservation({
                   ...reservation,
@@ -121,22 +103,21 @@ export function ReservationForm({
                 })
               }
             />
-          </Label>
-          <Label
-            htmlFor="childCount"
-            className="flex flex-1 flex-col items-start justify-start"
-          >
-            <p className="mb-1 flex items-center justify-start gap-1">
+          </div>
+          <div className="flex flex-col">
+            <Label
+              htmlFor="childrenCount"
+              className="mb-1 flex gap-1 text-muted-foreground"
+            >
               <MdChildCare />
-              <span className="text-xs">Infantes</span>
-            </p>
+              <span className="text-xs">Children</span>
+            </Label>
             <Input
-              type="number"
-              name="childCount"
+              type="tel"
+              min={1}
+              id="childrenCount"
               placeholder="0"
-              id="childCount"
-              min={0}
-              required
+              value={reservation.infants}
               onChange={(e) =>
                 setReservation({
                   ...reservation,
@@ -144,122 +125,78 @@ export function ReservationForm({
                 })
               }
             />
-          </Label>
+          </div>
         </div>
-        {/* CheckIn */}
-        <div className="flex gap-2 max-sm:flex-col">
-          <Label
-            htmlFor="childCount"
-            className="flex flex-1 flex-col items-start justify-start"
-          >
-            <p className="mb-1 flex items-center justify-start gap-1">
-              <LuCalendarDays />
-              <span className="text-xs">Check In</span>
-            </p>
+        <div className="items-strech flex flex-col justify-start">
+          <Label className="mb-1 flex items-end justify-start gap-1 text-muted-foreground">
+            <MdOutlineChecklistRtl />
+            <span className="text-xs">Check In</span>
+          </Label>
+          <div className="grid grid-cols-2 items-center justify-between gap-2 max-sm:grid-cols-1 max-sm:grid-rows-2">
             <DateTimePicker
-              hideCalendar={true}
-              value={checkInDate}
-              onChange={setCheckInDate}
-              hourCycle={12}
-              granularity="day"
-              displayFormat={{ hour12: "MM-dd-yyyy" }}
+              min={new Date()}
+              value={reservation.checkInDate}
+              onChange={(checkInDate) =>
+                setReservation({
+                  ...reservation,
+                  checkInDate: checkInDate,
+                })
+              }
+              use12HourFormat
+              hideTime
             />
-          </Label>
-          <Label
-            htmlFor="childCount"
-            className="mb-4 flex flex-1 flex-col items-start justify-start"
-          >
-            <p className="mb-1 flex items-center justify-start gap-1 text-xs">
-              <MdOutlineTimer />
-              <span className="text-xs">Time</span>
-            </p>
-            <TimePicker hourCycle={12} granularity="minute" />
-          </Label>
+            <TimePicker setTimeToCheckIn={setTimeToCheckIn} />
+          </div>
         </div>
-        {/* Checkout */}
-        <div className="flex w-full items-center justify-between gap-2 max-sm:flex-col">
-          <Label
-            htmlFor="childCount"
-            className="flex w-full flex-1 flex-col items-start justify-start"
-          >
-            <p className="mb-1 flex items-center justify-start gap-1">
-              <LuCalendarDays />
-              <span className="text-xs">Check Out</span>
-            </p>
+        <div className="items-strech flex flex-col justify-start">
+          <Label className="mb-1 flex items-end justify-start gap-1 text-muted-foreground">
+            <MdOutlineChecklistRtl />
+            <span className="text-xs">Check Out</span>
+          </Label>
+          <div className="grid grid-cols-2 items-center justify-between gap-2 max-sm:grid-cols-1 max-sm:grid-rows-2">
             <DateTimePicker
-              hideCalendar={true}
-              value={checkOutDate}
-              onChange={setCheckOutDate}
-              hourCycle={12}
-              granularity="day"
-              displayFormat={{ hour12: "MM-dd-yyyy" }}
+              min={reservation.checkInDate || new Date()}
+              value={reservation.checkOutDate}
+              onChange={(checkOutDate) =>
+                setReservation({
+                  ...reservation,
+                  checkOutDate: checkOutDate,
+                })
+              }
+              use12HourFormat
+              hideTime
             />
-          </Label>
-          <Label
-            htmlFor="checkoutTime"
-            className="flex flex-1 flex-col items-start justify-start max-sm:w-full"
-          >
-            <p className="mb-1 flex items-center justify-start gap-1 text-xs">
-              <MdOutlineTimer />
-              <span className="text-xs">Time</span>
-            </p>
-            <p className="flex cursor-not-allowed gap-2 opacity-35">
-              <span className="flex h-10 w-[3rem] items-center justify-center rounded-md border px-4 text-xs shadow-sm">
-                11
-              </span>
-              <span className="flex items-center">:</span>
-              <span className="flex h-10 w-[4rem] items-center rounded-md border px-4 text-xs shadow-sm">
-                30
-              </span>
-              <span className="flex h-10 w-[3rem] items-center rounded-md border px-4 shadow-sm">
-                AM
-                <ChevronDown size={15} className="ml-1" />
+            <p className="flex w-full cursor-not-allowed items-center rounded-md border p-2 px-3 text-sm opacity-50 shadow-sm">
+              <FaRegClock size={12.2} className="mr-3" />
+              <span>11</span>
+              <span>:</span>
+              <span>30</span>
+              <span className="ml-1">AM</span>
+              <span className="ml-auto">
+                <FaChevronDown size={11} className="text-neutral-300" />
               </span>
             </p>
-          </Label>
+          </div>
         </div>
-        {/* Message */}
-        <Label
-          htmlFor="reservationMessage"
-          className="flex flex-1 flex-col items-start justify-start"
-        >
-          <p className="mb-1 flex items-center justify-start">
-            <BiMessageRoundedDots />
-            <span className="text-xs">(Optional)</span>
-          </p>
+        <div>
+          <Label className="mb-1 flex items-end justify-start gap-2 text-muted-foreground">
+            <MdOutlineMessage />
+            <span className="text-xs">Message (Optional)</span>
+          </Label>
           <Textarea
-            placeholder="Type your message here."
-            id="reservationMessage"
-            name="reservationMessage"
+            value={reservation.message}
             onChange={(e) =>
-              setReservation({ ...reservation, message: e.target.value })
+              setReservation({
+                ...reservation,
+                message: e.target.value,
+              })
             }
           />
-        </Label>
-        {children}
-        <Button size="block" type="submit" className="max-lg:hidden">
-          Submit
+        </div>
+        <Button size="block" type="submit" disabled={isValid}>
+          Add Booking
         </Button>
       </form>
-      <AlertDialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Validation Errors</AlertDialogTitle>
-          </AlertDialogHeader>
-          <ul className="space-y-2">
-            {errors.map((error, index) => (
-              <li key={index} className="text-sm text-red-500">
-                {error}
-              </li>
-            ))}
-          </ul>
-          <AlertDialogFooter>
-            <AlertDialogAction onClick={() => setIsDialogOpen(false)}>
-              Dismiss
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
     </>
   );
 }

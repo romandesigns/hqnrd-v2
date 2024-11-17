@@ -5,7 +5,12 @@ export {
 } from "react-icons/bi";
 export { CiImageOn } from "react-icons/ci";
 export { FaEnvelope, FaStar, FaStarHalfAlt, FaUsers } from "react-icons/fa";
-export { FaArrowLeft, FaCheck, FaShareNodes } from "react-icons/fa6";
+export {
+  FaArrowLeft,
+  FaCheck,
+  FaShareNodes,
+  FaRegClock,
+} from "react-icons/fa6";
 export { FcGoogle } from "react-icons/fc";
 export { FiBox, FiInbox } from "react-icons/fi";
 export { IoIosPeople } from "react-icons/io";
@@ -112,7 +117,7 @@ export {
   IoSettings,
 } from "react-icons/io5";
 export { LiaBedSolid } from "react-icons/lia";
-export { LuRockingChair, LuUser2 } from "react-icons/lu";
+export { LuRockingChair, LuUser2, LuCalendarDays } from "react-icons/lu";
 export {
   MdAdd,
   MdAssignment,
@@ -142,6 +147,7 @@ export {
   MdSpaceDashboard,
   MdVpnKey,
   MdWifi,
+  MdOutlineTimer,
 } from "react-icons/md";
 export {
   PiCoatHangerBold,

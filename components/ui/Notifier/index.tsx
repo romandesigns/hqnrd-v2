@@ -8,6 +8,9 @@ export function Notifier() {
 
   useEffect(() => {
     if (notification === "added reservation") {
+      if (audioRef.current) {
+        audioRef.current.volume = 0.25; // Set volume to halfway (50%)
+      }
       audioRef.current?.play();
     }
   }, [notification]);

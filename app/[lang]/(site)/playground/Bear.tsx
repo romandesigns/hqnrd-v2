@@ -4,16 +4,10 @@ import { useMobileNavigation } from "@/zustand/hooks";
 import React from "react";
 
 export function Bear() {
+  const [date, setDate] = React.useState<Date | undefined>(undefined);
+  const [time, setTime] = React.useState<Date | undefined>(undefined);
   // const store = useCombinedStore((state) => state);
   const store = useMobileNavigation();
-  return (
-    <div className="flex flex-col gap-2">
-      <p>Bears: {store.isOpen}</p>
-      <button className="outline" onClick={() => store.toggle()}>
-        Increase population
-      </button>
 
-      <p>ComponentName</p>
-    </div>
-  );
+  return <div className="flex flex-col gap-3 md:flex-row md:gap-10">Hello</div>;
 }

@@ -2,6 +2,7 @@ import { poppins } from "@/components/fonts";
 import { i18n, Locale } from "@/i18n-config";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import type { Metadata, Viewport } from "next";
+import { Toaster } from "@/components/ui/toaster";
 
 import "./globals.css";
 
@@ -48,6 +49,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           disableTransitionOnChange
         >
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

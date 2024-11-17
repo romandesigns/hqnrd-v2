@@ -277,3 +277,23 @@ export interface Reservation {
 export interface Reservations {
   reservations: Reservation[] | [];
 }
+
+export interface RoomReservationInterface {
+  adults: number;
+  infants: number;
+  pricePerNight: number;
+  unitNumber: number;
+  checkInTime: string | undefined;
+  checkInDate: Date | undefined;
+  checkOutDate: Date | undefined;
+  checkOutTime: string | undefined;
+  message: string;
+  user: string;
+  createdOn: Date;
+  totalDays?: number;
+  totalPrice?: number;
+  eligibleForDiscount?: boolean;
+  discount?: number;
+  totalGuests?: number;
+  origianlPrice?: number;
+}
