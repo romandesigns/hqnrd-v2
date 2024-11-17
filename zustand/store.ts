@@ -1,3 +1,4 @@
+import { RoomReservationInterface } from "@/types";
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import {
@@ -9,8 +10,10 @@ import {
   MobileNavBarPropTypes,
   NotificationPropTypes,
   ReservationPropTypes,
-  ReservationTypes,
 } from "./interface";
+
+// Utils
+import { calculateReservationFees } from "./reducers/utils/calculateReservationFees";
 
 // Combined Interface
 export interface CombinedStore
@@ -34,9 +37,10 @@ export const useCombinedStore = create<CombinedStore>()(
 
         // Handle reservations
         ...reservationInitialState,
-        addReservation: (reservation: ReservationTypes) =>
+        addReservation: (reservation: RoomReservationInterface) =>
           set((state) => {
-            const reservations = [...state.reservations, reservation];
+            const computedReservation = calculateReservationFees(reservation);
+            const reservations = [...state.reservations, computedReservation];
             return { reservations };
           }),
 

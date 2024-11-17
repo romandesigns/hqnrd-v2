@@ -1,3 +1,4 @@
+import { RoomReservationInterface } from "@/types";
 export interface MobileNavBarPropTypes {
   isOpen: boolean;
   toggle: () => void;
@@ -16,8 +17,8 @@ export interface ReservationTypes {
 }
 
 export interface ReservationPropTypes {
-  reservations: ReservationTypes[];
-  addReservation: (reservation: ReservationTypes) => void;
+  reservations: RoomReservationInterface[];
+  addReservation: (reservation: RoomReservationInterface) => void;
 }
 
 export interface NotificationPropTypes {
