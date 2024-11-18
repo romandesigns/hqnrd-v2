@@ -28,7 +28,7 @@ export function ReservationForm({
 }: {
   unitNumber: number;
   pricePerNight: number;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   const [errors, setErrors] = useState<string[]>([]);
   const [reservation, setReservation] = useState<RoomReservationInterface>({
@@ -71,7 +71,9 @@ export function ReservationForm({
       addReservation(reservation);
       notificationTrigger("added reservation");
     } catch (error) {
-      console.error(error.errors); // Log the validation errors
+      if (error instanceof Error) {
+        console.error(error.message); // Log the validation errors
+      }
     }
   };
 

@@ -1,9 +1,8 @@
 "use client";
 import { Button, ContactWidget, ModeToggle } from "@/components/ui";
-import { SiteNavigationTypes } from "@/types";
+import { RoomReservationInterface, SiteNavigationTypes } from "@/types";
 import { clsx } from "@/utils/clsx";
 import { useMobileNavigation } from "@/zustand/hooks";
-import { ReservationTypes } from "@/zustand/interface";
 import Link from "next/link";
 import { Bookings } from "./Bookings";
 
@@ -16,7 +15,7 @@ export function NavigationMenu({
   lang: string;
   classNames?: string;
   navStrings: SiteNavigationTypes;
-  reservations: ReservationTypes[];
+  reservations: RoomReservationInterface[];
 }) {
   const { toggle } = useMobileNavigation();
 

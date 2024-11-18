@@ -30,6 +30,7 @@ const RoomReservationSchema = z.object({
     .date()
     .nullable()
     .refine(
+      // @ts-ignore
       (date, ctx) => {
         if (!date || !ctx.parent.checkIn) return true; // Allow null check-out or missing check-in
         return moment(date).isAfter(moment(ctx.parent.checkIn));

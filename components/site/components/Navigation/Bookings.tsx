@@ -9,14 +9,14 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { clsx } from "@/utils/clsx";
-import { ReservationTypes } from "@/zustand/interface";
 
 import { CardBooking } from "../../Room";
+import { RoomReservationInterface } from "@/types";
 
 export function Bookings({
   reservations,
 }: {
-  reservations: ReservationTypes[];
+  reservations: RoomReservationInterface[];
 }) {
   return (
     <>

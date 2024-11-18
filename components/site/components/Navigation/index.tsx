@@ -1,11 +1,10 @@
 import { NavContainer } from "@/components/motion/SlidingContainer";
 import { BrandWrapper, ModeToggle, NavigationToggleBtn } from "@/components/ui";
-import { SiteNavigationTypes } from "@/types";
+import { RoomReservationInterface, SiteNavigationTypes } from "@/types";
 import clsx from "clsx";
 import { Wrapper } from "../Wrapper";
-import { NavigationMenu } from "./Menu";
-import { ReservationTypes } from "@/zustand/interface";
 import { Bookings } from "./Bookings";
+import { NavigationMenu } from "./Menu";
 
 /**
  * Navigation Component
@@ -23,7 +22,7 @@ export function Navigation({
   lang: string;
   navIsOpen: boolean;
   navStrings: SiteNavigationTypes;
-  reservations: ReservationTypes[];
+  reservations: RoomReservationInterface[];
 }) {
   return (
     <Wrapper
