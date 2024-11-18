@@ -16,7 +16,7 @@ export function Content({
   contentClassName,
 }: ContentPropTypes): JSX.Element {
   return (
-    <article className={clsx(`py-20 max-md:py-8`, contentClassName)}>
+    <article className={clsx(`py-10 max-md:py-8`, contentClassName)}>
       {children}
     </article>
   );

@@ -32,7 +32,7 @@ export function SiteWrapper({
   const { reservations } = useReservation();
 
   return (
-    <div className="grid w-full grid-cols-1 grid-rows-[auto_1fr_auto]">
+    <div className="relative grid w-full grid-cols-1 grid-rows-[auto_1fr_auto]">
       {showNavigation && (
         <Navigation
           lang={lang}

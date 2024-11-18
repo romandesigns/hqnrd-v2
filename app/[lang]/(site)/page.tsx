@@ -33,8 +33,12 @@ export default async function Page(props: {
         footer: component.footer,
       }}
     >
-      <div>
+      <>
         <HomeHeader lang={lang} dictionary={component.page.home.header} />
+        <div className="absolute top-0 -z-10 h-full w-full bg-transparent">
+          <div className="left-right absolute bottom-auto left-0 top-0 h-[50vh] w-[50vw] -translate-x-[30%] translate-y-[20%] rounded-full bg-[#bfbd3340] opacity-50 blur-[80px]" />
+          <div className="left-right absolute bottom-auto right-0 top-0 h-[60vh] w-[50vw] -translate-x-[30%] translate-y-[20%] rounded-full bg-[#479dcf60] opacity-50 blur-[80px]" />
+        </div>
         <main>
           <Testimonials dictionary={component.page.home.testimonials.heading} />
           <Discounts lang={lang} dictionary={component.page.home.discounts} />
@@ -43,7 +47,7 @@ export default async function Page(props: {
           <Trending dictionary={component.page.home.trending} />
           <FrequentlyAskedQuestions dictionary={component.page.home.faq} />
         </main>
-      </div>
+      </>
     </SiteWrapper>
   );
 }
