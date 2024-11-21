@@ -33,17 +33,17 @@ li {
 @layer base {
   :root {
     /* Brand color palette - BOSTON BLUE */
-    --brand-primary-accent-50: '#e3f2fb',  /* Lightest*/
-    --brand-primary-accent-100: '#c7e5f7', /* Very light*/
-    --brand-primary-accent-200: '#a3d4ef', /* Light*/
-    --brand-primary-accent-300: '#72bde3', /* Lighter*/
-    --brand-primary-accent-400: '#479dcf', /* Base shade - lighter version*/
-    --brand-primary-accent-500: '#338fbf', /* Base Color*/
-    --brand-primary-accent-600: '#2d7fae', /* Darker base*/
-    --brand-primary-accent-700: '#246590', /* Dark*/
-    --brand-primary-accent-800: '#1c4e70', /* Darker*/
-    --brand-primary-accent-900: '#153a54', /* Very dark*/
-    --brand-primary-accent-950: '#0c2333', /* Darkest*/
+    --brand-primary-accent-50: '#e3f2fb';  /* Lightest*/
+    --brand-primary-accent-100: '#c7e5f7'; /* Very light*/
+    --brand-primary-accent-200: '#a3d4ef'; /* Light*/
+    --brand-primary-accent-300: '#72bde3'; /* Lighter*/
+    --brand-primary-accent-400: '#479dcf'; /* Base shade - lighter version*/
+    --brand-primary-accent-500: '#338fbf'; /* Base Color*/
+    --brand-primary-accent-600: '#2d7fae'; /* Darker base*/
+    --brand-primary-accent-700: '#246590'; /* Dark*/
+    --brand-primary-accent-800: '#1c4e70'; /* Darker*/
+    --brand-primary-accent-900: '#153a54'; /* Very dark*/
+    --brand-primary-accent-950: '#0c2333'; /* Darkest*/
 
     /* Brand color palette - BOSTON BLUE */
     --brand-secondary-accent-50: #e3e7b4;  /* Lightest */
@@ -63,10 +63,21 @@ li {
     --highlight-primary-accent: 333, 58%, 47%;
     --highlight-second-accent: 46, 71%, 51%;
 
+    /* Custom Palette */
+    --background: 180 100% 99.8%;
+    --foreground: 200.3 59.6% 21.4%;
+    --border: 0 0% 89%;
+
+    --highlight: 333 58% 47%;
+    --highlight-foreground: 0 0% 98%;
+
+    --card: 0, 0% 98.4%;
     
-    --background: 0 0% 98%;
-    --foreground: 210 8% 5%;
-    --card: 0 0% 98%;
+    /* --background: 0 0% 98%; */
+    /* --foreground: 210 8% 5%; */
+    /* --border: 200 6% 90%; */
+    /* --card: 0 0% 98%; */
+    
     --card-foreground: 210 8% 5%;
     --popover: 0 0% 98%;
     --popover-foreground: 210 8% 5%;
@@ -80,7 +91,6 @@ li {
     --accent-foreground: 210 8% 5%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 200 6% 90%;
     --input: 204 6% 83%;
     --ring: 201 24% 75%;
     --radius: 0.5rem;
@@ -103,10 +113,18 @@ li {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
  .dark {
-    --background: 180 4% 5%;
-    --foreground: 0 0% 98%;
-    --card: 240 3% 6%;
-    --card-foreground: 0 0% 98%;
+   /* Custom Palette */
+   --background: 0 0% 3%;
+   --foreground: 0 0% 94.1%;
+   --border: 180 2% 12%;
+   --card: 0 0% 5.9%;
+   --card-foreground: 0 0% 97%;
+
+    /* --background: 180 4% 5%; */
+    /* --foreground: 0 0% 98%; */
+    /* --border: 180 2% 12%; */
+    /* --card: 240 3% 6%; */
+    /* --card-foreground: 0 0% 98%; */
     --popover: 240 3% 6%;
     --popover-foreground: 0 0% 98%;
     --primary: 201 97% 26%;
@@ -119,7 +137,6 @@ li {
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 180 2% 12%;
     --input: 210 2% 18%;
     --ring: 201 97% 40%;
 

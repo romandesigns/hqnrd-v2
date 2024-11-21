@@ -11,13 +11,10 @@ import { clsx } from "@/utils/clsx";
 export function Heading({ title, subtitle, classNames }: HeadingProps) {
   return (
     <h2
-      className={clsx(
-        `flex flex-col items-center justify-center text-accent-foreground`,
-        classNames,
-      )}
+      className={clsx(`flex flex-col items-center justify-center`, classNames)}
     >
       {title && (
-        <span className="rounded-full bg-accent p-4 py-2 text-xs font-semibold">
+        <span className="rounded-full bg-highlight p-4 py-2 text-xs font-semibold text-highlight-foreground">
           {title}
         </span>
       )}

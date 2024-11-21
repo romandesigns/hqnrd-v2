@@ -37,7 +37,7 @@ const config = {
           foreground: "hsl(var(--secondary-foreground))",
         },
         highlight: {
-          DEFAULT: "hsl(var(--highlight-primary-accent))",
+          DEFAULT: "hsl(var(--highlight))",
           foreground: "hsl(var(--highlight-foreground))",
         },
         destructive: {

@@ -62,14 +62,14 @@ export function CopyWritting({
         </h1>
       </BoxReveal>
       <BoxReveal boxColor={"black"} duration={0.5}>
-        <p className="my-4 text-sm leading-relaxed max-lg:px-4 max-lg:text-center max-lg:text-xs">
+        <p className="text-muted-foreground my-4 text-sm leading-relaxed max-lg:px-4 max-lg:text-center max-lg:text-xs">
           {htmlParser(dictionary.complementaryText)}
           <TextHighlight
             {...{
               elId: "myEl",
               text: dictionary.cta,
               highlightType: "underline",
-              color: "black",
+              color: "hsl(333, 58%, 47%)",
               delay: 3000,
               className: "font-bold inline-block ml-1",
             }}

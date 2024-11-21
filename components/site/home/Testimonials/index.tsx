@@ -23,7 +23,7 @@ export function Testimonials({ dictionary }: TestimonialsProps): JSX.Element {
           slidesPerView={3}
         />
       </Content>
-      <div className="left-right absolute bottom-auto right-0 top-1/4 h-[50vh] w-[50vw] -translate-x-[30%] translate-y-[20%] rounded-full bg-[#bf973310] opacity-50 blur-[80px]" />
+      <div className="left-right absolute bottom-auto right-0 top-0 h-[60vh] w-[50vw] -translate-x-[30%] translate-y-[20%] rounded-full bg-[#479dcf35] opacity-50 blur-[80px] dark:bg-[#479dcf40]" />
     </Section>
   );
 }
