@@ -25,9 +25,8 @@ export function Bookings({
         <SheetTrigger className="relative rounded-md border bg-background p-2 shadow-sm hover:bg-muted">
           <div
             className={clsx(
-              `p-0.25 absolute -right-2 -top-1.5 rounded-full border border-background bg-muted px-2.5 text-[0.7rem] font-semibold text-muted-foreground`,
-              reservations.length >= 1 &&
-                "bg-[var(--brand-secondary-accent-500)] text-white",
+              `p-0.25 text-muted-foreground absolute -right-2 -top-1.5 rounded-full border border-background bg-muted px-2.5 text-[0.7rem] font-semibold`,
+              reservations.length >= 1 && "bg-highlight text-white",
             )}
           >
             {reservations.length}

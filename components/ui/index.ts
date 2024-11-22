@@ -26,8 +26,10 @@ import { Label } from "./label";
 import { Textarea } from "./textarea";
 import { TimePicker } from "./TimePicker";
 import { DateTimePicker } from "./datetime-picker";
+import { BackgroundEffect } from "./Effects/Background";
 
 export {
+  BackgroundEffect,
   DateTimePicker,
   TimePicker,
   Textarea,

@@ -71,7 +71,8 @@ li {
     --highlight: 333 58% 47%;
     --highlight-foreground: 0 0% 98%;
 
-    --card: 0, 0% 98.4%;
+    --card: 0, 0% 100%;
+    --card-foreground: 200.3 59.6% 21.4%;
     
     /* --background: 0 0% 98%; */
     /* --foreground: 210 8% 5%; */

@@ -31,7 +31,7 @@ export function CardHeader({
           )}
         >
           {highlight && (
-            <p className="block text-xs font-medium text-muted-foreground">
+            <p className="text-muted-foreground block text-xs font-medium">
               {highlight}
             </p>
           )}
