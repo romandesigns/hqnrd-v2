@@ -2,7 +2,7 @@ import { Button } from "@/components/ui";
 import { Input } from "@/components/ui/input";
 import { Bear } from "./Bear";
 
-export default function Playground() {
+export default function Page() {
   async function getName(formData: FormData) {
     "use server";
     const name = formData.get("name");
