@@ -27,7 +27,7 @@ export function DiscountCard({
         </div>
         <div className="h-3 w-full bg-background" />
       </header>
-      <div className="bg-background p-1">
+      <div className="overflow-hidden rounded-md bg-background p-3">
         <figure className="relative block aspect-square overflow-hidden rounded-md">
           <div className="absolute inset-0 z-[1] flex flex-col items-start justify-start bg-foreground/40 p-14 backdrop-blur-sm max-lg:p-4">
             <p className="flex flex-col">
@@ -48,7 +48,6 @@ export function DiscountCard({
           />
         </figure>
       </div>
-      <footer className="rounded-bl-md rounded-br-md bg-background p-2 text-xs" />
     </article>
   );
 }

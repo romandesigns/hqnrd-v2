@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import type { Metadata, Viewport } from "next";
 import { Toaster } from "@/components/ui/toaster";
 
-import "./globals.css";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Hotel Quinto Nivel RD",
