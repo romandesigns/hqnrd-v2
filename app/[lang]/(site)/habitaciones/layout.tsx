@@ -4,13 +4,16 @@ import { SectionHeading } from "@/components/ui";
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
 
-export default async function RoomsLayout({
-  params: { lang },
-  children,
-}: {
-  params: { lang: Locale };
+export default async function RoomsLayout(props: {
+  params: Promise<{ lang: Locale }>;
   children: React.ReactNode;
 }) {
+  const params = await props.params;
+
+  const { lang } = params;
+
+  const { children } = props;
+
   const {
     site: { component },
   } = await getDictionary(lang);

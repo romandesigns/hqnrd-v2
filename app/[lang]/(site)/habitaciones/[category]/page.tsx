@@ -2,11 +2,18 @@ import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
 import React from "react";
 
-export default async function Page({
-  params: { category, lang },
-}: {
-  params: { category: string; lang: Locale };
-}) {
+export default async function Page(
+  props: {
+    params: Promise<{ category: string; lang: Locale }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    category,
+    lang
+  } = params;
+
   const {
     site: {
       component: {

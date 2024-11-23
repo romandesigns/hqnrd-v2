@@ -1,23 +1,32 @@
 "use client";
 import { Button, ContactWidget, ModeToggle } from "@/components/ui";
-import { useSiteMobileNavigation } from "@/hooks";
-import { SiteNavigationTypes } from "@/types";
+import { RoomReservationInterface, SiteNavigationTypes } from "@/types";
 import { clsx } from "@/utils/clsx";
+import { useMobileNavigation } from "@/zustand/hooks";
 import Link from "next/link";
+import { Bookings } from "./Bookings";
 
 export function NavigationMenu({
   lang,
   classNames,
   navStrings,
+  reservations,
 }: {
   lang: string;
   classNames?: string;
   navStrings: SiteNavigationTypes;
+  reservations: RoomReservationInterface[];
 }) {
-  const { toggleNav } = useSiteMobileNavigation();
+  const { toggle } = useMobileNavigation();
+
   return (
-    <ul className={clsx("flex text-sm max-lg:flex-col", classNames)}>
-      <li className="w-full" onClick={() => toggleNav()}>
+    <ul
+      className={clsx(
+        "relative flex items-center text-sm max-lg:flex-col lg:gap-2",
+        classNames,
+      )}
+    >
+      <li className="w-full" onClick={() => toggle()}>
         <Button
           variant="ghost"
           className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
@@ -26,7 +35,7 @@ export function NavigationMenu({
           <Link href={`/${lang}`}>{navStrings.navigation.home}</Link>
         </Button>
       </li>
-      <li className="w-full" onClick={() => toggleNav()}>
+      <li className="w-full" onClick={() => toggle()}>
         <Button
           variant="ghost"
           className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
@@ -37,13 +46,15 @@ export function NavigationMenu({
           </Link>
         </Button>
       </li>
-      <li className="lg:block lg:px-4" />
+      <li className="w-full rounded-md" onClick={() => toggle()}>
+        <Bookings reservations={reservations} />
+      </li>
       <li className="mt-auto">
         <ContactWidget lang={lang} />
       </li>
       <li className="w-full max-lg:mt-3">
-        <ul className="mt-auto flex flex-col gap-4 lg:flex-row">
-          <li className="w-full" onClick={() => toggleNav()}>
+        <ul className="mt-auto flex flex-col gap-4 lg:flex-row lg:items-center">
+          <li className="w-full" onClick={() => toggle()}>
             <Button
               variant="default"
               className="w-full max-lg:h-10 lg:h-8"
@@ -51,17 +62,6 @@ export function NavigationMenu({
             >
               <Link href={`/${lang}/iniciar-session`}>
                 {navStrings.navigation.signIn}
-              </Link>
-            </Button>
-          </li>
-          <li className="w-full" onClick={() => toggleNav()}>
-            <Button
-              asChild
-              variant="ghost"
-              className="max-lg:h-10 max-lg:w-full max-lg:border max-lg:shadow-sm lg:h-8"
-            >
-              <Link href={`/${lang}/crear-session`}>
-                {navStrings.navigation.signUp}
               </Link>
             </Button>
           </li>

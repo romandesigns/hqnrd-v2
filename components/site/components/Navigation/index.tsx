@@ -1,8 +1,9 @@
+import { NavContainer } from "@/components/motion/SlidingContainer";
 import { BrandWrapper, ModeToggle, NavigationToggleBtn } from "@/components/ui";
-import { NavContainer } from "@/framerMotion/SlidingContainer";
-import { SiteNavigationTypes } from "@/types";
+import { RoomReservationInterface, SiteNavigationTypes } from "@/types";
 import clsx from "clsx";
 import { Wrapper } from "../Wrapper";
+import { Bookings } from "./Bookings";
 import { NavigationMenu } from "./Menu";
 
 /**
@@ -16,15 +17,17 @@ export function Navigation({
   lang,
   navIsOpen,
   navStrings,
+  reservations,
 }: {
   lang: string;
   navIsOpen: boolean;
   navStrings: SiteNavigationTypes;
+  reservations: RoomReservationInterface[];
 }) {
   return (
     <Wrapper
       className={clsx(
-        "after:backdrop min-lg:shadow-black/5 min-lg:shadow sticky top-0 z-[4] flex flex-col items-end justify-end rounded-md bg-background p-2 after:absolute after:inset-x-0 after:top-0 after:z-[1] after:block after:h-full after:backdrop-blur-sm after:content-[''] lg:border-b",
+        "after:backdrop min-lg:shadow-black/5 min-lg:shadow sticky top-0 z-[4] flex flex-col items-end justify-end rounded-md bg-background/60 p-2 after:absolute after:inset-x-0 after:top-0 after:z-[1] after:block after:h-full after:backdrop-blur-lg after:content-[''] max-lg:bg-background/90 lg:translate-y-4 lg:overflow-hidden lg:rounded-full lg:border-b",
       )}
     >
       {/* Show the theme toggle button and open/close navigation btn in mobile screens */}
@@ -35,6 +38,7 @@ export function Navigation({
       >
         {/* Show the theme toggle button and open/close navigation btn in mobile screens */}
         <div className="ml-auto space-x-4 lg:hidden">
+          <Bookings reservations={reservations} />
           <ModeToggle navStrings={navStrings.themeMenu} />
           <NavigationToggleBtn />
         </div>
@@ -43,6 +47,7 @@ export function Navigation({
           lang={lang}
           classNames="hidden lg:flex lg:w-auto"
           navStrings={navStrings}
+          reservations={reservations}
         />
       </BrandWrapper>
 
@@ -58,6 +63,7 @@ export function Navigation({
               lang={lang}
               classNames="w-full flex items-stretch justify-stretch gap-4 h-full"
               navStrings={navStrings}
+              reservations={reservations}
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import { FaShareNodes } from "@/components/icons";
-import { ShareMetadata, SiteMetaData } from "@/types";
+import { ShareMetadata } from "@/types";
 import { clsx } from "@/utils/clsx";
 import { Button } from "..";
 
@@ -13,11 +13,27 @@ async function handleShareDetails(metadata: ShareMetadata) {
   }
 }
 
-export function ShareBtn({ metadata, className }: SiteMetaData) {
+export function ShareBtn({
+  metadata,
+  className,
+  variant = "ghost",
+}: {
+  metadata: ShareMetadata;
+  className?: string;
+  variant?:
+    | "ghost"
+    | "link"
+    | "outline"
+    | "secondary"
+    | "destructive"
+    | "default"
+    | null
+    | undefined;
+}) {
   return (
     <Button
       size="icon"
-      variant="ghost"
+      variant={variant}
       className={clsx(`mx-2`, className)}
       onClick={() => handleShareDetails(metadata)}
     >

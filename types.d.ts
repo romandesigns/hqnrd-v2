@@ -107,6 +107,7 @@ export interface CategoryCardProps {
   description: string;
   slug: string;
   Icon: IconType;
+  lang: Locale;
 }
 
 export interface RoomCategory {
@@ -254,4 +255,45 @@ export interface RoomsHeaderCopyProps {
   dictionary: RoomsHeaderDictionaryProps;
   slugs: string[];
   rooms: number[];
+}
+
+export interface NavBar {
+  isOpen: boolean;
+  lastUpdate: number;
+  toggleNavigation: () => void;
+}
+
+export interface Reservation {
+  adultsCount: number;
+  infantsCount: number;
+  totalDays: number;
+  checkInTime: string;
+  checkOutTime: number;
+  discount: 0 | 5 | 15;
+  totalPrice: number;
+  eligibleForDiscount: boolean;
+}
+
+export interface Reservations {
+  reservations: Reservation[] | [];
+}
+
+export interface RoomReservationInterface {
+  adults: number;
+  infants: number;
+  pricePerNight: number;
+  unitNumber: number;
+  checkInTime: string | undefined;
+  checkInDate: Date | undefined;
+  checkOutDate: Date | undefined;
+  checkOutTime: string | undefined;
+  message: string;
+  user: string;
+  createdOn: Date;
+  totalDays?: number;
+  totalPrice?: number;
+  eligibleForDiscount?: boolean;
+  discount?: number;
+  totalGuests?: number;
+  origianlPrice?: number;
 }

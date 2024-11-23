@@ -1,8 +1,6 @@
-import { FaArrowLeft } from "@/components/icons";
-import { Button, ContactWidget } from "@/components/ui";
+import { ContactWidget, GoBack } from "@/components/ui";
 import { RoomsHeaderCopyProps } from "@/types";
 import classNames from "classnames";
-import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import { CategorySelect } from "./CategoriesSelect";
 
@@ -18,16 +16,11 @@ export function CopyWritting({
   lang,
   slugs,
   dictionary,
-  rooms,
 }: RoomsHeaderCopyProps) {
   return (
     <section className="flex flex-col items-start justify-start gap-2 lg:gap-8">
       <div className="max-lg:mb-10 max-lg:hidden">
-        <Button asChild variant="ghost" size="icon">
-          <Link href={`/${lang}`}>
-            <FaArrowLeft className="text-lg" />
-          </Link>
-        </Button>
+        <GoBack />
       </div>
       <div className="flex flex-col items-start justify-start gap-4 max-lg:mx-auto max-lg:text-center">
         <small className="font-semibold max-lg:mx-auto max-lg:hidden">
@@ -43,14 +36,13 @@ export function CopyWritting({
         >
           {dictionary.header.title}
         </h2>
-        <p className="max-w-[90%] text-sm max-lg:mx-auto max-lg:hidden max-lg:text-[0.8rem]">
+        <p className="max-w-[90%] text-sm font-normal leading-relaxed max-lg:mx-auto max-lg:hidden max-lg:text-[0.8rem]">
           {dictionary.header.complementaryText}
         </p>
       </div>
       <CategorySelect
         slugs={slugs}
         lang={lang}
-        placeholder={dictionary.header.selectText}
         title={dictionary.header.title}
       />
       <div className="flex w-full max-lg:justify-center lg:justify-start">

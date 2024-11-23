@@ -1,5 +1,5 @@
 import { clsx } from "@/utils/clsx";
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 interface StarRatingProps {
   rating: number;
@@ -14,7 +14,7 @@ export function StarRating({ rating, classNames }: StarRatingProps) {
   return (
     <span
       className={clsx(
-        `flex -translate-y-1 items-start justify-center`,
+        `flex -translate-y-1 items-start justify-center text-secondary-highlight`,
         classNames,
       )}
     >

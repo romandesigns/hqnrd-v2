@@ -9,8 +9,8 @@ import {
 import BoxReveal from "@/components/ui/box-reveal";
 import NumberTicker from "@/components/ui/number-ticker";
 import { CONSTANTS } from "@/constants";
+import { htmlParser } from "@/lib/utils";
 import { HomeHeaderCopyProps } from "@/types";
-import { useHtmlParser } from "@/utils/useHtmlParser";
 import classNames from "classnames";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
@@ -41,11 +41,12 @@ export function CopyWritting({
           <StarRating rating={4.5} classNames="pt-1" />
         </div>
         <small className="max-lg:text-xs max-lg:font-medium">
-          <NumberTicker value={139} delay={2} /> Google {dictionary.review}
+          <NumberTicker value={139} delay={2} className="font-bold" /> Google{" "}
+          {dictionary.review}
         </small>
       </div>
       <div className="flex items-center justify-start gap-2 text-sm font-medium max-lg:justify-center">
-        <PiMapPinFill className="animate-bounce" />
+        <PiMapPinFill className="animate-bounce text-primary-highlight" />
         <p>{dictionary.highlight}</p>
       </div>
       <BoxReveal boxColor={"black"} duration={0.25}>
@@ -61,14 +62,14 @@ export function CopyWritting({
         </h1>
       </BoxReveal>
       <BoxReveal boxColor={"black"} duration={0.5}>
-        <p className="my-4 text-sm leading-relaxed max-lg:px-4 max-lg:text-center max-lg:text-xs">
-          {useHtmlParser(dictionary.complementaryText)}
+        <p className="text-muted-foreground my-4 text-sm leading-relaxed max-lg:px-4 max-lg:text-center max-lg:text-xs">
+          {htmlParser(dictionary.complementaryText)}
           <TextHighlight
             {...{
               elId: "myEl",
               text: dictionary.cta,
               highlightType: "underline",
-              color: "black",
+              color: "hsl(333, 58%, 47%)",
               delay: 3000,
               className: "font-bold inline-block ml-1",
             }}

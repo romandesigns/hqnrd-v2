@@ -1,9 +1,8 @@
 import { poppins } from "@/components/fonts";
-import { i18n } from "@/i18n-config";
+import { i18n, Locale } from "@/i18n-config";
 import { ThemeProvider } from "@/providers/ThemeProvider";
-import StoreProvider from "@/store/StoreProvider";
-import type { Metadata } from "next";
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
+import { Toaster } from "@/components/ui/toaster";
 
 import "./globals.css";
 
@@ -26,13 +25,16 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export default function RootLayout({
-  children,
-  params: { lang },
-}: Readonly<{
+interface LayoutProps {
   children: React.ReactNode;
-  params: { lang: string };
-}>) {
+  params: Promise<{
+    lang: Locale;
+  }>;
+}
+
+export default async function RootLayout({ children, params }: LayoutProps) {
+  const { lang } = await params;
+
   return (
     <html
       lang={lang}
@@ -40,16 +42,15 @@ export default function RootLayout({
       className="scroll-smooth focus:scroll-auto"
     >
       <body className={`${poppins.className} h-dvh antialiased`}>
-        <StoreProvider lastUpdate={new Date().getTime()}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-        </StoreProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

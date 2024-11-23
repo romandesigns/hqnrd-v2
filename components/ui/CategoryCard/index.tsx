@@ -8,6 +8,7 @@ export function CategoryCard({
   description,
   slug,
   Icon,
+  lang,
 }: CategoryCardProps) {
   return (
     <article className="glass-effect">
@@ -28,10 +29,10 @@ export function CategoryCard({
         </p>
       </div>
       <footer className="rounded-bl-md rounded-br-md bg-background pb-4 pl-4 pr-4 text-xs">
-        <Button asChild className="w-full">
+        <Button asChild className="w-full" size="block">
           <Link
-            href={`/habitaciones/?categoria=${slug}`}
-            className="block py-6"
+            href={`/${lang}/habitaciones?categoria=${slug}`}
+            className="block py-5"
           >
             {btnText}
           </Link>

@@ -14,7 +14,7 @@ export function Heading({ title, subtitle, classNames }: HeadingProps) {
       className={clsx(`flex flex-col items-center justify-center`, classNames)}
     >
       {title && (
-        <span className="rounded-full bg-primary p-4 py-2 text-xs font-medium text-primary-foreground">
+        <span className="rounded-full bg-highlight p-4 py-2 text-xs font-semibold text-highlight-foreground">
           {title}
         </span>
       )}

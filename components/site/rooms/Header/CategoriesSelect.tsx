@@ -7,11 +7,9 @@ import Link from "next/link";
 export function CategorySelect({
   slugs,
   lang,
-  placeholder,
   title,
 }: {
   lang: Locale;
-  placeholder: string;
   slugs: string[];
   title: string;
 }) {
@@ -23,7 +21,7 @@ export function CategorySelect({
             <FaArrowLeft className="text-lg" />
           </Link>
         </Button>
-        <h3 className="max-sm:text-md mx-auto my-4 max-w-[17rem] text-center text-xl font-black uppercase max-sm:mt-0 max-sm:leading-tight">
+        <h3 className="mx-auto my-4 w-full text-center text-xl font-bold uppercase max-sm:mt-0 max-sm:text-sm max-sm:leading-tight">
           {title}
         </h3>
       </div>

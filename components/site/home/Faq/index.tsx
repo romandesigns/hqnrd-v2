@@ -16,7 +16,7 @@ import { Content, Section } from "../../components";
  */
 export function FrequentlyAskedQuestions({ dictionary }: FAQ): JSX.Element {
   return (
-    <Section wrapperClassName="max-w-6xl">
+    <Section wrapperClassName="max-w-6xl" sectionClassName="relative">
       <SectionHeading
         title={dictionary.heading.title}
         subtitle={dictionary.heading.subtitle}
