@@ -64,12 +64,18 @@ li {
     --highlight-second-accent: 46, 71%, 51%;
 
     /* Custom Palette */
-    --background: 180 100% 99.8%;
+
+
+    /* --background: 180 100% 99.8%; */
+    --background: 200.7 58.2% 98%;
     --foreground: 200.3 59.6% 21.4%;
     --border: 0 0% 89%;
 
     --highlight: 333 58% 47%;
     --highlight-foreground: 0 0% 98%;
+
+    --accent-secondary: 200.3 59.6% 21.4%;
+    --accent-secondary-foreground: 200.7 58.2% 98%;
 
     --card: 0 0% 100%;
     --card-foreground: 200.3 59.6% 21.4%;
@@ -117,12 +123,15 @@ li {
   }
  .dark {
    /* Custom Palette */
-   --background: 0 0% 3%;
+   --accent-secondary: 200.3 59.6% 21.4%;
+   --accent-secondary-foreground: 200.7 58.2% 98%;
+   
+   --background: 0 0% 2.7%;
    --foreground: 0 0% 94.1%;
    --border: 180 2% 12%;
    --card: 0 0% 5.9%;
    --card-foreground: 0 0% 97%;
-
+   
     /* --background: 180 4% 5%; */
     /* --foreground: 0 0% 98%; */
     /* --border: 180 2% 12%; */

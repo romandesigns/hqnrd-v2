@@ -27,13 +27,13 @@ export function RoomCard({
   lang?: string;
 }) {
   return (
-    <div className="">
+    <div>
       <CardHeader
         highlight={`#${unitNumber}`}
         title={title}
         siteMetaData={{ metadata: data.site.shareData }}
       />
-      <div className="bg-muted/30 p-2">
+      <div className="bg-card p-2">
         <figure className="relative block aspect-video">
           <Image
             fill
@@ -47,7 +47,7 @@ export function RoomCard({
         text={`${pricePerNight} / Night `}
         classNames="font-bold -mt-8 "
       />
-      <div className="flex flex-col gap-2 bg-muted/30 p-2 py-4">
+      <div className="flex flex-col gap-2 bg-card p-2 py-4">
         <div className="flex items-center justify-start gap-2">
           <p className="text-xs font-semibold">Features</p>
           <ul className="flex items-center justify-start">
@@ -88,7 +88,7 @@ export function RoomCard({
           </ul>
         </div>
       </div>
-      <div className="rounded-bl-md rounded-br-md bg-muted/30 p-2">
+      <div className="rounded-bl-md rounded-br-md bg-card p-2">
         <Button size="block" asChild>
           <Link href={`/${lang}/habitacion/${unitNumber}`}>View Details</Link>
         </Button>

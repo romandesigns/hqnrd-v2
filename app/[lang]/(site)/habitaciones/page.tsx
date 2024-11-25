@@ -39,7 +39,7 @@ export default async function Page({ params, searchParams }: PageProps) {
   return rooms.length ? (
     <>
       <div className="pb-20 pt-2">
-        <p className="text-center text-[.9rem] font-medium [&_span]:inline-flex [&_span]:rounded-full [&_span]:bg-accent-foreground [&_span]:px-4 [&_span]:text-primary-foreground">
+        <p className="text-center text-[.9rem] font-medium [&_span]:inline-flex [&_span]:rounded-full [&_span]:bg-[hsl(var(--accent-secondary))] [&_span]:px-4 [&_span]:text-[hsl(var(--accent-secondary-foreground))]">
           {categoria
             ? htmlParser(
                 `Showing <span>${rooms.length}</span> ${formatLabel(categoria)} rooms`,
@@ -49,7 +49,7 @@ export default async function Page({ params, searchParams }: PageProps) {
       </div>
       <ul
         className={clsx(
-          `grid grid-flow-row grid-cols-1 grid-rows-1 gap-4 gap-y-10 rounded-md p-2 sm:grid-cols-2 lg:grid-cols-3`,
+          `grid grid-flow-row grid-cols-1 grid-rows-1 gap-4 gap-y-10 rounded-md p-2 pb-10 sm:grid-cols-2 lg:grid-cols-3`,
           rooms.length === 0 && "grid-cols-1 grid-rows-1",
         )}
       >

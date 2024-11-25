@@ -3,9 +3,9 @@ import { Heading } from ".";
 
 export function Amenities() {
   return (
-    <div className="rounded-md border p-2 @container">
+    <div className="rounded-md border p-2">
       <Heading text="Amenities" />
-      <ul className="my-3 grid w-full grid-cols-2 gap-3 rounded-md bg-muted/10 p-2 py-4 sm:grid-cols-5">
+      <ul className="my-3 grid w-full grid-cols-2 gap-6 rounded-md p-2 py-4 sm:grid-cols-5">
         {amenities.map((amenity, idx) => (
           <li key={idx} className="flex items-center justify-start">
             <span className="order-2 text-[.8rem]">{amenity.label}</span>

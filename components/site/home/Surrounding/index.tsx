@@ -18,6 +18,7 @@ export function Surrounding({ dictionary }: SurroundingProps): JSX.Element {
       <SectionHeading
         title={dictionary.heading.title}
         subtitle={dictionary.heading.subtitle}
+        headingClassName="!mb-10"
       />
       <Content>
         <Tabs

@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
       colors: {
         "primary-highlight": "hsl(var(--highlight-primary-accent))",
         "secondary-highlight": "hsl(var(--highlight-second-accent))",

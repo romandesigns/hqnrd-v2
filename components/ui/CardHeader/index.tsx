@@ -18,20 +18,20 @@ export function CardHeader({
   siteMetaData: SiteMetaData;
 }) {
   return (
-    <div className="relative flex after:absolute after:-bottom-1 after:left-0 after:right-0 after:bg-muted/30">
-      <div className="w-[10%] rounded-tl-md bg-muted/30" />
+    <div className="relative flex after:absolute after:-bottom-1 after:left-0 after:right-0 after:bg-card">
+      <div className="w-[10%] rounded-tl-md bg-card" />
       <div
         className={clsx(
-          `w-${width} relative -top-4 rounded-bl-md rounded-br-md bg-transparent p-${p / 2} shadow-[0px_18px_0px_1.5px_#151717]`,
+          `w-${width} relative -top-4 rounded-bl-md rounded-br-md bg-transparent p-${p / 2} shadow-[0px_18px_0px_1.5px_hsl(var(--card))]`,
         )}
       >
         <div
           className={clsx(
-            `block h-auto rounded-md bg-muted/30 py-${p - 1} px-${p * 2}`,
+            `block h-auto rounded-md bg-[hsl(var(--accent-secondary))] text-white py-${p - 1} px-${p * 2}`,
           )}
         >
           {highlight && (
-            <p className="text-muted-foreground block text-xs font-medium">
+            <p className="text-muted-foreground block text-[0.65rem] font-normal">
               {highlight}
             </p>
           )}
@@ -42,7 +42,7 @@ export function CardHeader({
           )}
         </div>
       </div>
-      <div className="flex flex-1 items-center justify-end rounded-tr-md bg-muted/30">
+      <div className="flex flex-1 items-center justify-end rounded-tr-md bg-card">
         <ShareBtn metadata={metadata} />
       </div>
     </div>

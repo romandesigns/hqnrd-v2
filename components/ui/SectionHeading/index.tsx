@@ -1,6 +1,6 @@
+import { SectionHeadingProps } from "@/types";
 import { clsx } from "@/utils/clsx";
 import { Divider, Heading } from "..";
-import { SectionHeadingProps } from "@/types";
 
 export function SectionHeading({
   title,
