@@ -1,12 +1,9 @@
-import {
-  BackgroundEffect,
-  CategoryCard,
-  SectionHeading,
-} from "@/components/ui";
+import { CategoryCard, SectionHeading } from "@/components/ui";
 import { Locale } from "@/i18n-config";
 import { CategoriesProps } from "@/types";
 import { Content, Section } from "../../components";
 import { dictionaryStrings } from "./translationStrings";
+import { BackgroundCategories } from "@/components/ui/Backgrounds/BackgroundCategories";
 
 /**
  * @title Categories component
@@ -32,9 +29,7 @@ export function Categories({
 
   return (
     <Section sectionClassName="relative">
-      <div className="absolute top-0 -z-10 h-full w-full bg-transparent">
-        <div className="left-right absolute bottom-auto right-0 top-0 h-[90vh] w-[90vw] -translate-x-[10vw] translate-y-[0vh] rounded-full bg-[#479dcf40] opacity-50 blur-[80px] dark:bg-[#479dcf00]" />
-      </div>
+      <BackgroundCategories />
       <SectionHeading
         title={heading.title}
         subtitle={heading.subtitle}

@@ -2,6 +2,8 @@ import { Carousel, SectionHeading } from "@/components/ui";
 import { data } from "@/public/assets/data";
 import { TestimonialsProps } from "@/types";
 import { Content, Section } from "../../components";
+import { BackgroundTestimonials } from "@/components/ui/Backgrounds/BackgroundTestimonials";
+
 /**
  * @title Testimonials
  * @description Home testimonail  component
@@ -9,6 +11,7 @@ import { Content, Section } from "../../components";
  * @param {TestimonialsProps} { dictionary }
  * @return {*}  {JSX.Element}
  */
+
 export function Testimonials({ dictionary }: TestimonialsProps): JSX.Element {
   return (
     <Section sectionClassName="relative">
@@ -23,7 +26,7 @@ export function Testimonials({ dictionary }: TestimonialsProps): JSX.Element {
           slidesPerView={3}
         />
       </Content>
-      <div className="left-right absolute bottom-auto right-0 top-0 -z-[2] h-[40vh] w-[60vw] -translate-x-[30%] translate-y-[20%] rounded-full bg-[#479dcf35] opacity-50 blur-[80px] dark:bg-[#479dcf00]" />
+      <BackgroundTestimonials />
     </Section>
   );
 }
