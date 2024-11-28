@@ -15,7 +15,7 @@ export function CategoryCard({
       <header className="flex w-full flex-col">
         <div className="flex w-full">
           <div className="h-8 flex-[.1] rounded-tl-md rounded-tr-md bg-card" />
-          <div className="relative max-w-16 flex-auto rounded-bl-md rounded-br-md bg-transparent p-2 pt-0 shadow-[3px_6px_0px_3px_hsl(var(--card))] after:absolute after:bottom-2 after:left-2 after:right-2 after:mx-auto after:flex after:aspect-square after:h-10 after:items-center after:justify-center after:rounded-md after:bg-[hsl(var(--accent-secondary))] after:py-6 after:font-bold after:text-primary-foreground after:max-sm:px-6 after:max-sm:text-xs">
+          <div className="after:floating-shadow relative max-w-16 flex-auto rounded-bl-md rounded-br-md bg-transparent p-2 pt-0 shadow-[3px_6px_0px_3px_hsl(var(--card))] after:absolute after:bottom-2 after:left-2 after:right-2 after:mx-auto after:flex after:aspect-square after:h-10 after:items-center after:justify-center after:rounded-md after:bg-[hsl(var(--accent-secondary))] after:py-6 after:font-bold after:text-primary-foreground after:max-sm:px-6 after:max-sm:text-xs">
             <Icon className="absolute -top-[.8rem] left-0 right-0 z-[2] mx-auto h-7 w-7 text-primary-foreground" />
           </div>
           <div className="h-8 flex-1 rounded-tl-md rounded-tr-md bg-card" />

@@ -77,6 +77,14 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        wave: {
+          "0%, 100%": {
+            boxShadow: "0 0 0 0 hsl(333 58% 47%/20%)",
+          },
+          "50%": {
+            boxShadow: "0 0 10px 0px hsl(333 58% 47%/98%)",
+          },
+        },
         "accordion-down": {
           from: {
             height: "0",
@@ -97,6 +105,7 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        beacon: "wave 1.5s ease-in-out infinite",
       },
     },
   },

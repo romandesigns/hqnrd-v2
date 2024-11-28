@@ -4,7 +4,7 @@ import { Locale } from "@/i18n-config";
 import { formatLabel } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function DropDownSelect({
   slugs,
@@ -14,6 +14,8 @@ export function DropDownSelect({
   lang: Locale;
 }) {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("All Rooms");
+
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -35,13 +37,21 @@ export function DropDownSelect({
     router.push(`/${lang}/habitaciones?categoria=${option}`);
   };
 
+  useEffect(() => {
+    if (categoria) {
+      setSelectedCategory(categoria);
+    } else {
+      setSelectedCategory("All Rooms");
+    }
+  }, [categoria]);
+
   return (
     <motion.div className="relative z-[1] rounded-sm border p-3">
       <motion.button
         onClick={() => setShowDropdown((prev) => !prev)}
         className="flex w-full items-center justify-between px-2 text-left text-sm"
       >
-        <span className="font-semibold">{currentOption}</span>
+        <span className="font-semibold">{selectedCategory}</span>
         <FaChevronDown
           className={`transform text-primary-highlight transition-transform delay-75 ${showDropdown ? "rotate-180" : "0"}`}
         />
@@ -57,14 +67,14 @@ export function DropDownSelect({
             transition={{
               speed: 0.25,
               duration: 0.1,
-            }} // Adjust duration as needed
+            }}
           >
             <motion.div className="flex flex-col items-start justify-start gap-2 text-sm">
               {slugs.map((slug, index) => (
                 <motion.button
                   key={index}
                   onClick={() => handleOptionClick(slug)}
-                  className={`group relative flex w-full cursor-pointer select-none items-center justify-between rounded-sm px-2 py-1.5 pl-2 text-left text-sm outline-none hover:bg-muted-foreground/10 focus:bg-accent focus:text-accent-foreground ${
+                  className={`hover:bg-muted-foreground/10 group relative flex w-full cursor-pointer select-none items-center justify-between rounded-sm px-2 py-1.5 pl-2 text-left text-sm outline-none focus:bg-accent focus:text-accent-foreground ${
                     formatLabel(slug) === param
                       ? "bg-accent text-accent-foreground"
                       : ""

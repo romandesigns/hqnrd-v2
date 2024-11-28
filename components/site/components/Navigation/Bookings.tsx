@@ -15,18 +15,26 @@ import { RoomReservationInterface } from "@/types";
 
 export function Bookings({
   reservations,
+  className,
 }: {
   reservations: RoomReservationInterface[];
+  className?: string;
 }) {
   return (
     <>
       <Notifier />
       <Sheet>
-        <SheetTrigger className="relative rounded-md border bg-background p-2 shadow-sm hover:bg-muted">
+        <SheetTrigger
+          className={clsx(
+            "relative rounded-md border bg-background p-2 shadow-sm hover:bg-muted",
+            className,
+          )}
+        >
           <div
             className={clsx(
-              `p-0.25 text-muted-foreground absolute -right-2 -top-1.5 rounded-full border border-background bg-muted px-2.5 text-[0.7rem] font-semibold`,
-              reservations.length >= 1 && "bg-highlight text-white",
+              `p-0.25 text-muted-foreground absolute -right-2 -top-1.5 rounded-full bg-muted px-2.5 text-[0.7rem] font-semibold transition-transform duration-1000`,
+              reservations.length >= 1 &&
+                "animate-beacon bg-highlight text-white",
             )}
           >
             {reservations.length}

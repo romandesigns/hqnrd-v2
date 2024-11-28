@@ -27,7 +27,7 @@ export function RoomCard({
   lang?: string;
 }) {
   return (
-    <div>
+    <div className="glass-effect !p-1">
       <CardHeader
         highlight={`#${unitNumber}`}
         title={title}

@@ -16,7 +16,7 @@ export function CardTestimonial({
     <article className="glass-effect w-full @container">
       <div className="flex justify-end after:absolute after:left-[.5rem] after:block after:h-[calc(100%-3rem)] after:w-[3.4%] after:rounded-tl-lg after:bg-card after:content-[''] lg:after:left-3">
         <div className="relative z-[2] w-[20.5%] -translate-y-6 rounded-lg rounded-tr-none bg-transparent p-[.3rem] shadow-[0px_26px_0px_2px_hsl(var(--card))]">
-          <div className="relative aspect-square h-[100%] w-full -translate-y-[.05rem] overflow-hidden rounded-lg bg-card">
+          <div className="floating-shadow relative aspect-square h-[100%] w-full -translate-y-[.05rem] overflow-hidden rounded-lg bg-card">
             <Image src={avatar} fill alt="Avatar user" />
           </div>
         </div>

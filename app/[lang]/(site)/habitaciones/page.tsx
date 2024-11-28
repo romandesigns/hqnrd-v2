@@ -1,10 +1,12 @@
 import { FiInbox } from "@/components/icons";
 import { RoomCard } from "@/components/ui";
+import { BackgroundTrendings } from "@/components/ui/Backgrounds/BackgroundTrendings";
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
 import { formatLabel, htmlParser } from "@/lib/utils";
 import { data } from "@/public/assets/data";
 import { clsx } from "@/utils/clsx";
+import Link from "next/link";
 
 interface PageProps {
   params: Promise<{ lang: Locale }>;
@@ -47,18 +49,33 @@ export default async function Page({ params, searchParams }: PageProps) {
             : "Showing all rooms"}
         </p>
       </div>
-      <ul
-        className={clsx(
-          `grid grid-flow-row grid-cols-1 grid-rows-1 gap-4 gap-y-10 rounded-md p-2 pb-10 sm:grid-cols-2 lg:grid-cols-3`,
-          rooms.length === 0 && "grid-cols-1 grid-rows-1",
-        )}
-      >
-        {rooms.map((room) => (
-          <li key={room.id}>
-            <RoomCard imgSrc={data.home.header.room[0]} {...room} lang={lang} />
-          </li>
-        ))}
-      </ul>
+      <div className="relative">
+        <div className="mb-10 text-right">
+          <Link
+            href={`/${lang}/habitaciones`}
+            className="text-var(--highlight) text-sm font-semibold text-primary-highlight underline"
+          >
+            View All
+          </Link>
+        </div>
+        <ul
+          className={clsx(
+            `grid grid-flow-row grid-cols-1 grid-rows-1 gap-4 gap-y-10 rounded-md p-2 pb-10 sm:grid-cols-2 lg:grid-cols-3`,
+            rooms.length === 0 && "grid-cols-1 grid-rows-1",
+          )}
+        >
+          {rooms.map((room) => (
+            <li key={room.id}>
+              <RoomCard
+                imgSrc={data.home.header.room[0]}
+                {...room}
+                lang={lang}
+              />
+            </li>
+          ))}
+        </ul>
+        {/* <BackgroundTrendings /> */}
+      </div>
     </>
   ) : (
     <EmptyBox />

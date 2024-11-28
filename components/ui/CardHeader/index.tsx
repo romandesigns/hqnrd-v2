@@ -27,7 +27,7 @@ export function CardHeader({
       >
         <div
           className={clsx(
-            `block h-auto rounded-md bg-[hsl(var(--accent-secondary))] text-white py-${p - 1} px-${p * 2}`,
+            `floating-shadow block h-auto rounded-md bg-[hsl(var(--accent-secondary))] text-white py-${p - 1} px-${p * 2}`,
           )}
         >
           {highlight && (
