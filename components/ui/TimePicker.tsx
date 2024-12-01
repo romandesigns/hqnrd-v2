@@ -32,8 +32,8 @@ export function TimePicker({
     <Popover>
       <PopoverTrigger asChild>
         <Button
-          variant="outline"
-          className="flex items-center justify-start text-xs text-muted-foreground"
+          variant="ghost"
+          className="text-muted-foreground flex items-center justify-start border text-xs"
         >
           <FaRegClock />
           <span>{selectedHrs}</span>
@@ -56,7 +56,7 @@ export function TimePicker({
                 {hours.map((hour) => (
                   <Button
                     key={hour}
-                    variant="outline"
+                    variant="ghost"
                     size="sm"
                     className={`aspect-square h-10 w-10 ${
                       hour === selectedHrs
@@ -80,7 +80,7 @@ export function TimePicker({
                 {minutes.map((min) => (
                   <Button
                     key={min}
-                    variant="outline"
+                    variant="ghost"
                     size="sm"
                     className={`aspect-square h-10 w-10 ${
                       min === selectedMins
@@ -104,7 +104,7 @@ export function TimePicker({
                 {meridians.map((mer) => (
                   <Button
                     key={mer}
-                    variant="outline"
+                    variant="ghost"
                     size="sm"
                     className={`aspect-square h-10 w-10 ${
                       mer === selectedMer
@@ -128,7 +128,7 @@ export function TimePicker({
               setSelectedMer(undefined)
             )}
             size="block"
-            variant="outline"
+            variant="ghost"
           >
             Reset
           </Button>

@@ -47,7 +47,7 @@ export function NavigationMenu({
         </Button>
       </li>
       <li className="w-full rounded-md" onClick={() => toggle()}>
-        <Bookings reservations={reservations} />
+        <Bookings reservations={reservations} lang={lang} />
       </li>
       <li className="mt-auto">
         <ContactWidget lang={lang} />

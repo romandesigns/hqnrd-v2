@@ -1,9 +1,50 @@
 import { HiOutlineUser, MdChildCare, TbMoonStars } from "@/components/icons";
 import { Card, CardContent } from "@/components/ui/card";
+import { Locale } from "@/i18n-config";
+import { formattedTime } from "@/lib/utils";
+import { dateTimeFormatter } from "@/zustand/reducers/utils/timeStamp";
+import { format } from "date-fns";
 
-export function CardBooking() {
+interface CardBookingProps {
+  adults: number;
+  infants: number;
+  roomUnitNumber: number;
+  unitNumber: number;
+  checkInTime: string | undefined;
+  checkInDate: Date | undefined;
+  checkOutDate: Date | undefined;
+  checkOutTime: string | undefined;
+  message: string;
+  user: string;
+  createdOn: Date;
+  totalGuests: number | undefined;
+  totalDays: number;
+  origianlPrice: number;
+  totalPrice: number;
+  discount: number;
+  eligibleForDiscount: boolean;
+  lang: Locale;
+  category: string;
+  pricePerNight: number;
+}
+
+export function CardBooking({
+  adults,
+  infants,
+  totalDays,
+  unitNumber,
+  pricePerNight,
+  totalPrice,
+  checkInDate,
+  checkOutDate,
+  checkOutTime,
+  checkInTime,
+  lang,
+  category,
+  roomUnitNumber,
+}: CardBookingProps) {
   return (
-    <Card className="rounded-md">
+    <Card className="rounded-md shadow-sm">
       <CardContent className="flex items-start justify-start p-0">
         {/* Image thumbnail */}
         <div className="aspect-square w-2/6 p-1">
@@ -16,9 +57,9 @@ export function CardBooking() {
             <div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xs font-bold">UNIT 205</h3>-
-                  <p className="text-xs font-semibold text-muted-foreground">
-                    Double Bed
+                  <h3 className="text-xs font-bold">UNIT {roomUnitNumber}</h3>~
+                  <p className="text-muted-foreground text-xs font-semibold">
+                    {category}
                   </p>
                 </div>
                 <p className="text-xs">
@@ -33,51 +74,57 @@ export function CardBooking() {
             <div className="flex w-full justify-start pt-1">
               <div className="flex-1">
                 <p className="flex flex-1 flex-col items-start justify-start text-xs">
-                  <span className="text-[0.6rem] font-medium text-muted-foreground">
+                  <span className="text-muted-foreground text-[0.6rem] font-medium">
                     Check In
                   </span>
                   <span className="text-[0.65rem] font-medium">
-                    16-06-2024~12:30PM
+                    {dateTimeFormatter.formattedTime(checkInDate, lang)}
                   </span>
                 </p>
               </div>
               <div className="flex-1">
                 <p className="flex flex-1 flex-col items-start justify-start text-xs">
-                  <span className="text-[0.60rem] font-medium text-muted-foreground">
+                  <span className="text-muted-foreground text-[0.60rem] font-medium">
                     Check Out
                   </span>
                   <span className="text-[0.65rem] font-medium">
-                    16-06-2024~11:30AM
+                    {dateTimeFormatter.formattedTime(checkOutDate, lang)}
                   </span>
                 </p>
               </div>
             </div>
             <div className="flex items-end gap-2">
               <p className="flex items-end gap-1 rounded-full bg-muted p-1 py-0.5 text-xs">
-                <span className="font-bold leading-none">3</span>
-                <span className="leading-none text-muted-foreground">
+                <span className="text-[0.65rem] font-medium leading-none">
+                  {adults}
+                </span>
+                <span className="text-muted-foreground leading-none">
                   <HiOutlineUser />
                 </span>
               </p>
               <p className="flex items-end gap-1 rounded-full bg-muted p-1 py-0.5 text-xs">
-                <span className="font-bold leading-none">0</span>
-                <span className="leading-none text-muted-foreground">
+                <span className="text-[0.65rem] font-medium leading-none">
+                  {infants}
+                </span>
+                <span className="text-muted-foreground leading-none">
                   <MdChildCare />
                 </span>
               </p>
               <p className="flex items-end gap-1 rounded-full bg-muted p-1 py-0.5 text-xs">
-                <span className="font-bold leading-none">2</span>
-                <span className="leading-none text-muted-foreground">
+                <span className="text-[0.65rem] font-medium leading-none">
+                  {totalDays}
+                </span>
+                <span className="text-muted-foreground leading-none">
                   <TbMoonStars />
                 </span>
               </p>
               <p className="flex items-end gap-1 text-xs">
                 <span className="py-0.25">
-                  <span className="font-bold leading-none">2</span>
-                  <span className="leading-none">x 1,300 = </span>
+                  <span className="font-bold leading-none">{totalDays}</span>
+                  <span className="leading-none">x {pricePerNight} = </span>
                 </span>
                 <span className="rounded-lg bg-muted px-2 py-0.5 font-bold leading-none">
-                  $2,600
+                  ${totalPrice}
                 </span>
               </p>
             </div>

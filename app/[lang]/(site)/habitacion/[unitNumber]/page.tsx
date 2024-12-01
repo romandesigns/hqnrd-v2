@@ -24,7 +24,15 @@ export default async function Page(props: {
   const {
     site: { component },
   } = await getDictionary(lang);
-  console.log();
+
+  const room = unitNumber
+    ? component.page.rooms.roomsList.filter(
+        (room) => room.unitNumber === unitNumber,
+      )
+    : component.page.rooms.roomsList;
+
+  const roomCategory = room[0].title.replace(/Room|Habitacion/i, "").trim();
+
   return (
     <SiteWrapper
       lang={lang}
@@ -49,10 +57,11 @@ export default async function Page(props: {
                 <Amenities />
                 <Media />
               </div>
-              <Aside>
+              <Aside roomPricePerNight={room[0].pricePerNight}>
                 <ReservationForm
-                  unitNumber={Number(unitNumber)}
-                  pricePerNight={1350}
+                  roomUnitNumber={Number(unitNumber)}
+                  roomPricePerNight={Number(room[0].pricePerNight)}
+                  roomCategory={roomCategory}
                 />
               </Aside>
             </article>

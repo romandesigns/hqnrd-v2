@@ -14,7 +14,6 @@ export {
 export { FcGoogle } from "react-icons/fc";
 export { FiBox, FiInbox } from "react-icons/fi";
 export { IoIosPeople } from "react-icons/io";
-export { MdBusinessCenter, MdKingBed, MdOutlineKitchen } from "react-icons/md";
 export { PiFan, PiMapPinFill } from "react-icons/pi";
 export { RiWhatsappFill } from "react-icons/ri";
 export { SiGoogletranslate } from "react-icons/si";
@@ -148,6 +147,11 @@ export {
   MdVpnKey,
   MdWifi,
   MdOutlineTimer,
+  MdOutlineEdit,
+  MdModeEdit,
+  MdBusinessCenter,
+  MdKingBed,
+  MdOutlineKitchen,
 } from "react-icons/md";
 export {
   PiCoatHangerBold,

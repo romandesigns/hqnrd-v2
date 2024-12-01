@@ -12,14 +12,20 @@ import { clsx } from "@/utils/clsx";
 
 import { CardBooking } from "../../Room";
 import { RoomReservationInterface } from "@/types";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Locale } from "@/i18n-config";
 
 export function Bookings({
   reservations,
   className,
+  lang,
 }: {
   reservations: RoomReservationInterface[];
   className?: string;
+  lang: Locale;
 }) {
+  console.log(reservations);
+  const isBooked = false;
   return (
     <>
       <Notifier />
@@ -45,8 +51,21 @@ export function Bookings({
           <SheetHeader className="py-4">
             <SheetTitle>My Bookings</SheetTitle>
           </SheetHeader>
-          <CardBooking />
-          <SheetClose>Close it</SheetClose>
+          <div className="h-full">
+            <ScrollArea className="h-full max-h-screen">
+              <div className="grid grid-flow-row grid-cols-1 grid-rows-[1fr_auto] gap-3 py-20">
+                {reservations.map((booking, index) => {
+                  return <CardBooking key={index} {...booking} lang={lang} />;
+                })}
+              </div>
+            </ScrollArea>
+            <div className="z-[2] bg-red-500">
+              <Button>Continue</Button>
+            </div>
+          </div>
+          {/* <div>
+            <SheetClose>Close it</SheetClose>
+          </div> */}
         </SheetContent>
       </Sheet>
     </>

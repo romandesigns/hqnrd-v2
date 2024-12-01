@@ -282,7 +282,7 @@ export interface RoomReservationInterface {
   adults: number;
   infants: number;
   pricePerNight: number;
-  unitNumber: number;
+  roomUnitNumber: number;
   checkInTime: string | undefined;
   checkInDate: Date | undefined;
   checkOutDate: Date | undefined;
@@ -296,4 +296,5 @@ export interface RoomReservationInterface {
   discount?: number;
   totalGuests?: number;
   origianlPrice?: number;
+  category: string;
 }

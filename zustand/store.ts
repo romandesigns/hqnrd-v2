@@ -14,6 +14,7 @@ import {
 
 // Utils
 import { calculateReservationFees } from "./reducers/utils/calculateReservationFees";
+import { integrateReservationTimes } from "./reducers/utils/combineTimeWithTimeStamp";
 
 // Combined Interface
 export interface CombinedStore
@@ -40,7 +41,11 @@ export const useCombinedStore = create<CombinedStore>()(
         addReservation: (reservation: RoomReservationInterface) =>
           set((state) => {
             const computedReservation = calculateReservationFees(reservation);
-            const reservations = [...state.reservations, computedReservation];
+            const reservations = [
+              ...state.reservations,
+              integrateReservationTimes(computedReservation),
+            ];
+            console.log(reservations);
             return { reservations };
           }),
 
