@@ -51,11 +51,11 @@
             "cards": {
               "first_discount": {
                 "title": "Discount",
-                "description": "Get a 5% discount when you book a 5 day stay!"
+                "description": "Available when booking a 5 day stay!"
               },
               "second_discount": {
                 "title": "Discount",
-                "description": "Enjoy an 8% discount when you book for 15 days or more!"
+                "description": "Available when booking for 15 days or more!"
               }
             },
             "cta": {

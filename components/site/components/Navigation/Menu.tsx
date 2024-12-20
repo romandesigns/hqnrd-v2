@@ -46,7 +46,7 @@ export function NavigationMenu({
           </Link>
         </Button>
       </li>
-      <li className="hidden w-full rounded-md">
+      <li className="w-full rounded-md max-lg:hidden">
         <Bookings reservations={reservations} lang={lang} />
       </li>
       <li className="mt-auto">

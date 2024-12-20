@@ -88,6 +88,7 @@ export function CopyWritting({
       </div>
       <div className="max-lg:hidden lg:pt-12">
         <ContactWidget
+          buttonVariant="outline"
           lang={lang}
           className="w-full lg:flex lg:justify-start"
         />

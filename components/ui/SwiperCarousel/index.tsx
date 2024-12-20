@@ -1,7 +1,7 @@
 "use client";
 import { CONSTANTS } from "@/constants";
 import Image from "next/image";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect } from "react";
 import "swiper/css";
@@ -62,6 +62,7 @@ export function Carousel({
 
   return (
     <Swiper
+      pagination={true}
       autoplay={{
         waitForTransition: true,
         delay: delay,
@@ -81,7 +82,7 @@ export function Carousel({
       speed={speed} // Control speed for transitions
       loop={true}
       className="absolute inset-0 h-full w-full bg-transparent"
-      modules={[Autoplay]}
+      modules={[Autoplay, Pagination]}
     >
       {component === "img" && renderImageComponent(arr as string[])}
       {component === "cardTestimonial" &&

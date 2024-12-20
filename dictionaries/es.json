@@ -51,11 +51,11 @@
             "cards": {
               "first_discount": {
                 "title": "Descuento",
-                "description": "Obtén un 5% de descuento al reservar una estancia de 5 días."
+                "description": "Disponible al reservar una estancia de 5 días."
               },
               "second_discount": {
                 "title": "Descuento",
-                "description": "Disfruta de un 8% de descuento al reservar por 15 días o más."
+                "description": "Disponible al reservar por 15 días o más."
               }
             },
             "cta": {
