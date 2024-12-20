@@ -15,7 +15,7 @@ export function TrendingRooms({
       wrapperClassName="flex flex-col items-center justify-center"
     >
       <SectionHeading title={title} subtitle={subtitle} />
-      <Content contentClassName="mt-20  grid w-full grid-cols-3 grid-rows-1 gap-4 max-[1230px]:grid-cols-2 max-[1230px]:grid-rows-2 max-[804px]:grid-cols-1 max-[804px]:grid-rows-3 max-[804px]:gap-10 py-0">
+      <Content contentClassName="mt-20 grid w-full grid-cols-3 grid-rows-1 gap-4 max-[1230px]:grid-cols-2 max-[1230px]:grid-rows-2 max-[804px]:grid-cols-1 max-[804px]:grid-rows-3 max-[804px]:gap-10">
         <RoomCard imgSrc={data.home.header.room[0]} />
         <RoomCard imgSrc={data.home.header.room[1]} />
         <RoomCard imgSrc={data.home.header.room[2]} />

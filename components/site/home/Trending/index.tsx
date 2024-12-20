@@ -15,7 +15,7 @@ export function Trending({ dictionary }: TrendingProps): JSX.Element {
   return (
     <Section sectionClassName="relative">
       <BackgroundTrendings />
-      <div className="rounded-lg p-4">
+      <div>
         <SectionHeading
           title={dictionary.heading.title}
           subtitle={dictionary.heading.subtitle}

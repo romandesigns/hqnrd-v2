@@ -27,7 +27,7 @@ export function Navigation({
   return (
     <Wrapper
       className={clsx(
-        "after:backdrop min-lg:shadow-black/5 min-lg:shadow sticky top-0 z-[4] flex flex-col items-end justify-end rounded-md bg-background/60 p-2 after:absolute after:inset-x-0 after:top-0 after:z-[1] after:block after:h-full after:backdrop-blur-lg after:content-[''] max-lg:bg-background/90 lg:translate-y-4 lg:overflow-hidden lg:rounded-full lg:border-b",
+        "sticky top-0 z-[4] flex flex-col items-end justify-end rounded-md bg-background p-2 after:absolute after:inset-x-0 after:top-0 after:z-[1] after:block after:h-full after:backdrop-blur-lg after:content-[''] max-lg:bg-background max-lg:before:absolute max-lg:before:left-0 max-lg:before:right-0 max-lg:before:top-2 max-lg:before:h-full max-lg:before:w-full max-lg:before:bg-transparent max-lg:before:shadow-md max-lg:before:backdrop-blur-lg lg:translate-y-4 lg:overflow-hidden lg:rounded-full lg:bg-background/80",
       )}
     >
       {/* Show the theme toggle button and open/close navigation btn in mobile screens */}
@@ -38,7 +38,7 @@ export function Navigation({
       >
         {/* Show the theme toggle button and open/close navigation btn in mobile screens */}
         <div className="ml-auto space-x-4 lg:hidden">
-          <Bookings reservations={reservations} />
+          <Bookings reservations={reservations} lang={lang} />
           <ModeToggle navStrings={navStrings.themeMenu} />
           <NavigationToggleBtn />
         </div>

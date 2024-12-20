@@ -9,7 +9,7 @@ export function NavigationToggleBtn() {
   return (
     <Button
       size="icon"
-      variant="link"
+      variant="ghost"
       className="text-lg lg:hidden"
       onClick={() => toggle()}
     >

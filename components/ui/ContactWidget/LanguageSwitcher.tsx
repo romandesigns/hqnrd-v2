@@ -1,7 +1,7 @@
 "use client";
 
 import { SiGoogletranslate } from "@/components/icons";
-import { Button } from "@/components/ui/button";
+import { Button, ButtonProps } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -18,11 +18,15 @@ import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 import { redirectedPathName } from "../locale-switcher";
 
-function languageSwitcherBtns(lang: string, pathName: string) {
+function languageSwitcherBtns(
+  lang: string,
+  pathName: string,
+  buttonVariant: ButtonProps["variant"] = "ghost",
+) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button variant={buttonVariant} size="icon">
           <SiGoogletranslate className="size-5" />
         </Button>
       </DialogTrigger>
@@ -66,7 +70,13 @@ function languageSwitcherBtns(lang: string, pathName: string) {
   );
 }
 
-export function LanugageSwitcher({ lang }: { lang: string }) {
+export function LanugageSwitcher({
+  lang,
+  buttonVariant,
+}: {
+  lang: string;
+  buttonVariant?: ButtonProps["variant"];
+}) {
   const pathName = usePathname();
-  return languageSwitcherBtns(lang, pathName);
+  return languageSwitcherBtns(lang, pathName, buttonVariant);
 }

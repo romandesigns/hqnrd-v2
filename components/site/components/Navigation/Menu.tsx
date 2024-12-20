@@ -46,11 +46,11 @@ export function NavigationMenu({
           </Link>
         </Button>
       </li>
-      <li className="w-full rounded-md" onClick={() => toggle()}>
+      <li className="hidden w-full rounded-md">
         <Bookings reservations={reservations} lang={lang} />
       </li>
       <li className="mt-auto">
-        <ContactWidget lang={lang} />
+        <ContactWidget lang={lang} buttonVariant="ghost" />
       </li>
       <li className="w-full max-lg:mt-3">
         <ul className="mt-auto flex flex-col gap-4 lg:flex-row lg:items-center">

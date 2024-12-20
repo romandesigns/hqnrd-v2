@@ -21,7 +21,7 @@ export function FrequentlyAskedQuestions({ dictionary }: FAQ): JSX.Element {
         title={dictionary.heading.title}
         subtitle={dictionary.heading.subtitle}
       />
-      <Content>
+      <Content contentClassName="px-2">
         <Accordion type="single" collapsible className="w-full">
           {dictionary.questions.map(({ id, question, answer }) => (
             <AccordionItem key={id} value={id}>
