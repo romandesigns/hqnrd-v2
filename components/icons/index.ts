@@ -116,7 +116,7 @@ export {
   IoSettings,
 } from "react-icons/io5";
 export { LiaBedSolid } from "react-icons/lia";
-export { LuRockingChair, LuUser2, LuCalendarDays } from "react-icons/lu";
+export { LuRockingChair, LuUser, LuCalendarDays } from "react-icons/lu";
 export {
   MdAdd,
   MdAssignment,

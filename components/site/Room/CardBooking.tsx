@@ -9,11 +9,11 @@ interface CardBookingProps {
   adults: number;
   infants: number;
   roomUnitNumber: number;
-  unitNumber: number;
+  unitNumber?: number;
   checkInTime: string | undefined;
-  checkInDate: Date | undefined;
-  checkOutDate: Date | undefined;
-  checkOutTime: string | undefined;
+  checkInDate?: Date | undefined;
+  checkOutDate?: Date | undefined;
+  checkOutTime?: string | undefined;
   message: string;
   user: string;
   createdOn: Date;
@@ -25,7 +25,7 @@ interface CardBookingProps {
   eligibleForDiscount: boolean;
   lang: Locale;
   category: string;
-  pricePerNight: number;
+  pricePerNight?: number;
 }
 
 export function CardBooking({

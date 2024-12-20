@@ -43,9 +43,7 @@ export default async function Page({ params, searchParams }: PageProps) {
       <div className="pb-20 pt-2">
         <p className="text-center text-[.9rem] font-medium [&_span]:inline-flex [&_span]:rounded-full [&_span]:bg-[hsl(var(--accent-secondary))] [&_span]:px-4 [&_span]:text-[hsl(var(--accent-secondary-foreground))]">
           {categoria
-            ? htmlParser(
-                `Showing <span>${rooms.length}</span> ${formatLabel(categoria)} rooms`,
-              )
+            ? `Showing <span>${rooms.length}</span> ${formatLabel(categoria)} rooms`
             : "Showing all rooms"}
         </p>
       </div>

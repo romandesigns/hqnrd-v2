@@ -9,7 +9,7 @@ administrative tasks.
 2.  Responsive Site Navigation
 3.  Public Site
 4.  Dashboard
-5.  Tray Bookings
+5.  Bookings Tray
 
 ## Public Site
 
